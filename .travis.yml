@@ -1,6 +1,6 @@
 language: ruby
 script:
-  - bundle exec ci:lint
+  - bundle exec rake ci:lint
 deploy:
   provider: pages
   local-dir: ./docs
