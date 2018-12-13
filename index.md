@@ -15,7 +15,7 @@ _/ ___\|  | |  |/    \   __\____ \    \  \/  <   |  |\___   /
 ```
 
 
-Welcome to [http://clintp.xyz](clintp.xyz)
+Welcome to [clintp.xyz]({{ site.url }})
 
 ## who?
 
