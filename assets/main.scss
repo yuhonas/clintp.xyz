@@ -1,0 +1,41 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+	color: #888;
+	background-color:#000;
+	background-image:radial-gradient(circle, rgba(0,40,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
+}
+
+.highlighter-rouge .highlight {
+	background-color: transparent !important;
+}
+
+pre, code {
+	border:0px;
+	background-color: transparent;
+	color: white;
+}
+
+a {
+	color: #2a9fd6;
+}
+
+.post-header {
+	margin: 0px;
+}
+
+.site-header {
+	border:0px;
+	min-height: auto;
+}
+
+h1,h2,h3,h4 {
+	color:white;
+}
+
+.page-content {
+	padding:0px;
+}
