@@ -9,7 +9,7 @@ This is a simple one page bio site that uses [jekyll](https://jekyllrb.com) with
 
 ### Prerequisites
 
-* Ruby 2.5 see [ruby-version](./ruby-version)
+* Ruby 2.5 see [ruby-version](./.ruby-version)
 
 
 ### Installing
@@ -35,5 +35,5 @@ For other Rake tasks see [Rakefile](./Rakefile)
 ## Deployment
 
 
-This site is automatically built and deployed by [Travis CI](https://travis-ci.org/) to [Github Pages](https://pages.github.com/) see also [travis.yml](./travis.yml)
+This site is automatically built and deployed by [Travis CI](https://travis-ci.org/) to [Github Pages](https://pages.github.com/) see also [travis.yml](./.travis.yml)
 
