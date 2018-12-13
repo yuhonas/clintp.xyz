@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: post
+layout: home
 ---
 
 ```
@@ -13,9 +13,6 @@ _/ ___\|  | |  |/    \   __\____ \    \  \/  <   |  |\___   /
  \___  >____/__|___|  /__| |   __/ /\ /__/\_ \/ ____|/_____ \
      \/             \/     |__|    \/       \/\/           \/
 ```
-
-
-Welcome to [clintp.xyz]({{ site.url }})
 
 ## who?
 
@@ -31,7 +28,7 @@ Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere.
 
 ## why?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.## why?
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 ### and?
 

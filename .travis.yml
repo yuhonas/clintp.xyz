@@ -1,6 +1,6 @@
 language: ruby
 script:
-  - bundle exec jekyll build -d docs/
+  - bundle exec ci:lint
 deploy:
   provider: pages
   local-dir: ./docs
