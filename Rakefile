@@ -6,7 +6,7 @@ namespace :ci do
 		system "jekyll build -d '#{BUILD_DIR}'"	
 	end
 
-	desc "One line task description"
+	desc "Validate the site's HTML"
 	task :lint => [:build] do
 	  system "htmlproofer '#{BUILD_DIR}'"
 	end
