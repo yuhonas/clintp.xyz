@@ -26,7 +26,11 @@ github_username:  yuhonas
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-hacker
+
+# Add a GA tracker using the hacker theme
+# See https://github.com/pages-themes/hacker/blob/master/_layouts/default.html
+google_analytics: UA-131284430-1
 # plugins:
 #  - jekyll-asciidoc
 

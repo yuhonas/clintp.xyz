@@ -1,0 +1,11 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+
+h1, h2, body {
+	font-family: $base-font-family;
+}
