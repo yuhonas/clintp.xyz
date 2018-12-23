@@ -7,7 +7,7 @@ layout: default
 
 ## who?
 
-I grew up in Melbourne, Australia in the 80's and was an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),
+I grew up in Melbourne, Australia in the 80's, an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),
  my passion for computing started with typing lengthy programs from [Commodore 64 magazines](https://en.wikipedia.org/wiki/Zzap!64)
 only to see many uneventfully fail (still unsure how this didn't lead to an aversion to programming)
 
