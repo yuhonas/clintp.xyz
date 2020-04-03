@@ -5,11 +5,11 @@
 
 ## Getting Started
 
-This is a simple one page bio site that uses [jekyll](https://jekyllrb.com) with some basic CI/CD using [travis-ci](https://travis-ci.org/) 
+This is a simple one page bio site that uses [jekyll](https://jekyllrb.com) with some basic CI/CD using [travis-ci](https://travis-ci.org/)
 
 ### Prerequisites
 
-* Ruby 2.5 see [ruby-version](./.ruby-version)
+* Ruby 2.7 see [ruby-version](./.ruby-version)
 
 
 ### Installing
