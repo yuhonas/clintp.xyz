@@ -1,6 +1,6 @@
 # clintp.xyz
 
-[![Build Status](https://travis-ci.com/yuhonas/clintp.xyz.svg?branch=master)](https://travis-ci.com/yuhonas/clintp.xyz)
+[![Build Status](https://github.com/yuhonas/clintp.xyz/workflows/ci/badge.svg)](https://github.com/yuhonas/clintp.xyz/actions)
 
 
 ## Getting Started
