@@ -1,7 +1,6 @@
 # clintp.xyz
 
-[![Build Status](https://github.com/yuhonas/clintp.xyz/workflows/ci/badge.svg)](https://github.com/yuhonas/clintp.xyz/actions)
-
+![lint and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/lint%20and%20deploy%20site/badge.svg)
 
 ## Getting Started
 
