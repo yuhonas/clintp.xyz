@@ -17,6 +17,13 @@ My most recent position was as an Engineering Manager at [GOAT](https://www.goat
 
 Outside of work I love traveling with ~25 countries under my belt, hiking, studying spanish, reading, coffee (trying to perfect my latte art) and alcohol (not in any kind of intense restraining order type love but more of a gentle fascination with its production and how it could be perceived as a distillation of a culture)
 
+## looking for a resume?
+
+{% assign cv_files = site.static_files | where: "cv", true %}
+{% for cv in cv_files %}
+* [{{ cv.name }}]({{ cv.path }})
+{% endfor %}
+
 
 ## would like to get in contact?
 

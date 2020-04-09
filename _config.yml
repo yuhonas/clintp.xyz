@@ -28,6 +28,12 @@ theme: jekyll-theme-hacker
 # Add a GA tracker using the hacker theme
 # See https://github.com/pages-themes/hacker/blob/master/_layouts/default.html
 google_analytics: UA-131284430-1
+
+defaults:
+  - scope:
+      path: "assets/cv"
+    values:
+      cv: true
 # plugins:
 #  - jekyll-asciidoc
 
