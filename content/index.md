@@ -1,10 +1,3 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: default
----
-
 ## who?
 
 I grew up in Melbourne, Australia in the 80's, an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),
@@ -19,11 +12,7 @@ Outside of work I love traveling with ~25 countries under my belt, hiking, study
 
 ## looking for a resume?
 
-{% assign cv_files = site.static_files | where: "cv", true %}
-{% for cv in cv_files %}
-* [{{ cv.name }}]({{ cv.path }})
-{% endfor %}
-
+* [Resume_ClintPlummer_ENMR-2020.docx](/Resume_ClintPlummer_ENMR-2020.docx)
 
 ## would like to get in contact?
 
