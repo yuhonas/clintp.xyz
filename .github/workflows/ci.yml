@@ -15,9 +15,10 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node--
-    - name: build & test
+    - name: test & build for static hosting
       run: |
         npm install
+        npm run ci:test
         npm run build
         npm run export
         touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/

@@ -7,7 +7,9 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "test": "cypress run",
+    "ci:test": "start-server-and-test dev 3000 test"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +21,9 @@
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "terminal.css": "^0.7.1"
+  },
+  "devDependencies": {
+    "cypress": "^4.3.0",
+    "start-server-and-test": "^1.10.11"
   }
 }
