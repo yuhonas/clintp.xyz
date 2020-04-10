@@ -23,6 +23,7 @@ jobs:
         npm run export
         touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
     - uses: actions/upload-artifact@v1
+      if: failure()
       with:
         name: test run video
         path: cypress/videos/site.spec.js.mp4
