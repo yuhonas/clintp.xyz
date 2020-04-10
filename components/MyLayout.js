@@ -1,4 +1,4 @@
-// import Header from './Header';
+import Head from 'next/head'
 
 const layoutStyle = {
   margin: 20,
@@ -8,6 +8,10 @@ const layoutStyle = {
 
 const Layout = props => (
 <div class="container">
+  <Head>
+    <title>clintp.xyz</title>
+    <meta name="description" content="my bio in two mouse clicks or less"/>
+  </Head>
   <header class="terminal-nav">
     <div class="terminal-logo">
       <h1><a href="">./clintp.xyz</a></h1>
