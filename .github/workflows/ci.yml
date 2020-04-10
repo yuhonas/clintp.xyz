@@ -5,27 +5,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: setup ruby
-      uses: actions/setup-ruby@v1
+    - name: setup node
+      uses: actions/setup-node@v1
       with:
-        ruby-version: 2.7
+        node-version: '10.x'
     - uses: actions/cache@v1
       with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: build and test
+          ${{ runner.os }}-node--
+    - name: build & test
       run: |
-        gem install bundler
-        bundle config path vendor/bundle
-        bundle install --jobs 4 --retry 3
-        bundle exec rake ci:lint
+        npm install
+        npm run build
+        npm run export
     - name: deploy the site
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-        build_dir: docs
+        build_dir: out
         fqdn: ${{ secrets.SITE_FQDN }}
       env:
         GITHUB_PAT: ${{ secrets.DEPLOYMENT_PAT }}

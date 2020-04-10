@@ -1,10 +1,3 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: default
----
-
 ## who?
 
 I grew up in Melbourne, Australia in the 80's, an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),
@@ -16,14 +9,6 @@ I went on to study Computer Science at Swinburne University and am also deeply i
 My most recent position was as an Engineering Manager at [GOAT](https://www.goat.com) in LA, All in all I enjoy leading teams and organisations on rewarding journeys.
 
 Outside of work I love traveling with ~25 countries under my belt, hiking, studying spanish, reading, coffee (trying to perfect my latte art) and alcohol (not in any kind of intense restraining order type love but more of a gentle fascination with its production and how it could be perceived as a distillation of a culture)
-
-## looking for a resume?
-
-{% assign cv_files = site.static_files | where: "cv", true %}
-{% for cv in cv_files %}
-* [{{ cv.name }}]({{ cv.path }})
-{% endfor %}
-
 
 ## would like to get in contact?
 
