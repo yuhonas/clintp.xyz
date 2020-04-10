@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout'
+import Layout from '../components/Layout'
 import ReactMarkdown from 'react-markdown'
 
 export default function Index(props) {

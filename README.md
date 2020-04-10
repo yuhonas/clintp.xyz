@@ -30,10 +30,10 @@ $ npm run dev
 ## Running the tests
 
 
-The site can be built and linted using [html-proofer](https://github.com/gjtorikian/html-proofer) using
+The site is tested using [cypress](https://www.cypress.io/)
 
 ```
-$ bundle exec rake ci:lint
+$ npm run ci:test
 ```
 
 For other tasks see [package.json](./package.json)
