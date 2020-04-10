@@ -22,6 +22,10 @@ jobs:
         npm run build
         npm run export
         touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+    - uses: actions/upload-artifact@v1
+      with:
+        name: test run video
+        path: cypress/videos/site.spec.js.mp4
     - name: deploy the site
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
