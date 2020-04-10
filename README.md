@@ -4,11 +4,11 @@
 
 ## Getting Started
 
-This is a simple one page bio site that uses [jekyll](https://jekyllrb.com) with some basic CI/CD using [travis-ci](https://travis-ci.org/)
+This is a simple one page bio site that uses [next.js](https://nextjs.org) with some basic CI/CD using [github actions](https://github.com/actions)
 
 ### Prerequisites
 
-* Ruby 2.7 see [ruby-version](./.ruby-version)
+* Node 10.x
 
 
 ### Installing
@@ -16,7 +16,15 @@ This is a simple one page bio site that uses [jekyll](https://jekyllrb.com) with
 Install all our dependencies
 
 ```
-$ bundle install
+$ npm install
+```
+
+## Development
+
+To run a local web server for development
+
+```
+$ npm run dev
 ```
 
 ## Running the tests
@@ -28,11 +36,11 @@ The site can be built and linted using [html-proofer](https://github.com/gjtorik
 $ bundle exec rake ci:lint
 ```
 
-For other Rake tasks see [Rakefile](./Rakefile)
+For other tasks see [package.json](./package.json)
 
 
 ## Deployment
 
 
-This site is automatically built and deployed by [Travis CI](https://travis-ci.org/) to [Github Pages](https://pages.github.com/) see also [travis.yml](./.travis.yml)
+This site is automatically built and deployed by [github actions](https://github.com/actions) to [Github Pages](https://pages.github.com/)
 
