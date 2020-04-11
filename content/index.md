@@ -12,7 +12,7 @@ Outside of work I love traveling with ~25 countries under my belt, hiking, study
 
 ## looking for a resume?
 
-* [Resume_ClintPlummer_ENMR-2020.docx](/Resume_ClintPlummer_ENMR-2020.docx)
+* [Resume_ClintPlummer_ENMR-2020.pdf](/Resume_ClintPlummer_ENMR-2020.pdf)
 
 ## would like to get in contact?
 
