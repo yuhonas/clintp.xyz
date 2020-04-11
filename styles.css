@@ -23,3 +23,13 @@
   --input-style: solid;
   --display-h1-decoration: none;
 }
+
+img.github {
+  fill: #64CEAA;
+  color: red;
+  position: absolute;
+  top: 0px;
+  border: 0px;
+  right: 0px;
+  width: auto;
+}

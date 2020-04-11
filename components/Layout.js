@@ -8,6 +8,9 @@ const layoutStyle = {
 
 const Layout = props => (
 <div class="container">
+  <a href="https://github.com/yuhonas/clintp.xyz">
+    <img class="github" src="/github-corner-right.svg" width="80" height="80" />
+  </a>
   <Head>
     <title>clintp.xyz</title>
     <meta name="description" content="my bio in two mouse clicks or less"/>
