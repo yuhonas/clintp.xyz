@@ -4,12 +4,13 @@
 
 ## Getting Started
 
-This is a simple one page bio site that uses [next.js](https://nextjs.org) with some basic CI/CD using [github actions](https://github.com/actions)
+This is a simple one page bio site that uses [next.js](https://nextjs.org) with some basic CI/CD using [github actions](https://github.com/actions) and a resume built using [latex](https://www.latex-project.org/)
 
 ### Prerequisites
 
-* Node 10.x
+### Site
 
+* Node.js 10.x
 
 ### Installing
 
