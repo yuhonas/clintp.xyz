@@ -45,3 +45,15 @@ For other tasks see [package.json](./package.json)
 
 This site is automatically built and deployed by [github actions](https://github.com/actions) to [Github Pages](https://pages.github.com/)
 
+
+## Building my resume
+
+My resume is built using [latex](https://www.latex-project.org/)
+
+![picture of latex envy](./public/latexenvy-300.png)
+
+To export it to pdf
+
+```
+$ cd public && pdflatex Resume_ClintPlummer_ENMR-2020.tex
+```
