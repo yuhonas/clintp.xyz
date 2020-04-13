@@ -1,0 +1,153 @@
+[[**CLINT**]{style="color: white"}]{style="background-color: black"}
+
+[[**PLUMMER**]{style="color: white"}]{style="background-color: black"}
+
+Engineering Manager
+
+\
+\
+
+\
+\
+
+Who Am I?
+
+Software engineering manager with over 10 years experience developing
+for the web in a multitude of languages, highly collaborative with an
+excellent understanding of development best practices throughout the
+entire SDLC
+
+Experience owning & crafting product / technical roadmaps collaborating
+with both clients and technical stakeholders to many successful
+deliveries.
+
+Enjoys working closely with HR & Recruiting to hire and build high
+performing agile teams of 6-12 people
+
+5.5
+
+Experience
+
+4/2019 -- 4/2020\
+Los Angeles, USA Engineering Manager GOAT
+
+Lead, recruited & managed a team of 15 comprising of iOS (Swift) /
+Android (Kotlin) / Backend Engineers (Ruby/Golang Microservices) both
+co-located and remote, building a brand new yet unreleased app for GOAT
+
+Worked with PM's and key stakeholders to execute & deliver utilizing a
+combination of agile methodologies on an entirely new app & brand for
+GOAT
+
+6/2017 -- 7/2018\
+Melbourne, Australia Solutions Architect Travelport Locomote
+
+Pragmatically defined & owned the product technology roadmap and set
+strategic direction to teams through deep collaboration with product
+owners, engineers, QA & other stakeholders, roadmap artifact were
+created in the form of user stories & through visual language eg. UML
+
+Worked with HR and Recruiting to recruit staff & improve the hiring
+process / pipeline
+
+Championed key initiatives to increase release predictability &
+reliability, reducing cycle time, reducing escaped defects through
+collaboration with multiple facets of the business such as management,
+support, sales & engineering
+
+Selected and evangelized design patterns & processes to help scale the
+architecture & organization with contribution to the organization's
+wiki, lightning talks & mentoring resulting in improvements to the
+organizations engineering conceptual integrity & reduced cycle time for
+user stories
+
+Orchestrated a zero downtime organization wide migration to Heroku
+(PaaS) from Ansible/Chef managed infrastructure, this resulted in a
+reduced operational overhead on the engineering team & direct cost
+savings through a reduction in hosting costs.
+
+Developed technical tools to aid in story visibility through the
+development pipeline & defect tracking/resolution 
+
+Maintained a suite of apps hosting in AWS using Config Management
+(Ansible/Chef) & PaaS such as Elastic Beanstalk, Heroku and
+containerization using Docker
+
+Provided direction/planning to engineering teams and collaborated with
+third party vendors in order to meet PCI / GDPR compliance
+
+6/2014 -- 7/2017\
+Melbourne, Australia Engineering Manager / Technical Product Owner
+Travelport Locomote
+
+Built, hired, mentored & lead scrum teams of 6-8 composing of
+(Engineers, QA's and BA's) both domestically and remotely, worked
+closely with HR & Recruiting both locally & abroad nurturing a much
+lauded company culture that emphasized ownership and collective impact
+
+Fostered continuous improvement and provided continuous feedback to
+employee's with one on one's and frequent engagement
+
+Facilitated growth of the company from 5 - 50 employee's through
+formulation & articulation of the vision and goals to scrum teams via
+story mapping sessions, five whys, kick off's, pair programming &
+mentoring & improvements to documentation & processes
+
+Orchestrated plans, prioritized resources and set the strategy for
+on-boarding some of Australia's largest Banks & Universities
+
+Forged and build relationships outside engineering in marketing and
+support to ensure alignment
+
+Crafted, evangelized and delivered on both the product strategy & the
+technical roadmap utilizing a stack of Rails/node.js/Heroku/AWS
+
+Identified key differentiators & opportunities through user & sales
+feedback, backlog and competitor analysis within the market and crafted
+user stories to guide & fortify the companies USP
+
+Guided product decisions through empiricism primarily through the build,
+measure lean feedback loop
+
+Supported and collaborated with third parties through acquisition due
+diligence resulting in a successful buy out
+
+7/2012 -- 6/2014\
+Melbourne, Australia Engineering Manager / Lead Backend Engineer
+Travelport Locomote
+
+Built, lead, supported & mentored scrum teams of 6-8 as a servant leader
+both domestically and remotely to many successful deliveries utilizing a
+stack of Rails/node.js/Heroku/AWS
+
+On-boarded & Supported some of Australia's leading banks and
+universities, leading to increased revenue/improved market perception
+
+Collaborated and improved hiring, policies and processes for an
+organization undergoing tremendous growth
+
+Implemented/maintained best practice Continuous Integration/Continuous
+Delivery/Test Automation & Deployment pipelines
+
+3/2006 -- 5/2012\
+Melbourne, Australia Senior / Lead Web Developer Alliance Software
+
+Delivered E2E & supported over 20 projects with Rails/Zend Framework
+
+Worked with recruiting for hiring and later to lead and mentor junior
+software engineers
+
+Fostered a spirit of continuous improvement within engineering
+
+Helped build relationships with clients to ensure quality outcomes &
+manage expectations
+
+Built, managed and supported a custom CMS based on Zend Framework
+architecture
+
+Education
+
+2001 -- 2004\
+Melbourne, Australia Bachelor of Applied Science (Computing) Swinburne
+University 1998\
+Melbourne, Australia Bachelor's Degree Pembroke College

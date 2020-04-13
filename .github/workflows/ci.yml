@@ -19,8 +19,8 @@ jobs:
       run: |
         npm install
         npm run ci:test
-        npm run build
-        npm run export
+        npm run site:build
+        npm run site:export
         touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
     - uses: actions/upload-artifact@v1
       if: failure()
