@@ -25,7 +25,7 @@ $ npm install
 To run a local web server for development
 
 ```
-$ npm run dev
+$ npm run site:dev
 ```
 
 ## Running the tests
@@ -40,13 +40,21 @@ $ npm run ci:test
 For other tasks see [package.json](./package.json)
 
 
+## Building the site
+
+To build a static website for hosting
+
+```
+$ npm run site:build && npm run site:export
+```
+
 ## Deployment
 
 
 This site is automatically built and deployed by [github actions](https://github.com/actions) to [Github Pages](https://pages.github.com/)
 
 
-## Building my resume
+## Building the resume
 
 My resume is built using [latex](https://www.latex-project.org/)
 
@@ -55,5 +63,5 @@ My resume is built using [latex](https://www.latex-project.org/)
 To export it to pdf
 
 ```
-$ cd public && pdflatex Resume_ClintPlummer_ENMR-2020.tex
+$ npm resume:export
 ```
