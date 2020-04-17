@@ -1,7 +1,7 @@
 ## who?
 
 I grew up in Melbourne, Australia in the 80's, an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),
- my passion for computing started with typing lengthy programs from [Commodore 64 magazines](https://en.wikipedia.org/wiki/Zzap!64)
+ my passion for computing started with typing lengthy [programs](https://en.wikipedia.org/wiki/Type-in_program) from [Commodore 64 magazines](https://en.wikipedia.org/wiki/Zzap!64)
 only to see many uneventfully fail (still unsure how this didn't lead to an aversion to programming)
 
 I went on to study Computer Science at Swinburne University and am also deeply intrigued by the Social Sciences, particularly Psychology, Sociology and Economics. In my professional life I have been a business owner, engineer, senior engineer, delivery lead, engineering manager, product owner, solutions architect and involved in a startup from seed to exit.
