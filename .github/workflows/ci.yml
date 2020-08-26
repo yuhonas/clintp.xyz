@@ -29,9 +29,9 @@ jobs:
         path: cypress/videos/site.spec.js.mp4
     - name: deploy the site
       if: success()
-      uses: crazy-max/ghaction-github-pages@v1
+      uses: crazy-max/ghaction-github-pages@v2
       with:
         build_dir: out
         fqdn: ${{ secrets.SITE_FQDN }}
       env:
-        GITHUB_PAT: ${{ secrets.DEPLOYMENT_PAT }}
+        GH_PAT: ${{ secrets.DEPLOYMENT_PAT }}
