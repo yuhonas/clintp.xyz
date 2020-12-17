@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "frontmatter-markdown-loader": "^3.6.2",
+    "terminal.css": "^0.7.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
