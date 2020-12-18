@@ -1,5 +1,7 @@
 <template>
-  <img alt="Vue logo" src="../assets/github-logo.svg">
+  <a href="https://github.com/yuhonas/clintp.xyz/">
+    <img alt="github" src="../assets/github-logo.svg">
+  </a>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

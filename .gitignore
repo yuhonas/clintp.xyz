@@ -24,3 +24,19 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# cypress
+cypress/videos/
+
+# latex build output
+public/*.aux
+public/*.out
+public/*.log
+
+# python
+__pycache__
+
+

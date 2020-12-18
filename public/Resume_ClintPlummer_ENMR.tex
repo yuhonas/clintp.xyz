@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Clint}}}}} % First name
+
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Plummer}}}}} % Last name
+
+	\vspace{6pt}
+
+	{\huge Engineering Manager} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{MapMarker}{12}{Melbourne}\\
+	% \icon{Phone}{12}{+1 000-000-0000}\\
+	\icon{At}{12}{\href{mailto:hello@clintp.xyz}{hello@clintp.xyz}}\\
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{Globe}{12}{Australian}\\
+	\icon{Github}{12}{\href{https://github.com/yuhonas}{github.com/yuhonas}}\\
+	% \icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+\begin{cvsect}{Who Am I?}
+
+  \begin{minipage}[t]{0.5\textwidth} % 40% of the page width for the introduction text
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+  Software engineering manager with over 10 years experience developing for the web in a multitude of languages, highly collaborative with an excellent understanding of development best practices throughout the entire SDLC
+
+  Experience owning \& crafting product / technical road maps collaborating with both clients and technical stakeholders to many successful deliveries.
+
+  Enjoys working closely with HR \& Recruiting to hire and build high performing agile teams of 6-12 people
+    % \lorem \lorem \lorem \lorem \lorem\\ % Dummy text
+  \end{minipage}
+  \hfill % Whitespace between
+  \begin{minipage}[t]{0.4\textwidth} % 50% of the page for the skills bar chart
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    \begin{barchart}{5.5}
+      \baritem{Leadership, team building \& management}{0}
+      \baritem{Full Stack Developer}{0}
+      \baritem{Devops}{0}
+      \baritem{Agile Methodologies}{0}
+      \baritem{Product Management}{0}
+      \baritem{Product Strategy}{0}
+    \end{barchart}
+  \end{minipage}
+\end{cvsect}
+
+% \begin{center}
+% 	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
+% \end{center}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{cvsect}{Experience}
+
+  \begin{entrylist}
+    \entry
+      {4/2019 -- 4/2020\\\footnotesize{Los Angeles, USA}}
+      {Engineering Manager}
+      {GOAT}
+      {Lead, recruited \& managed a team of 15 comprising of iOS (Swift) / Android
+      (Kotlin) / Backend Engineers (Ruby/Golang Micro-services)  both co-located
+      and remote, building and successfully delivering on \href{https://apps.apple.com/us/app/id1467090341}{alias} a brand new app \& brand for GOAT
+      \par\medskip Worked with PM’s and key stakeholders to execute \& deliver utilizing a
+      combination of agile methodologies on an entirely new app \& brand}
+    \entry
+      {6/2017 -- 7/2018\\\footnotesize{Melbourne, Australia}}
+      {Solutions Architect}
+      {Travelport Locomote}
+      {
+      Pragmatically defined \& owned the product technology roadmap and set
+      strategic direction to teams through deep collaboration with product owners,
+      engineers, QA \& other stakeholders, roadmap artifact were created in the form of user stories \& through visual language eg. UML
+      \par\medskip Worked with HR and Recruiting to recruit staff \& improve the hiring process / pipeline
+      \par\medskip Championed key initiatives to increase release predictability \& reliability, reducing cycle time, reducing escaped defects through
+      collaboration with multiple facets of the business such as management, support, sales \& engineering
+  \par\medskip Selected and evangelized design patterns \& processes to help scale
+    the architecture \& organization with contribution to the organization's wiki,
+    lightning talks \& mentoring resulting in improvements to the organizations engineering conceptual integrity \& reduced cycle time for user stories
+  \par\medskip Orchestrated a zero downtime organization wide migration to Heroku (PaaS) from Ansible/Chef managed infrastructure, this resulted in a reduced operational overhead on the engineering team \& direct cost savings through a reduction in hosting costs.
+  \par\medskip Developed technical tools to aid in story visibility through the
+      development pipeline \& defect tracking/resolution 
+  \par\medskip Maintained a suite of apps hosting in AWS using Config Management
+      (Ansible/Chef) \& PaaS such as Elastic Beanstalk, Heroku and
+      containerization using Docker
+  \par\medskip Provided direction/planning to engineering teams and collaborated with third party vendors in order to meet PCI / GDPR compliance
+      }
+    \entry
+      {6/2014 -- 7/2017\\\footnotesize{Melbourne, Australia}}
+      {Engineering Manager / Technical Product Owner}
+      {Travelport Locomote}
+      {Built, hired, mentored \& lead scrum teams of 6-8  composing of (Engineers,
+      QA’s and BA’s) both domestically and remotely, worked closely with HR \&
+      Recruiting both locally \& abroad nurturing a much lauded company culture
+      that emphasized ownership and collective impact
+      \par\medskip Fostered continuous improvement and provided continuous feedback to employee’s with one on one’s and frequent engagement
+      \par\medskip Facilitated growth of the company from 5 - 50 employee’s through formulation \& articulation of the vision and goals to scrum teams via story mapping sessions, five whys, kick off's, pair programming \& mentoring \& improvements to documentation \& processes
+      \par\medskip Orchestrated plans, prioritized resources and set the strategy for on-boarding some of Australia’s largest Banks \& Universities
+      \par\medskip Forged and build relationships outside engineering in marketing and support to ensure alignment
+      \par\medskip Crafted, evangelized and delivered on both the product strategy \& the technical roadmap  utilizing a stack of  Rails/node.js/Heroku/AWS
+      \par\medskip Identified key differentiators \& opportunities through user \& sales feedback, backlog and competitor analysis within the market and crafted user stories to guide \& fortify the companies USP
+      \par\medskip Guided product decisions through empiricism primarily through the build, measure lean feedback loop
+      \par\medskip Supported and collaborated with third parties through acquisition due diligence resulting in a successful buy out}
+    \entry
+      {7/2012 -- 6/2014\\\footnotesize{Melbourne, Australia}}
+      {Lead Backend Engineer / Engineering Manager}
+      {Travelport Locomote}
+      {Built, lead, supported \& mentored scrum teams of 6-8 as a servant leader both domestically and remotely to many successful deliveries utilizing a stack of  Rails/node.js/Heroku/AWS
+      \par\medskip On-boarded \& Supported some of Australia's leading banks and universities, leading to increased revenue/improved market perception
+      \par\medskip Collaborated and improved hiring, policies and processes for an organization undergoing tremendous growth
+      \par\medskip Implemented/maintained best practice Continuous
+      Integration/Continuous Delivery/Test Automation \& Deployment pipelines}
+    \entry
+      {3/2006 -- 5/2012\\\footnotesize{Melbourne, Australia}}
+      {Senior Engineer / Lead Backend Engineer}
+      {Alliance Software}
+      {Delivered E2E \& supported over 20 projects with Rails/Zend Framework
+      \par\medskip Worked with recruiting for hiring and later to lead and mentor junior software engineers
+      \par\medskip Fostered a spirit of continuous improvement within engineering
+      \par\medskip Helped build relationships with clients to ensure quality outcomes \& manage expectations
+      \par\medskip Built, managed and supported a custom CMS based on Zend
+      Framework architecture}
+  \end{entrylist}
+\end{cvsect}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\begin{cvsect}{Education}
+
+  \begin{entrylist}
+    \entry
+      {2001 -- 2004\\\footnotesize{Melbourne, Australia}}
+      {Bachelor of Applied Science (Computing)}
+      {Swinburne University}
+      {}
+    \entry
+      {1998\\\footnotesize{Melbourne, Australia}}
+      {Bachelor's Degree}
+      {Pembroke College}
+      {}
+  \end{entrylist}
+\end{cvsect}
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\begin{minipage}[t]{0.3\textwidth}
+%	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+%	\cvsect{Languages}
+
+%	\textbf{English} - native\\
+%	\textbf{German} - proficient\\
+%	\textbf{Polish} - rudimentary
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.3\textwidth}
+%	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+%	\cvsect{Hobbies}
+
+%	I love... \lorem
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.3\textwidth}
+%	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+%	\cvsect{Non profit}
+
+%	I help... \lorem
+%\end{minipage}
+
+%%----------------------------------------------------------------------------------------
+
+\end{document}

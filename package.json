@@ -1,5 +1,5 @@
 {
-  "name": "crap",
+  "name": "clintp.xyz",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "resume:export": "cd public && pdflatex Resume_ClintPlummer_ENMR.tex"
   },
   "dependencies": {
     "core-js": "^3.6.5",

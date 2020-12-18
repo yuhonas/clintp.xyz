@@ -8,13 +8,13 @@
 <script>
 import 'terminal.css'
 import GithubLogo from './components/GithubLogo.vue'
-import PageContent from './components/PageContent.vue'
+import fm from './index.md'
 
 export default {
   name: 'App',
   components: {
     GithubLogo,
-    PageContent
+    PageContent: fm.vue.component
   }
 }
 </script>
