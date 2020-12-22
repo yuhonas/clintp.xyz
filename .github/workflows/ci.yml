@@ -1,6 +1,20 @@
-name: lint and deploy site
+name: test, build and deploy site
 on: [push]
 jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: run e2e tests
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run serve
+          wait-on: http://localhost:8080/
+          config_file: cypress.json
+          spec: "tests/e2e/**/*"
+        env:
+          CYPRESS_baseUrl: http://localhost:8080/
   build:
     runs-on: ubuntu-latest
     steps:
@@ -15,17 +29,16 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node--
-    - name: test & build for static hosting
+    - name: build for static hosting
       run: |
         npm install
-        npm run test:e2e
         npm run build
-        touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+        touch dist/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
-        name: test run video
-        path: cypress/videos/site.spec.js.mp4
+        name: cypress-screenshots
+        path: cypress/screenshots
     - name: deploy the site
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
