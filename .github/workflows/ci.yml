@@ -1,0 +1,36 @@
+name: lint and deploy site
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node--
+    - name: test & build for static hosting
+      run: |
+        npm install
+        npm run test:e2e
+        npm run build
+        touch out/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+    - uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: test run video
+        path: cypress/videos/site.spec.js.mp4
+    - name: deploy the site
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        build_dir: dist
+        fqdn: ${{ secrets.SITE_FQDN }}
+      env:
+        GH_PAT: ${{ secrets.DEPLOYMENT_PAT }}

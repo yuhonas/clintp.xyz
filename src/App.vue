@@ -2,19 +2,25 @@
   <div class="container">
     <GithubLogo/>
     <PageContent/>
+    <TerminalPrompt/>
   </div>
 </template>
 
 <script>
 import 'terminal.css'
 import GithubLogo from './components/GithubLogo.vue'
+import TerminalPrompt from './components/TerminalPrompt.vue'
 import fm from './index.md'
 
 export default {
   name: 'App',
   components: {
     GithubLogo,
-    PageContent: fm.vue.component
+    PageContent: fm.vue.component,
+    TerminalPrompt
+  },
+  mounted () {
+    this.$ga.page('/') // track page hit with vue-analytics
   }
 }
 </script>
