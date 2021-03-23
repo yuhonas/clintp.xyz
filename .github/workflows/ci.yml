@@ -15,8 +15,14 @@ jobs:
           spec: "tests/e2e/**/*"
         env:
           CYPRESS_baseUrl: http://localhost:8080/
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
   build:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v1
     - name: setup node
@@ -34,11 +40,6 @@ jobs:
         npm install
         npm run build
         touch dist/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-    - uses: actions/upload-artifact@v1
-      if: failure()
-      with:
-        name: cypress-screenshots
-        path: cypress/screenshots
     - name: deploy the site
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
