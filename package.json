@@ -19,6 +19,9 @@
     "vue-analytics": "^5.22.1"
   },
   "devDependencies": {
+    "node-notifier": ">=8.0.1",
+    "minimist": ">=1.2.3",
+    "yargs-parser": ">=13.1.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
