@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "node-notifier": ">=8.0.1",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "yargs-parser": ">=13.1.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
