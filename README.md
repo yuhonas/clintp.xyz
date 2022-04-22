@@ -66,6 +66,23 @@ My resume is built using [latex](https://www.latex-project.org/)
 
 ![picture of latex envy](./public/latexenvy-300.png)
 
+### Dependencies
+
+You will need [ basictex ](https://tug.org/mactex/morepackages.html) installed in order to produce a pdf
+or (what ever format you want)
+
+Install basictex using homebrew
+
+```
+$ brew install basictex
+```
+
+The following packages are utilised in the latex document and will also need to be installed via latex's package manager
+
+```
+$ tlmgr install moresize raleway ly1 fontawesome
+```
+
 To export it to pdf
 
 ```
