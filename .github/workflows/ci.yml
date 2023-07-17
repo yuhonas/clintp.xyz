@@ -18,6 +18,7 @@ jobs:
           name: cypress-screenshots
           path: cypress/videos/
   build:
+    needs: cypress-run
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
@@ -33,7 +34,6 @@ jobs:
         npm run docs:build
         touch docs/.vitepress/dist/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
     - name: deploy the site
-      if: success()
       uses: crazy-max/ghaction-github-pages@v2
       with:
         build_dir: docs/.vitepress/dist/
