@@ -24,17 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: setup node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: '18.x'
-    - uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node--
+        cache: 'npm'
     - name: build for static hosting
       run: |
         npm install
