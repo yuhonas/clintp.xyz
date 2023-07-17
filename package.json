@@ -1,40 +1,10 @@
 {
-  "name": "clintp.xyz",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:ci": "vue-cli-service test:e2e --headless",
-    "lint": "vue-cli-service lint",
-    "resume:export": "cd public && pdflatex Resume_ClintPlummer_ENMR.tex"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "frontmatter-markdown-loader": "^3.6.2",
-    "terminal.css": "^0.7.2",
-    "vue": "^2.6.11",
-    "vue-analytics": "^5.22.1"
-  },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-e2e-cypress": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.0",
-    "@vue/cli-plugin-unit-jest": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "minimist": ">=1.2.6",
-    "vue-template-compiler": "^2.6.11",
-    "yargs-parser": ">=13.1.2"
+    "vitepress": "^1.0.0-beta.5"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   }
 }
