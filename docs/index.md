@@ -40,7 +40,7 @@ Outside of work I love traveling with ~25 countries under my belt, hiking, study
 ## looking for a resume?
 
 [Resume_ClintPlummer_ENMR.pdf](/Resume_ClintPlummer_ENMR.pdf) or
-[ipynb](https://github.com/yuhonas/clintp.xyz/blob/master/public/Resume_ClintPlummer_ENMR.ipynb)
+[ipynb](https://github.com/yuhonas/clintp.xyz/blob/main/docs/public/Resume_ClintPlummer_ENMR.ipynb)
 
 ## would like to get in contact?
 
