@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
+
 
   ],
   title: "clintp.xyz",
