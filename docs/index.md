@@ -48,10 +48,38 @@ I can be reached at [hello@clintp.xyz](mailto:hello@clintp.xyz) or my [Linked-In
 
 
 <script>
+import VueScrollTo from 'vue-scrollto'
+
 export default {
   mounted() {
-    const content = this.$el.querySelector('#who');
-    console.log(content)
+    const element = this.$el.querySelector('#who');
+    const container = element.closest('.markdown');
+
+    var options = {
+      container: container,
+      easing: 'ease-in-out',
+      lazy: false,
+      offset: -50,
+      force: true,
+      cancelable: true,
+      onStart: function(element) {
+        // scrolling started
+      },
+      onDone: function(element) {
+      //  overflow-y-hidden
+        // console.log(container);
+        // scrolling is done
+        // container.classList.remove('overflow-y-hidden');
+        // container.classList.add('overflow-y-scroll');
+      },
+      onCancel: function() {
+        // scrolling has been interrupted
+      },
+      x: false,
+      y: true
+    }
+
+    var cancelScroll = VueScrollTo.scrollTo(element, 1000, options);
   }
 }
 </script>

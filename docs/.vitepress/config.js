@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Fira+Code&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap' }],
 
   ],
   title: "clintp.xyz",
