@@ -23,9 +23,7 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-# [./clintp.xyz](./)
-
-My bio in two mouse clicks or less
+<!-- My bio in two mouse clicks or less -->
 
 ## who?
 
