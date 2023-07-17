@@ -29,6 +29,7 @@
 
 body, #app {
   height: 100%;
+  @apply bg-slate-900 md:bg-transparent;
 }
 
 a {
@@ -44,17 +45,16 @@ a {
 .markdown p {
   @apply mb-4 text-sm;
   color: var(--color7);
-
 }
 
 
 /* Chrome, Edge, and Safari */
-.container *::-webkit-scrollbar {
+.terminal *::-webkit-scrollbar {
   width: 0.5rem;
   scrollbar-width: thin;
 }
 
-.container *::-webkit-scrollbar-thumb {
+.terminal *::-webkit-scrollbar-thumb {
   background-color: var(--color11);
   border-radius: 14px;
   /* border: 1px solid white; */
