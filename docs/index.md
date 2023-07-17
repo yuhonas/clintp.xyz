@@ -47,3 +47,11 @@ Outside of work I love traveling with ~25 countries under my belt, hiking, study
 I can be reached at [hello@clintp.xyz](mailto:hello@clintp.xyz) or my [Linked-In](https://www.linkedin.com/in/clint-plummer/)
 
 
+<script>
+export default {
+  mounted() {
+    const content = this.$el.querySelector('#who');
+    console.log(content)
+  }
+}
+</script>
