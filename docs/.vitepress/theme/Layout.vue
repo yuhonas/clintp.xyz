@@ -3,12 +3,19 @@ import { useData } from 'vitepress'
 const { page } = useData();
 </script>
 <script>
-// import VueScrollTo
-// const VueScrollTo = require('vue-scrollto');
+import GithubCorner from './GithubCorner.vue'
+
+// load GithubCorner component
+export default {
+  components: {
+    GithubCorner
+  }
+}
 
 </script>
 
 <template>
+  <GithubCorner />
   <h1 class="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">$ ./clintp.xyz</h1>
   <!-- <img src="./images/background.jpg" class="w-full object-cover absolute top-0 left-0 h-full -z-50" /> -->
 

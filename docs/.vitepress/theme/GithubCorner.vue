@@ -1,7 +1,6 @@
 <template>
-  <p> testing</p>
   <a href="https://github.com/yuhonas/clintp.xyz/">
-    <img alt="github" src="./images/github-logo.svg" class="z-50">
+    <img alt="github" src="./images/github-logo.svg" class="z-10 absolute top-0 right-0 w-12 md:w-auto">
   </a>
 </template>
 
