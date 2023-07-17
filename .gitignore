@@ -40,3 +40,5 @@ public/*.log
 __pycache__
 
 
+# vite build
+docs/.vitepress/dist/

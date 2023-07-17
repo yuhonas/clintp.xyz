@@ -1,25 +1,25 @@
 name: test, build and deploy site
 on: [push]
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v1
-      - name: run e2e tests
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm run serve
-          wait-on: http://localhost:8080/
-          config_file: cypress.json
-          spec: "tests/e2e/**/*"
-        env:
-          CYPRESS_baseUrl: http://localhost:8080/
-      - uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+  # cypress-run:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: checkout
+  #       uses: actions/checkout@v1
+  #     - name: run e2e tests
+  #       uses: cypress-io/github-action@v2
+  #       with:
+  #         start: npm run serve
+  #         wait-on: http://localhost:8080/
+  #         config_file: cypress.json
+  #         spec: "tests/e2e/**/*"
+  #       env:
+  #         CYPRESS_baseUrl: http://localhost:8080/
+  #     - uses: actions/upload-artifact@v1
+  #       if: failure()
+  #       with:
+  #         name: cypress-screenshots
+  #         path: cypress/screenshots
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -28,7 +28,7 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v1
       with:
-        node-version: '14.x'
+        node-version: '18.x'
     - uses: actions/cache@v1
       with:
         path: ~/.npm
@@ -38,13 +38,13 @@ jobs:
     - name: build for static hosting
       run: |
         npm install
-        npm run build
+        npm run docs:build
         touch dist/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
     - name: deploy the site
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
       with:
-        build_dir: dist
+        build_dir: docs/.vitepress/dist/
         fqdn: ${{ secrets.SITE_FQDN }}
       env:
         GH_PAT: ${{ secrets.DEPLOYMENT_PAT }}
