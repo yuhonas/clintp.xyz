@@ -11,7 +11,7 @@ context('site', () => {
 
   it('should have the correct meta description', () => {
     cy.document().get('head meta[name="description"]')
-      .should("have.attr", "content", "my bio in two mouse clicks or less");
+      .should('have.attr', 'content', 'my bio in two mouse clicks or less')
   })
 
   it('should have the correct opening page title', () => {

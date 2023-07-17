@@ -15,7 +15,7 @@ module.exports = {
     config.plugin('html')
       .tap(args => {
         args[0].meta = {
-           description: 'my bio in two mouse clicks or less'
+          description: 'my bio in two mouse clicks or less'
         }
         return args
       })
