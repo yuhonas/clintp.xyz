@@ -42,3 +42,8 @@ __pycache__
 
 # vite build
 docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# cypress
+cypress/videos
+cypress/screenshots

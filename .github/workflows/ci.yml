@@ -1,25 +1,22 @@
 name: test, build and deploy site
 on: [push]
 jobs:
-  # cypress-run:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: checkout
-  #       uses: actions/checkout@v1
-  #     - name: run e2e tests
-  #       uses: cypress-io/github-action@v2
-  #       with:
-  #         start: npm run serve
-  #         wait-on: http://localhost:8080/
-  #         config_file: cypress.json
-  #         spec: "tests/e2e/**/*"
-  #       env:
-  #         CYPRESS_baseUrl: http://localhost:8080/
-  #     - uses: actions/upload-artifact@v1
-  #       if: failure()
-  #       with:
-  #         name: cypress-screenshots
-  #         path: cypress/screenshots
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: run e2e tests
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm run ci:e2e
+        env:
+          CYPRESS_baseUrl: http://localhost:8080/
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/videos/
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
