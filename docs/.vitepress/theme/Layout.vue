@@ -39,7 +39,7 @@ export default {
               </p>
             </div>
             <div v-else>
-              <img src="./images/ansi-full.png" alt="ANSI Art Graphics" class="w-full mb-4" v-if="!page.isNotFound" />
+              <img src="./images/ansi-full.png" alt="ANSI Art Graphics" class="w-full mb-4" />
               <Content />
             </div>
           </article>
