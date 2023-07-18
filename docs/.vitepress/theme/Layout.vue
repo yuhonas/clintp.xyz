@@ -28,16 +28,17 @@ export default {
         </div>
       </nav>
       <section class="terminal text-white bg-slate-900 rounded-b-md px-3 pb-4 font-mono md:max-w-2xl mb-4 h-[80vh]">
-          <article class="md:overflow-y-scroll markdown pb-4" style="max-height: 100%">
-            <img src="./images/ansi-full.png" class="w-full mb-4" />
-
+          <article class="md:overflow-y-scroll markdown pb-4 h-full">
             <div v-if="page.isNotFound">
               <h2 class="text-xl mb-4">404 - Page Not Found</h2>
               <p class="mb-4">
                   But fear not, we've dispatched our squad of pixelated Ghostbusters to hunt it down, who you gonna call? 🕹️👻
               </p>
             </div>
-            <Content v-else />
+            <div v-else>
+              <img src="./images/ansi-full.png" class="w-full mb-4" v-if="!page.isNotFound" />
+              <Content />
+            </div>
           </article>
       </section>
     </div>
