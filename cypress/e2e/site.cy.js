@@ -33,4 +33,9 @@ context('site', () => {
       cy.request($anchor.attr('href')).its('status').should('eq', 200)
     })
   })
+
+  it('should have a link to my linkedin', () => {
+    cy.get('a').contains('Linked-In').should('have.attr', 'href', 'https://www.linkedin.com/in/clint-plummer/')
+  })
+
 })
