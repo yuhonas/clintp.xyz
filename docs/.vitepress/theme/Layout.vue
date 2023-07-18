@@ -9,6 +9,12 @@ import GithubCorner from './GithubCorner.vue'
 export default {
   components: {
     GithubCorner
+  },
+  methods: {
+    swapTheme(theme, event) {
+      event.preventDefault();
+      document.querySelector('body').dataset.theme = theme;
+    }
   }
 }
 
@@ -22,9 +28,9 @@ export default {
     <div class="max-w-2xl mx-auto">
       <nav class="theme-bg rounded-t-md p-3 mt-2 hidden md:block">
         <div class="flex gap-1.5">
-          <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
-          <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
-          <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+          <a href="" @click="swapTheme('001', $event)"><div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div></a>
+          <a href="" @click="swapTheme('002', $event)"><div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div></a>
+          <a href="" @click="swapTheme('003', $event)"><div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div></a>
         </div>
       </nav>
       <section class="theme-bg terminal text-white rounded-b-md px-3 pb-4 font-mono md:max-w-2xl mb-4 h-[80vh]">
