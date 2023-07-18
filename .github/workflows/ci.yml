@@ -16,7 +16,7 @@ jobs:
         if: failure()
         with:
           name: cypress-screenshots
-          path: cypress/videos/
+          path: ./cypress/videos/
   build:
     needs: cypress-run
     runs-on: ubuntu-latest

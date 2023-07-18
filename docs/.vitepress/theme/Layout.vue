@@ -9,6 +9,12 @@ import GithubCorner from './GithubCorner.vue'
 export default {
   components: {
     GithubCorner
+  },
+  methods: {
+    swapTheme(theme, event) {
+      event.preventDefault();
+      document.querySelector('body').dataset.theme = theme;
+    }
   }
 }
 
@@ -20,15 +26,15 @@ export default {
     <h1 class="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">$ ./clintp.xyz</h1>
 
     <div class="max-w-2xl mx-auto">
-      <nav class="bg-slate-900 rounded-t-md p-3 mt-2 hidden md:block">
+      <nav class="theme-bg rounded-t-md p-3 mt-2 hidden md:block">
         <div class="flex gap-1.5">
-          <div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
-          <div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
-          <div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+          <a href="" @click="swapTheme('001', $event)"><div class="w-2.5 h-2.5 bg-red-400 rounded-full"></div></a>
+          <a href="" @click="swapTheme('002', $event)"><div class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div></a>
+          <a href="" @click="swapTheme('003', $event)"><div class="w-2.5 h-2.5 bg-green-400 rounded-full"></div></a>
         </div>
       </nav>
-      <section class="terminal text-white bg-slate-900 rounded-b-md px-3 pb-4 font-mono md:max-w-2xl mb-4 h-[80vh]">
-          <article class="md:overflow-y-scroll markdown pb-4 h-full">
+      <section class="theme-bg terminal text-white rounded-b-md px-3 pb-4 font-mono md:max-w-2xl mb-4 h-[80vh]">
+          <article class="md:overflow-y-scroll markdown pb-4 h-full pe-1">
             <div v-if="page.isNotFound">
               <h2 class="text-xl mb-4">404 - Page Not Found</h2>
               <p class="mb-4">
@@ -39,7 +45,8 @@ export default {
               </p>
             </div>
             <div v-else>
-              <img src="./images/ansi-full.png" alt="ANSI Art Graphics" class="w-full mb-4" />
+              <img  alt="ANSI Art Graphics" class="w-full mb-4 ansi-art" />
+
               <Content />
             </div>
           </article>
