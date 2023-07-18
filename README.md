@@ -56,7 +56,7 @@ This site is automatically built and deployed by [github actions](https://github
 
 My resume is built using [latex](https://www.latex-project.org/)
 
-![picture of latex envy](./public/latexenvy-300.png)
+![picture of latex envy](./latexenvy-300.png)
 
 ### Dependencies
 
