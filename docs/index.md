@@ -59,7 +59,7 @@ export default {
       y: true
     }
 
-    var cancelScroll = VueScrollTo.scrollTo(element, 1000, options);
+    var cancelScroll = VueScrollTo.scrollTo(element, 1200, options);
   }
 }
 </script>
