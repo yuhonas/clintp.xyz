@@ -2,7 +2,7 @@
 
 ![test, build and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/test,%20build%20and%20deploy%20site/badge.svg)
 
-![Example MOTD](./site-preview.png)
+![Site Preview](./gh-site-preview.avif)
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ This site is automatically built and deployed by [github actions](https://github
 
 My resume is built using [latex](https://www.latex-project.org/)
 
-![picture of latex envy](./latexenvy-300.png)
+![picture of latex envy](./gh-latexenvy.png)
 
 ### Dependencies
 
