@@ -33,10 +33,13 @@ export default {
               <h2 class="text-xl mb-4">404 - Page Not Found</h2>
               <p class="mb-4">
                   But fear not, we've dispatched our squad of pixelated Ghostbusters to hunt it down, who you gonna call? 🕹️👻
+                  <a href="https://www.youtube.com/watch?v=Fe93CLbHjxQ">
+                    <img src="./images/404.svg" class="mx-auto mt-8 w-1/2 animate-pulse hover:animate-spin" alt="Ghostbusters Logo" />
+                  </a>
               </p>
             </div>
             <div v-else>
-              <img src="./images/ansi-full.png" class="w-full mb-4" v-if="!page.isNotFound" />
+              <img src="./images/ansi-full.png" alt="ANSI Art Graphics" class="w-full mb-4" v-if="!page.isNotFound" />
               <Content />
             </div>
           </article>
