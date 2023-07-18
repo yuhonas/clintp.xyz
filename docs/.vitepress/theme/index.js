@@ -4,6 +4,7 @@
 import Layout from './Layout.vue'
 
 import 'tailwindcss/tailwind.css'
+import './002.css'
 import './theme.css'
 
 export default {
