@@ -1,10 +1,8 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title:  "my bio in two mouse clicks or less"
 ---
-
-<!-- My bio in two mouse clicks or less -->
-
 ## who?
 
 I grew up in Melbourne, Australia in the 80's, an unwilling combatant in the [console wars](https://www.denofgeek.com/games/sega/33279/sega-vs-nintendo-revisiting-the-deadliest-console-war),

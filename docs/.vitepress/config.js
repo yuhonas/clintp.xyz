@@ -7,6 +7,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
   ],
   title: "clintp.xyz",
+  titleTemplate: 'clintp.xyz | :title',
   description: "my bio in two mouse clicks or less",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
