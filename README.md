@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-This is a simple one page bio site that uses [vitepress](https://vitepress.dev/) with some basic CI/CD using [github actions](https://github.com/actions) and a resume built using [latex](https://www.latex-project.org/)
+This is a simple one page bio site that uses [vitepress](https://vitepress.dev/) with some basic CI/CD using [github actions](./.github/workflows/ci.yml) and a resume built using [latex](https://www.latex-project.org/)
 
 ### Prerequisites
 
