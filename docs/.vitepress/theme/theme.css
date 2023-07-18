@@ -28,14 +28,15 @@ body, #app {
   /* content: url('https://source.unsplash.com/7bwQXzbF6KE/800x500'); */
 }
 
-a {
+.markdown a {
   color: var(--color13);
   text-decoration: underline;
 }
-a:hover {
+.markdown a:hover {
   background-color: var(--color12);
   color: var(--color15);
 }
+
 .markdown  h2 {
   @apply text-2xl mb-4;
   color: var(--color6);

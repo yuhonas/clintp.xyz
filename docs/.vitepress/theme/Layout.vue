@@ -14,6 +14,21 @@ export default {
     swapTheme(theme, event) {
       event.preventDefault();
       document.querySelector('body').dataset.theme = theme;
+      this.currentTheme = theme;
+    },
+    nextTheme(event) {
+      // move to the next theme in the themes array based on our currentTheme
+      const currentIndex = this.themes.indexOf(this.currentTheme);
+      const nextIndex = (currentIndex + 1) % this.themes.length;
+      const nextTheme = this.themes[nextIndex];
+
+      this.swapTheme(nextTheme, event);
+    }
+  },
+  data() {
+    return {
+      currentTheme: '001',
+      themes: ['001', '002', '003']
     }
   }
 }
@@ -23,7 +38,9 @@ export default {
 <template>
   <GithubCorner repo="yuhonas/clintp.xyz" />
   <main>
-    <h1 class="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">$ ./clintp.xyz</h1>
+    <h1 class="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">
+      <a href="" @click="nextTheme">$ ./clintp.xyz</a>
+    </h1>
 
     <div class="max-w-2xl mx-auto">
       <nav class="theme-bg rounded-t-md p-3 mt-2 hidden md:block">
