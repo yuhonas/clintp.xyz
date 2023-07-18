@@ -27,7 +27,23 @@
 
 body, #app {
   height: 100%;
-  @apply bg-slate-900 md:bg-transparent;
+  @apply bg-slate-900 md:bg-inherit;
+}
+
+/* media query for screens greater then 768px */
+@media (min-width: 768px) {
+  body {
+    background: url('./images/background-2000w.avif') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+/* media query for screens greater then 2000px */
+@media (min-width: 2000px) {
+  body {
+    background: url('./images/background-4000w.avif') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 a {
