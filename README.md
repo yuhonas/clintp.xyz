@@ -1,16 +1,18 @@
-# clintp.xyz
+# clintp.xyz - my bio site
 
 ![test, build and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/test,%20build%20and%20deploy%20site/badge.svg)
 
+![Example MOTD](./site-preview.png)
+
 ## Getting Started
 
-This is a simple one page bio site that uses [vuejs](https://vuejs.org) with some basic CI/CD using [github actions](https://github.com/actions) and a resume built using [latex](https://www.latex-project.org/)
+This is a simple one page bio site that uses [vitepress](https://vitepress.dev/) with some basic CI/CD using [github actions](https://github.com/actions) and a resume built using [latex](https://www.latex-project.org/)
 
 ### Prerequisites
 
 ### Site
 
-* Node.js 14.x
+* Node.js 18.x
 
 ### Installing
 
@@ -25,25 +27,15 @@ $ npm install
 To run a local web server for development
 
 ```
-$ npm run serve
+$ npm run docs:dev
 ```
 
 ## Running the tests
 
 
-### Unit tests
-```
-npm run test:unit
-```
-
 ### End-to-end tests
 ```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
+npm run ci:e2e
 ```
 
 ## Building the site
@@ -51,7 +43,7 @@ npm run lint
 To build a static website for hosting
 
 ```
-npm run build
+npm run docs:build
 ```
 
 ## Deployment
