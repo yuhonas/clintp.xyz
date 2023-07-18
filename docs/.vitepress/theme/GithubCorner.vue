@@ -1,8 +1,13 @@
 <script>
 export default {
   props: ['repo'],
-  created() {
+  mounted() {
     this.repoUrl = new URL(this.repo, 'https://www.github.com/')
+  },
+  data() {
+    return {
+      repoUrl: ''
+    }
   }
 }
 </script>
