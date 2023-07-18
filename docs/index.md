@@ -15,7 +15,7 @@ I went on to study Computer Science at Swinburne University and am also deeply i
 
 My most recent position was as an Engineering Manager at [GOAT](https://www.goat.com) in Los Angeles, All in all I enjoy leading teams and organizations on rewarding journeys.
 
-Outside of work I love traveling with ~25 countries under my belt, hiking, studying Spanish, reading, coffee (trying to perfect my latte art) and alcohol (not in any kind of [Rick & Morty](https://www.adultswim.com/videos/rick-and-morty) high functioning alcoholic type love but more of a gentle fascination with its production and how it could be perceived as a distillation of a culture)
+Outside of work I love traveling with ~31 countries so far, [open sourcing](https://www.github.com/yuhonas), hiking, studying spanish, reading, coffee (trying to perfect my latte art) and alcohol (not in any kind of [Rick & Morty](https://www.adultswim.com/videos/rick-and-morty) high functioning alcoholic type love but more of a gentle fascination with its production and how it could be perceived as a distillation of a culture)
 
 ## looking for a resume?
 
