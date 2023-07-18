@@ -28,7 +28,7 @@ export default {
         </div>
       </nav>
       <section class="theme-bg terminal text-white rounded-b-md px-3 pb-4 font-mono md:max-w-2xl mb-4 h-[80vh]">
-          <article class="md:overflow-y-scroll markdown pb-4 h-full">
+          <article class="md:overflow-y-scroll markdown pb-4 h-full pe-1">
             <div v-if="page.isNotFound">
               <h2 class="text-xl mb-4">404 - Page Not Found</h2>
               <p class="mb-4">
