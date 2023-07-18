@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <GithubCorner />
+  <GithubCorner repo="yuhonas/clintp.xyz" />
   <main>
     <h1 class="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">$ ./clintp.xyz</h1>
 
