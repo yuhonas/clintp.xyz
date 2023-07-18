@@ -1,7 +1,7 @@
-body, #app {
+body {
   height: 100%;
-  @apply bg-theme md:bg-inherit;
-  transition: background-image 0.5s ease-in-out;
+  @apply bg-theme;
+  transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out;
 }
 
 .bg-theme {
@@ -11,7 +11,7 @@ body, #app {
 /* media query for screens greater then 768px */
 @media (min-width: 768px) {
   body {
-    background: var(--wallpaper2000w) no-repeat center center fixed;
+    background: var(--background) var(--wallpaper2000w) no-repeat center center fixed;
     background-size: cover;
   }
 }
@@ -19,7 +19,7 @@ body, #app {
 /* media query for screens greater then 2000px */
 @media (min-width: 2000px) {
   body {
-    background: var(--wallpaper4000w) no-repeat center center fixed;
+    background: var(--background) var(--wallpaper4000w) no-repeat center center fixed;
     background-size: cover;
   }
 }
