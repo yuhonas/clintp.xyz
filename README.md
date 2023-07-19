@@ -1,6 +1,4 @@
-# clintp.xyz - my bio site
-
-![test, build and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/test,%20build%20and%20deploy%20site/badge.svg)
+# clintp.xyz - my bio site &nbsp;![test, build and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/test,%20build%20and%20deploy%20site/badge.svg)
 
 ![Site Preview](./gh-site-preview.avif)
 
