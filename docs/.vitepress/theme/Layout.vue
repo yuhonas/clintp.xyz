@@ -61,7 +61,7 @@ export default {
                   </a>
               </p>
             </div>
-            <div v-else>
+            <div class="pb-4 md:pb-0" v-else>
               <img  alt="ANSI Art Graphics" class="w-full mb-4 ansi-art" />
 
               <Content />
