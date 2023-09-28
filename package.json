@@ -14,7 +14,9 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "ci:e2e": "start-server-and-test 'npm run docs:build && http-server ./docs/.vitepress/dist -c-1 --silent' 8080 'cypress run'"
+    "ci:e2e": "start-server-and-test 'npm run docs:build && http-server ./docs/.vitepress/dist -c-1 --silent' 8080 'cypress run'",
+    "resume:export": "cd docs/public && pdflatex Resume_ClintPlummer_ENMR.tex"
+
   },
   "engines": {
     "node": "^18.0",
