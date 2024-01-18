@@ -205,6 +205,39 @@
       "highlights": [
         "Worked in a team developing a complex advertisement builder for Australia Post using a custom inhouse CMS"
       ]
+    },
+    {
+      "name": "Bigdog Software",
+      "location": "Melbourne, Australia",
+      "description": "Bigdog Software provides custom software development for mission critical business applications with comprehensive technical support",
+      "position": "Junior Web Developer",
+      "url": "https://www.bigdogsoftware.com.au/",
+      "endDate": "2006-03-01",
+      "startDate": "2005-02-01",
+      "summary": "",
+      "highlights": [
+        "Worked on a variety of intranet based solutions for architectural firms. Features such as project estimation / tracking, time sheet management and reporting amongst others",
+        "Software & Hardware support for clients"
+      ]
+    },
+    {
+      "name": "Swinburne University",
+      "location": "Melbourne, Australia",
+      "description": "Swinburne is a world-class university in Melbourne that focuses on creating future-ready graduates, innovation, and producing research with real-world",
+      "position": "Junior Web Developer",
+      "url": "https://www.swinburne.edu.au/",
+      "endDate": "2005-08-01",
+      "startDate": "2002-02-01",
+      "summary": "",
+      "highlights": [
+        "Developed a training scheduling system for the CFA and a local intranet based version of that scheduling system for the ESTI unit",
+        "Developed an automated solution to map students exemptions from various courses",
+        "Developed and maintained the ESTI units website",
+        "Assisted & Supported the units IT operations"
+      ]
+    },
+    {
+
     }
   ],
   "volunteer": [
@@ -241,6 +274,10 @@
     {
       "language": "English",
       "fluency": "Native speaker"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "A2"
     }
   ],
   "interests": [
