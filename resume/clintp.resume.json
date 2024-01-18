@@ -235,14 +235,33 @@
         "Developed and maintained the ESTI units website",
         "Assisted & Supported the units IT operations"
       ]
-    },
-    {
-
     }
   ],
   "volunteer": [
   ],
   "education": [
+    {
+      "institution": "The Improv Conspiracy Theatre",
+      "url": "https://www.improvconspiracy.com/workshops/starter-101-introduction-to-long-form-improv",
+      "area": "Performing Arts",
+      "studyType": "Misc",
+      "startDate": "2022",
+      "endDate": "2022",
+      "score": "",
+      "courses": [
+        "Introduction to Long Form Improv"
+      ]
+    },
+    {
+      "institution": "Complete Hospitality Training",
+      "url": "https://cht.edu.au/courses/barista-coffee-course",
+      "area": "Hospitality",
+      "studyType": "Certificate",
+      "startDate": "2007",
+      "endDate": "2007",
+      "score": "",
+      "courses": []
+    },
     {
       "institution": "Swinburne University",
       "url": "https://www.swinburne.edu.au/",
@@ -251,8 +270,7 @@
       "startDate": "2001",
       "endDate": "2004",
       "score": "",
-      "courses": [
-      ]
+      "courses": []
     }
   ],
   "awards": [
@@ -282,39 +300,36 @@
   ],
   "interests": [
     {
-      "name": "Wildlife",
+      "name": "Coffee",
       "keywords": [
-        "Ferrets",
-        "Unicorns"
+        "Espresso",
+        "Barista"
       ]
     }
   ],
   "references": [
     {
-      "name": "Erlich Bachman",
+      "name": "Danny Chin",
       "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
     }
   ],
   "projects": [
     {
       "name": "Miss Direction",
-      "description": "A mapping engine that misguides you",
+      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
       "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
       ],
       "keywords": [
-        "GoogleMaps", "Chrome Extension", "Javascript"
+        "exercise", "fitness", "open-data"
       ],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "url": "https://missdirection.example.com",
+      "startDate": "2023-03-01",
+      "endDate": "",
+      "url": "https://github.com/yuhonas/free-exercise-db",
       "roles": [
-        "Team lead", "Designer"
+        "Creator", "Engineer"
       ],
-      "entity": "Smoogle",
-      "type": "application"
+      "entity": "owner",
+      "type": "open-source"
     }
   ],
   "meta": {
