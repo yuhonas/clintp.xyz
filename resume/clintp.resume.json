@@ -52,7 +52,11 @@
       "startDate": "2022-05-01",
       "summary": "Joined the program to explore nurturing my own startup, learnt many valuable skills along the way from ideation, taking concepts to market (0 to 1), market validation, business models, product/market fit to capital raising/pitching",
       "highlights": [
-        "Worked with some of Australia's most exciting startups"
+        "Developed strong problem-solving and critical thinking skills by identifying and addressing challenges facing early-stage startups",
+        "Gained experience in business strategy, market analysis, and financial planning to help startups develop sustainable and scalable business models",
+        "Built a diverse and global network of entrepreneurs, investors, and industry experts to share insights and best practices and create new opportunities for collaboration",
+        "Honed skills in pitching and presenting to effectively communicate complex ideas and value propositions to investors, customers, and other stakeholders",
+        "Developed a deep understanding of emerging technologies and trends and how they are reshaping industries and markets, enabling more informed decision-making and innovative thinking"
       ]
     },
     {
@@ -65,7 +69,7 @@
       "startDate": "2021-03-01",
       "summary": "",
       "highlights": [
-        "Performed market research & validation",
+        "Random multiple campaigns to evaluate problem/solution fit",
         "Built a landing page & MVP",
         "Pitched to Antler & was accepted into the program"
       ]
@@ -323,7 +327,7 @@
         "exercise", "fitness", "open-data"
       ],
       "startDate": "2023-03-01",
-      "endDate": "",
+      "endDate": "2024-01-01",
       "url": "https://github.com/yuhonas/free-exercise-db",
       "roles": [
         "Creator", "Engineer"
