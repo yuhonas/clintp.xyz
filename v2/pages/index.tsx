@@ -1,3 +1,4 @@
+// https://tailwindflex.com/@nishant-trivedi/resume-template-for-tech-field
 import Image from "next/image";
 import { Inter } from "next/font/google";
 // import useSWR from "swr";
@@ -11,13 +12,17 @@ const sections = [
 ]
 
 const resume = require('../public/resume.clintp.json');
-console.log(resume)
+// console.log(resume)
 
+import Markdown from "react-markdown";
+// see https://www.mozzlog.com/blog/react-markdown-custom-renderer
+const CustomH1 = ({ children }) => {
+  return <h1 className="text-4xl font-bold dark:text-white">{children}</h1>
+}
 export default function Home() {
 
   return (
-    <main>
-      <div className="min-h-screen dark:bg-neutral-900">
+    <main className={`min-h-screen dark:bg-neutral-900 ${inter.className}`}>
         <header className="fixed inset-x-0 bottom-0 bg-neutral-800 sm:relative">
           <div className="mx-auto justify-between p-3 sm:flex sm:max-w-4xl sm:p-4">
             <a href="#" className="hidden items-center gap-1 sm:flex">
@@ -26,27 +31,33 @@ export default function Home() {
             </a>
           </div>
         </header>
+       <Markdown components={{h1: CustomH1}}># testing</Markdown>
        <article className="font-fira mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
-      <h1 className="font-fira mb-8 text-4xl font-bold dark:text-white sm:mt-16">About Me</h1>
-      <img className="float-right w-44 rounded-full" src={ resume.basics.image + '?s=1000'} />
+      <h1 className="font-fira mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
+      <img className="float-right w-44 rounded-full" src={ resume.basics.image + '?s=200'} />
       <p className="text-lg dark:text-neutral-200">{ resume.basics.summary }</p>
       <section className="mt-12">
-        <h2 className="text-3xl font-bold dark:text-white">Work Experience</h2>
-
-      </section>
-
-      </article>
-
-
-      </div>
-      <h1 className="font-extrabold text-white my-2 md:my-1 ms-4 md:text-lg">
-        <a href="">$ ./clintp.xyz</a>
-        Hello World
-      </h1>
+        <h2 className="text-3xl font-bold dark:text-white">What have you done?</h2>
       <ul>
-        {sections.map(({ title, href }) => (
-          <li key="">{title}</li>))}
+        {resume.work.map(({ name, location, description }, index) => (
+          <li key={index}>{name}</li>))}
       </ul>
+      </section>
+      <section className="mt-12">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+         <section className="card cursor-pointer rounded p-5 shadow-sm shadow-black/60 transition hover:-translate-y-2 hover:shadow-md hover:shadow-black/50 dark:bg-neutral-800" >
+          <header className="flex items-center justify-between dark:text-gray-50">
+            <h3 className="text-lg font-bold">Some project</h3>
+            <span>123</span>
+          </header>
+          <div className="mt-2 dark:text-gray-300">Generate font size variables for a fluid type scale with CSS clamp.</div>
+          <footer className="my-4 flex gap-1">
+           <span className="bg-neutral-100 px-4 py-1 text-sm dark:bg-neutral-600 dark:text-gray-50"></span>
+          </footer>
+         </section>
+        </div>
+        </section>
+      </article>
     </main>
   )
   // return (
