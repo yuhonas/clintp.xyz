@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Key } from "react";
 const font = Inter({ subsets: ["latin"] });
 
-const resume = require('../public/resume.clintp.json');
-console.log(resume)
+const resume = require('../resume/resume.clintp.json');
+// console.log(resume)
 
 const Header = () => {
   return (

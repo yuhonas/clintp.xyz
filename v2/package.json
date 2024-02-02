@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:resume": "cd resume && node parser.js resume-template.docx resume.clintp.json ../public/resume.docx"
   },
   "dependencies": {
     "next": "14.1.0",
