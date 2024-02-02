@@ -47,6 +47,9 @@ curl -L \
   https://api.github.com/users/yuhonas/repos | jq '[sort_by(.stargazers_count) | reverse | limit(4; .[])]'
 ```
 
+## TODO
+Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
+
 ## Links
 * https://github.com/gauravghongde/social-icons
 * https://www.svgrepo.com/svg/342086/open-source-initiative

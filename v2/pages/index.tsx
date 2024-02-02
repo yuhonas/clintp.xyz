@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google"
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import { Key } from "react";
 const font = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ const Header = () => {
             <span className="text-lg font-bold text-white">$ ./clintp.xyz</span>
           </Link>
         <div className="flex gap-3">
-        {resume.basics.profiles.map(({ network, url }, index) => (
+        {resume.basics.profiles.map(({ network, url }: { network: string, url: string }, index: Key) => (
           <a
             key={index}
             href={url}
@@ -37,7 +38,7 @@ const AboutSection = () => {
     <section className="mt-12">
       <h2 className="text-3xl font-bold dark:text-white mb-8">What have you done?</h2>
       <ul>
-        {resume.work.map(({ name, location, description }, index) => (
+        {resume.work.map(({ name }: { name: any }, index: Key) => (
           <li key={index}>{name}</li>
         ))}
       </ul>
@@ -50,7 +51,7 @@ const ProjectsSection = () => {
     <section className="mt-12">
       <h2 className="text-3xl font-bold dark:text-white mb-8">Some of my Projects</h2>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {resume.projects.map(({ name, keywords, description }, index) => (
+        {resume.projects.map(({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
           <ProjectCard key={index} name={name} keywords={keywords} description={description} />
         ))}
       </div>
@@ -58,7 +59,7 @@ const ProjectsSection = () => {
   );
 }
 
-const ProjectCard = ({ name, keywords, description }) => {
+const ProjectCard = ({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }) => {
   return (
     <section className="card cursor-pointer rounded p-5 shadow-sm shadow-black/60 transition hover:-translate-y-2 hover:shadow-md hover:shadow-black/50 dark:bg-neutral-800">
       <header className="flex items-center justify-between dark:text-gray-50">
@@ -77,21 +78,26 @@ const ProjectCard = ({ name, keywords, description }) => {
 
 export default function Home() {
   return (
-    <main className={`min-h-screen dark:bg-neutral-900 ${font.className}`}>
-      <Header />
-      <article className="mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
-        <h1 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
-        {/* <img className=""  src={resume.basics.image + '?s=175'} alt="Picture of me" /> */}
-        <Image className="float-right rounded-full"
-          src={resume.basics.image + '?s=200'}
-          width={175} height={175}
-          quality="100"
-          alt="Picture of me"
-        />
-        <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
-        <AboutSection />
-        <ProjectsSection />
-      </article>
-    </main>
+    <div>
+      <Head>
+        <title>clintp.xyz - my bio in two mouse clicks or less</title>
+      </Head>
+      <main className={`min-h-screen dark:bg-neutral-900 ${font.className}`}>
+        <Header />
+        <article className="mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
+          <h1 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
+          {/* <img className=""  src={resume.basics.image + '?s=175'} alt="Picture of me" /> */}
+          <Image className="float-right rounded-full"
+            src={resume.basics.image + '?s=200'}
+            width={175} height={175}
+            quality="100"
+            alt="Picture of me"
+          />
+          <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
+          <AboutSection />
+          <ProjectsSection />
+        </article>
+      </main>
+    </div>
   );
 }
