@@ -1,0 +1,37 @@
+{
+  "name": "clintp-xyz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "npm run lint && npm run test:e2e",
+    "test:e2e": "start-server-and-test 'PORT=8080 npm run dev' 8080 'cypress run --browser chrome --headless'",
+    "test:cypress": "cypress open",
+    "build:resume": "cd resume && node parser.js resume-template.docx resume.clintp.json ../public/resume.clintp.docx"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "angular-expressions": "^1.2.1",
+    "autoprefixer": "^10.0.1",
+    "cypress": "^13.6.4",
+    "docxtemplater": "^3.44.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "pizzip": "^3.1.6",
+    "postcss": "^8",
+    "start-server-and-test": "^2.0.3",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
