@@ -14,7 +14,7 @@ const Header = () => {
       <div className="mx-auto justify-between p-3 sm:flex sm:max-w-4xl sm:p-4">
           <Link href="/" className="hidden items-center gap-1 sm:flex">
             <Image className="inline-block w-8 object-cover rounded mr-2" src={resume.basics.image} width={32} height={32} alt="Picture of me" />
-            <span className="text-lg font-bold text-white">$ ./clintp.xyz</span>
+            <h1 className="text-lg font-bold text-white">$ ./clintp.xyz</h1>
           </Link>
         <div className="flex gap-3">
         {resume.basics.profiles.map(({ network, url }: { network: string, url: string }, index: Key) => (
@@ -80,7 +80,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>clintp.xyz - my bio in two mouse clicks or less</title>
+        <title>clintp.xyz | my bio in two mouse clicks or less</title>
+        <meta content="my bio in two mouse clicks or less" name="description" />
       </Head>
       <main className={`min-h-screen dark:bg-neutral-900 ${font.className}`}>
         <Header />
@@ -95,7 +96,10 @@ export default function Home() {
           />
           <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
           <AboutSection />
+          <h3 className="text-3xl font-bold mt-12 mb-8">Would Like to get in Contact?</h3>
+          <p>I can be reached at <a href={ `mailto:` + resume.basics.email } className="hover:underline" >{ resume.basics.email }</a></p>
           <ProjectsSection />
+
         </article>
       </main>
     </div>
