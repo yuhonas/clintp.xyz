@@ -35,7 +35,7 @@ const Header = () => {
 const AboutSection = () => {
   return (
     <section className="mt-12">
-      <h2 className="text-3xl font-bold dark:text-white">What have you done?</h2>
+      <h2 className="text-3xl font-bold dark:text-white mb-8">What have you done?</h2>
       <ul>
         {resume.work.map(({ name, location, description }, index) => (
           <li key={index}>{name}</li>
@@ -48,8 +48,8 @@ const AboutSection = () => {
 const ProjectsSection = () => {
   return (
     <section className="mt-12">
-      <h2 className="text-3xl font-bold dark:text-white">Some of my Projects</h2>
-      <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <h2 className="text-3xl font-bold dark:text-white mb-8">Some of my Projects</h2>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {resume.projects.map(({ name, keywords, description }, index) => (
           <ProjectCard key={index} name={name} keywords={keywords} description={description} />
         ))}

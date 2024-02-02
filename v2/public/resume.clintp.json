@@ -7,7 +7,7 @@
     "email": "hello@clintp.xyz",
     "phone": "",
     "url": "https://clintp.xyz",
-    "summary": "Software engineering manager with over 10 years experience developing for the web across multiple languages. Highly collaborative with an excellent understanding of development best practices throughout the entire SDLC, specializing in growing high-performing agile teams and crafting product/technical roadmaps. Demonstrated success in collaborating with both clients and technical stakeholders, leading to numerous successful deliveries",
+    "summary": "Software engineering manager with over 10 years experience developing for the web across multiple languages. Highly collaborative with an excellent understanding of development best practices throughout the entire SDLC, specialising in growing high-performing agile teams and crafting product/technical roadmaps. Demonstrated success in collaborating with both clients and technical stakeholders, leading to numerous successful deliveries",
     "location": {
       "address": "",
       "postalCode": "",
@@ -32,12 +32,12 @@
     {
       "name": "Startup Advisor & Lead Engineer Freelance",
       "location": "Melbourne, Australia",
-      "description": "Startup Advisor and Lead Engineer, specializing in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
+      "description": "Startup Advisor and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
       "position": "Owner",
       "url": "https://clintp.xyz",
       "endDate": "2024-01-15",
       "startDate": "2023-04-01",
-      "summary": "Startup Advisor, fractional CTO and Lead Engineer, specializing in 0-day startups. I provide strategic guidance, lead MVP development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
+      "summary": "Startup Advisor, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
       "highlights": [
         "Worked with some of Australia's most exciting emerging startups"
       ]
@@ -77,7 +77,7 @@
     {
       "name": "GOAT",
       "location": "Los Angeles, USA",
-      "description": "Startup Advisor and Lead Engineer, specializing in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
+      "description": "Startup Advisor and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
       "position": "Engineering Manager",
       "url": "https://www.goat.com/",
       "endDate": "2020-04-01",
@@ -248,7 +248,8 @@
       "institution": "The Improv Conspiracy Theatre",
       "url": "https://www.improvconspiracy.com/workshops/starter-101-introduction-to-long-form-improv",
       "area": "Performing Arts",
-      "studyType": "Misc",
+      "studyType": "Short Course",
+      "location": "Melbourne, Australia",
       "startDate": "2022",
       "endDate": "2022",
       "score": "",
@@ -260,6 +261,7 @@
       "institution": "Complete Hospitality Training",
       "url": "https://cht.edu.au/courses/barista-coffee-course",
       "area": "Hospitality",
+      "location": "Melbourne, Australia",
       "studyType": "Certificate",
       "startDate": "2007",
       "endDate": "2007",
@@ -269,6 +271,7 @@
     {
       "institution": "Swinburne University",
       "url": "https://www.swinburne.edu.au/",
+      "location": "Melbourne, Australia",
       "area": "Computing",
       "studyType": "Bachelor of Applied Science",
       "startDate": "2001",
