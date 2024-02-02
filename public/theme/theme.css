@@ -1,0 +1,60 @@
+body {
+  height: 100%;
+  @apply bg-theme;
+  transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out;
+}
+
+.bg-theme {
+  background-color: var(--background)
+}
+
+/* media query for screens greater then 768px */
+@media (min-width: 768px) {
+  body {
+    background: var(--background) var(--wallpaper2000w) no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+/* media query for screens greater then 2000px */
+@media (min-width: 2000px) {
+  body {
+    background: var(--background) var(--wallpaper4000w) no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+.ansi-art {
+  content: var(--ansiart);
+}
+
+.markdown a {
+  color: var(--color13);
+  text-decoration: underline;
+}
+.markdown a:hover {
+  background-color: var(--color12);
+  color: var(--color15);
+}
+
+.markdown  h2 {
+  @apply text-2xl mb-4;
+  color: var(--color6);
+}
+
+.markdown p {
+  @apply mb-4 text-sm;
+  color: var(--color7);
+}
+
+/* Chrome, Edge, and Safari */
+.terminal *::-webkit-scrollbar {
+  width: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.terminal *::-webkit-scrollbar-thumb {
+  background-color: var(--color11);
+  border-radius: 14px;
+  scrollbar-width: thin;
+}

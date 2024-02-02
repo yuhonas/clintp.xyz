@@ -94,8 +94,12 @@ export default function Home() {
             alt="Picture of me"
           />
           <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
+          <h3 className="text-3xl font-bold mt-12 mb-8">Looking for a Resume?</h3>
+          <ul className="mb-4 flex gap-3">
+            <Link href="/resume.clintp.docx" className="hover:underline"><Image src="images/icon-file-docx.svg" width={30} height={30} className="" alt="docx" /></Link>
+          </ul>
           {/* <AboutSection /> */}
-          <h3 className="text-3xl font-bold mt-12 mb-8">Would Like to get in Contact?</h3>
+          <h3 className="text-3xl font-bold mt-12 mb-8">Want to get in Contact?</h3>
           <p>I can be reached at <a href={ `mailto:` + resume.basics.email } className="hover:underline" >{ resume.basics.email }</a></p>
           <ProjectsSection />
 

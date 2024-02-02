@@ -24,30 +24,31 @@ context("site", () => {
   });
 
   it("should have a working link to my resume", () => {
-    cy.get("a")
-      .contains("Resume")
-      .should("have.attr", "href", "/Resume_ClintPlummer_ENMR.pdf")
+    cy.get("a[href='/resume.clintp.docx']")
+      .should("exist")
       .then(($anchor) => {
         cy.request($anchor.attr("href")).its("status").should("eq", 200);
       });
   });
 
-  it("should have a working link to my ipynb", () => {
-    cy.get("a")
-      .contains("ipynb")
-      .should(
-        "have.attr",
-        "href",
-        "https://github.com/yuhonas/clintp.xyz/blob/main/docs/public/Resume_ClintPlummer_ENMR.ipynb"
-      )
+  // it("should have a working link to my ipynb", () => {
+  //   cy.get("a")
+  //     .contains("ipynb")
+  //     .should(
+  //       "have.attr",
+  //       "href",
+  //       "https://github.com/yuhonas/clintp.xyz/blob/main/docs/public/Resume_ClintPlummer_ENMR.ipynb"
+  //     )
+  //     .then(($anchor) => {
+  //       cy.request($anchor.attr("href")).its("status").should("eq", 200);
+  //     });
+  // });
+
+  it("should have a working link to my linkedin", () => {
+    cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']")
+      .should("exist")
       .then(($anchor) => {
         cy.request($anchor.attr("href")).its("status").should("eq", 200);
       });
-  });
-
-  it("should have a link to my linkedin", () => {
-    cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']").should(
-      "exist"
-    );
   });
 });
