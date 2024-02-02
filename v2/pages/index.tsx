@@ -12,26 +12,29 @@ const sections = [
 ]
 
 const resume = require('../public/resume.clintp.json');
-// console.log(resume)
+console.log(resume)
 
 import Markdown from "react-markdown";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode, Key } from "react";
+import getConfig from "next/config";
 // see https://www.mozzlog.com/blog/react-markdown-custom-renderer
 const CustomH1 = ({ children }) => {
   return <h1 className="text-4xl font-bold dark:text-white">{children}</h1>
 }
+
 export default function Home() {
 
   return (
     <main className={`min-h-screen dark:bg-neutral-900 ${inter.className}`}>
         <header className="fixed inset-x-0 bottom-0 bg-neutral-800 sm:relative">
           <div className="mx-auto justify-between p-3 sm:flex sm:max-w-4xl sm:p-4">
-            <a href="#" className="hidden items-center gap-1 sm:flex">
+            <a href="/" className="hidden items-center gap-1 sm:flex">
                 <img className="inline-block w-8 object-cover rounded" src={resume.basics.image} />
-              <span className="font-fira text-lg font-bold text-white">{ resume.basics.name }</span>
+              <span className="font-fira text-lg font-bold text-white">$ ./clintp.xyz</span>
             </a>
           </div>
         </header>
-       <Markdown components={{h1: CustomH1}}># testing</Markdown>
+       <Markdown components={{h1: CustomH1}}></Markdown>
        <article className="font-fira mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
       <h1 className="font-fira mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
       <img className="float-right w-44 rounded-full" src={ resume.basics.image + '?s=200'} />
@@ -44,17 +47,28 @@ export default function Home() {
       </ul>
       </section>
       <section className="mt-12">
+        <h2 className="text-3xl font-bold dark:text-white">Some of my Projects</h2>
+
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-         <section className="card cursor-pointer rounded p-5 shadow-sm shadow-black/60 transition hover:-translate-y-2 hover:shadow-md hover:shadow-black/50 dark:bg-neutral-800" >
-          <header className="flex items-center justify-between dark:text-gray-50">
-            <h3 className="text-lg font-bold">Some project</h3>
-            <span>123</span>
-          </header>
-          <div className="mt-2 dark:text-gray-300">Generate font size variables for a fluid type scale with CSS clamp.</div>
-          <footer className="my-4 flex gap-1">
-           <span className="bg-neutral-100 px-4 py-1 text-sm dark:bg-neutral-600 dark:text-gray-50"></span>
-          </footer>
-         </section>
+         {resume.projects.map(({ name, keywords, description }, index) => (
+           <section key={index} className="card cursor-pointer rounded p-5 shadow-sm shadow-black/60 transition hover:-translate-y-2 hover:shadow-md hover:shadow-black/50 dark:bg-neutral-800" >
+            <header className="flex items-center justify-between dark:text-gray-50">
+              <h3 className="text-lg font-bold">{name}</h3>
+              <Image src="/images/logo-open-source-initiative.svg"
+              width={20}
+              height={20}
+              className="dark:invert"
+              alt="Open Source Initiative Logo"
+              />
+            </header>
+            <div className="mt-2 dark:text-gray-300">{description}</div>
+            <footer className="my-4 flex gap-1">
+             {keywords.map((keyword: string, index: Key ) => (
+               <span key={index} className="bg-neutral-100 px-4 py-1 text-sm dark:bg-neutral-600 dark:text-gray-50">{keyword}</span>
+             ))}
+            </footer>
+           </section>
+          ))}
         </div>
         </section>
       </article>

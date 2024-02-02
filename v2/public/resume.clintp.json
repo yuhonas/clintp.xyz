@@ -7,7 +7,7 @@
     "email": "hello@clintp.xyz",
     "phone": "",
     "url": "https://clintp.xyz",
-    "summary": "I'm a Software engineering manager with over 10 years experience developing for the web in a multitude of languages, highly collaborative with an excellent understanding of development best practices throughout the entire SDLC.\nExperience owning & crafting product / technical road maps collaborating with both clients and technical stakeholders to many successful deliveries.",
+    "summary": "Software engineering manager with over 10 years experience developing for the web across multiple languages. Highly collaborative with an excellent understanding of development best practices throughout the entire SDLC, specializing in growing high-performing agile teams and crafting product/technical roadmaps. Demonstrated success in collaborating with both clients and technical stakeholders, leading to numerous successful deliveries",
     "location": {
       "address": "",
       "postalCode": "",
@@ -161,7 +161,7 @@
       "summary": "",
       "highlights": [
         "Provided guidance on product strategy, ownership, and best practices",
-        "Made key individual contributions (IC) with a focus on Django/Python.",
+        "Made key individual contributions (IC) with a focus on Django/Python",
         "Implemented and optimized development (CI/CD) pipelines for increased efficiency",
         "Advised on and assisted with the hiring and recruiting process"
       ]
@@ -319,7 +319,7 @@
   ],
   "projects": [
     {
-      "name": "Miss Direction",
+      "name": "Free exercise DB",
       "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
       "highlights": [
       ],
@@ -330,7 +330,24 @@
       "endDate": "2024-01-01",
       "url": "https://github.com/yuhonas/free-exercise-db",
       "roles": [
-        "Creator", "Engineer"
+        "Creator"
+      ],
+      "entity": "owner",
+      "type": "open-source"
+    },
+    {
+      "name": "zsh ansimotd",
+      "description": "a zsh-plugin to display old skool ansi & ascii bbs art on logon",
+      "highlights": [
+      ],
+      "keywords": [
+        "art", "bbs", "zsh-plugin"
+      ],
+      "startDate": "2023-03-01",
+      "endDate": "2024-01-01",
+      "url": "https://github.com/yuhonas/zsh-ansimotd",
+      "roles": [
+        "Creator"
       ],
       "entity": "owner",
       "type": "open-source"

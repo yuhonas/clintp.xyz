@@ -38,3 +38,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Top repos
+```bash
+curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/users/yuhonas/repos | jq '[sort_by(.stargazers_count) | reverse | limit(4; .[])]'
+```
+
+## Links
+* https://github.com/gauravghongde/social-icons
+* https://www.svgrepo.com/svg/342086/open-source-initiative
