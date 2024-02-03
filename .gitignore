@@ -35,6 +35,21 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# python
+__pycache__
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
 
 # cypress
+cypress/videos
 cypress/screenshots
