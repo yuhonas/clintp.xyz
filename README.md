@@ -1,80 +1,55 @@
-# clintp.xyz - my bio site &nbsp;![test, build and deploy site](https://github.com/yuhonas/clintp.xyz/workflows/test,%20build%20and%20deploy%20site/badge.svg)
-
-![Site Preview](./gh-site-preview.avif)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-This is a simple one page bio site that uses [vitepress](https://vitepress.dev/) with some basic CI/CD using [github actions](./.github/workflows/ci.yml) and a resume built using [latex](https://www.latex-project.org/)
+First, run the development server:
 
-### Prerequisites
-
-### Site
-
-* Node.js 18.x
-
-### Installing
-
-Install all our dependencies
-
-```
-$ npm install
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Development
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To run a local web server for development
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-```
-$ npm run docs:dev
-```
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## Running the tests
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### End-to-end tests
-```
-npm run ci:e2e
-```
+## Learn More
 
-## Building the site
+To learn more about Next.js, take a look at the following resources:
 
-To build a static website for hosting
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-npm run docs:build
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deployment
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This site is automatically built and deployed by [github actions](https://github.com/actions) to [Github Pages](https://pages.github.com/)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
-## Building the resume
-
-My resume is built using [latex](https://www.latex-project.org/)
-
-![picture of latex envy](./gh-latexenvy.png)
-
-### Dependencies
-
-You will need [ basictex ](https://tug.org/mactex/morepackages.html) installed in order to produce a pdf
-or (what ever format you want)
-
-Install basictex using homebrew
-
-```
-$ brew install basictex
+## Top repos
+```bash
+curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/users/yuhonas/repos | jq '[sort_by(.stargazers_count) | reverse | limit(4; .[])]'
 ```
 
-The following packages are utilised in the latex document and will also need to be installed via latex's package manager
+## TODO
+Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
 
-```
-$ tlmgr install moresize raleway ly1 fontawesome
-```
-
-To export it to pdf
-
-```
-$ npm resume:export
-```
+## Links
+* https://github.com/gauravghongde/social-icons
+* https://www.svgrepo.com/svg/342086/open-source-initiative
