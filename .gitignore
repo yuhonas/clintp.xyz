@@ -53,3 +53,6 @@ __pycache__
 # cypress
 cypress/videos
 cypress/screenshots
+
+# jupyter notebook
+resume/.ipynb_checkpoints/
