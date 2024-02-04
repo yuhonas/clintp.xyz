@@ -30,14 +30,14 @@
   },
   "work": [
     {
-      "name": "Startup Advisor & Lead Engineer Freelance",
+      "name": "Startup Adviser & Lead Engineer Freelance",
       "location": "Melbourne, Australia",
-      "description": "Startup Advisor and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
+      "description": "Startup Adviser and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
       "position": "Owner",
       "url": "https://clintp.xyz",
       "endDate": "2024-01-15",
       "startDate": "2023-04-01",
-      "summary": "Startup Advisor, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
+      "summary": "Startup Adviser, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
       "highlights": [
         "Worked with some of Australia's most exciting emerging startups"
       ]
@@ -77,7 +77,7 @@
     {
       "name": "GOAT",
       "location": "Los Angeles, USA",
-      "description": "Startup Advisor and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
+      "description": "Startup Adviser and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
       "position": "Engineering Manager",
       "url": "https://www.goat.com/",
       "endDate": "2020-04-01",
@@ -99,11 +99,11 @@
       "summary": "",
       "highlights": [
         "Pragmatically defined & owned the product technology roadmap and provided architectural direction to teams through deep collaboration with product owners, QA, teams & other stakeholders, roadmap artefacts were created in the form of user stories & through visual language eg. UML",
-        "Championed key initiatives to increase release predicability & reliability, reducing cycle time, reducing escaped defects through collaboration with multiple facets of the business such as management, support, sales & engineering",
+        "Championed key initiatives to increase release predictability & reliability, reducing cycle time, reducing escaped defects through collaboration with multiple facets of the business such as management, support, sales & engineering",
         "Selected and evangelised appropriate design and integration patterns with first/third parties & processes to help scale the business through contribution to the organisation's wiki, lightning talks and pair programming / mentoring resulting in improvements to organisations engineering conceptual integrity & reduced cycle time for user stories",
         "Developed technical tools to aid in story visibility through the development pipeline & defect tracking/resolution",
         "Engaged in Web App & Network Security, PEN Testing & PCI Compliance",
-        "Maintained a suite of apps hosting in AWS using Config Management (Ansible/Chef) & PaaS such as Elastic Beanstalk, Heroku and containerisation using Docker",
+        "Maintained a suite of apps hosting in AWS using Configuration Management (Ansible/Chef) & PaaS such as Elastic Beanstalk, Heroku and containerisation using Docker",
         "Orchestrated a zero downtime organisation wide migration to Heroku (PaaS) from Ansible/Chef managed infrastructure, this resulted in a reduced operational overhead on the engineering team & direct cost saving's through a reduction in hosting costs",
         "Provided direction/planning to engineering teams and collaborated with third party vendors in order to meet PCI / GDPR compliance"
       ]
@@ -125,7 +125,7 @@
         "Engaged in application performance, load & stress testing and implemented appropriate infrastructure and processes to support a 10x growth in on-boarded companies",
         "Implemented/improved many technical and operational procedures and processes to facilitate scaling the business such as streamlining/automating the support, implementation & development pipelines with a constant emphasis on continuous improvement",
         "Improved backlog priority transparency & stability through sequencing using a very simple cost/value weighting, it was previously ordered via the HiPPO method which wasn't scaling",
-        "Identified key differentiators & opportunities through user & sales feedbackbacklog and competitor analysis within the market and crafted user stories to guide product development",
+        "Identified key unique selling points, key features and competitive advantages through user, sales feedback and competitor analysis within the market and crafted user stories to guide product development",
         "Guided product decisions through empiricism primarily through the build, measure lean feedback loop",
         "Advocated a product strategy of saying \"no\" more than \"yes\" on the back of maintaining integrity of our product vision",
         "Supported and collaborated with third parties through due diligence as part of an acquisition",
@@ -154,7 +154,7 @@
       "name": "Revelthat",
       "location": "Melbourne, Australia",
       "description": "Revelthat is a stone stop stop event management platform & marketplace that allows you to create, manage and promote your events",
-      "position": "Advisor",
+      "position": "Adviser",
       "url": "https://www.revelthat.com/",
       "endDate": "2018-07-01",
       "startDate": "2017-03-01",
@@ -162,7 +162,7 @@
       "highlights": [
         "Provided guidance on product strategy, ownership, and best practices",
         "Made key individual contributions (IC) with a focus on Django/Python",
-        "Implemented and optimized development (CI/CD) pipelines for increased efficiency",
+        "Implemented and optimised development (CI/CD) pipelines for increased efficiency",
         "Advised on and assisted with the hiring and recruiting process"
       ]
     },
@@ -180,14 +180,14 @@
         "Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management",
         "Delivered E2E & supported over 20 projects with Ruby on Rails/Zend Framework",
         "Built a custom Zend Framework based Video Delivery platform that was pitched as a corporate Video Delivery Platform & CMS, this integrated with third party video platforms such as Brightcove and BitsOnTheRun. Features such as channel creation, pre/post roll advertisement injection, video scheduling and search by time based video meta data, it was later sold to a USA based company",
-        "Phased out a legacy custom built PHP CMS and co-ordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites",
-        "Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings* Lead, hired and mentored other software engineers * Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management * Delivered E2E & supported over 20 projects with Rails/Zend Framework * Built a custom Zend Framework based Video Delivery platform that was pitched as a corporate Video Delivery Platform & CMS, this integrated with third party video platforms such as Brightcove and BitsOnTheRun. Features such as channel creation, pre/post roll advertisement injection, video scheduling and search by time based video meta data, it was later sold to a USA based company. * Phased out a legacy custom built PHP CMS and co-ordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites. * Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings"
+        "Phased out a legacy custom built PHP CMS and coordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites",
+        "Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings* Lead, hired and mentored other software engineers * Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management * Delivered E2E & supported over 20 projects with Rails/Zend Framework * Built a custom Zend Framework based Video Delivery platform that was pitched as a corporate Video Delivery Platform & CMS, this integrated with third party video platforms such as Brightcove and BitsOnTheRun. Features such as channel creation, pre/post roll advertisement injection, video scheduling and search by time based video meta data, it was later sold to a USA based company. * Phased out a legacy custom built PHP CMS and coordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites. * Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings"
       ]
     },
     {
       "name": "Boche Collection",
       "location": "Melbourne, Australia",
-      "description": "Boutique fashion label, with a focus on streetwear with indie chic & global influences",
+      "description": "Boutique fashion label, with a focus on street-wear with indie chic & global influences",
       "position": "Co-Owner",
       "url": "https://web.archive.org/web/20130409102008/http://www.bochecollection.com.au/",
       "endDate": "2012-05-01",
@@ -207,7 +207,7 @@
       "startDate": "2008-03-01",
       "summary": "",
       "highlights": [
-        "Worked in a team developing a complex advertisement builder for Australia Post using a custom inhouse CMS"
+        "Worked in a team developing a complex advertisement builder for Australia Post using a custom in-house CMS"
       ]
     },
     {
@@ -254,7 +254,7 @@
       "endDate": "2022",
       "score": "",
       "courses": [
-        "Introduction to Long Form Improv"
+        "Introduction to Long Form Improvisational Comedy"
       ]
     },
     {
@@ -323,7 +323,7 @@
   "projects": [
     {
       "name": "Free exercise DB",
-      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
+      "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable front-end",
       "highlights": [
       ],
       "keywords": [
