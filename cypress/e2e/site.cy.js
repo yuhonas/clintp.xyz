@@ -31,18 +31,15 @@ context("site", () => {
       });
   });
 
-  // it("should have a working link to my ipynb", () => {
-  //   cy.get("a")
-  //     .contains("ipynb")
-  //     .should(
-  //       "have.attr",
-  //       "href",
-  //       "https://github.com/yuhonas/clintp.xyz/blob/main/docs/public/Resume_ClintPlummer_ENMR.ipynb"
-  //     )
-  //     .then(($anchor) => {
-  //       cy.request($anchor.attr("href")).its("status").should("eq", 200);
-  //     });
-  // });
+  it("should have a working link to my python notebook", () => {
+    cy.get(
+      "a[href='https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb']"
+    )
+      .should("exist")
+      .then(($anchor) => {
+        cy.request($anchor.attr("href")).its("status").should("eq", 200);
+      });
+  });
 
   it("should have a working link to my linkedin", () => {
     cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']")

@@ -6,7 +6,6 @@ import { Key } from "react";
 const font = Inter({ subsets: ["latin"] });
 
 const resume = require('../resume/resume.clintp.json');
-// console.log(resume)
 
 const Header = () => {
   return (
@@ -96,6 +95,7 @@ export default function Home() {
           <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
           <h3 className="text-3xl font-bold mt-12 mb-8">Looking for a Resume?</h3>
           <ul className="mb-4 flex gap-3">
+            <Link href="/Resume_ClintPlummer_ENMR.pdf" className="fill-blue-500"><Image src="images/icon-file-pdf.svg" width={30} height={30} className="" alt="pdf" /></Link>
             <Link href="/resume.clintp.docx" className="hover:underline"><Image src="images/icon-file-docx.svg" width={30} height={30} className="" alt="docx" /></Link>
             <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline"><Image src="images/icon-file-ipynb.svg" width={30} height={30} className="" alt="ipynb" /></Link>
           </ul>
