@@ -103,8 +103,10 @@ export default function Home() {
               width={30}
               height={30}
               alt="pdf"
+              className="mb-2 ml-5"
             />
           </Link>
+          <p className="text-xs">Regular PDF</p>
           <h4 className="text-2xl font-bold mt-12 mb-8">Something to geek out on</h4>
             <ul className="mb-4 flex gap-3">
               <li className="">
