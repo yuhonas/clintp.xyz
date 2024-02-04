@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-output=$(cat resume.clintp.json |\
-   jq -r '.. | scalars' |\
-   tr -cs 'a-zA-Z' '\n' |\
-   grep -vwFf ./spellcheck/ignorelist.txt |\
-   hunspell -d ./spellcheck/en_AU -L)
+script_dir=$(dirname "$0")
+output=$(cat "$1" |\
+  jq -r '.. | scalars' |\
+  tr -cs 'a-zA-Z' '\n' |\
+   grep -vwFf ./$script_dir/spellcheck/ignorelist.txt |\
+   hunspell -d ./$script_dir/spellcheck/en_AU -L)
 
 if [[ -z "$output" ]]; then
   echo "No spelling errors found"

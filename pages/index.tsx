@@ -6,8 +6,9 @@ import { Key } from "react";
 const font = Inter({ subsets: ["latin"] });
 
 const resume = require('../resume/resume.clintp.json');
+// const githubUrl = resume.basics.profiles.find(({ network }: { network: string }) => network.toLowerCase() === 'github')?.url;
 
-const Header = () => {
+const Header = ({ profiles }: { profiles: Array<{ network: string, url: string }> }) => {
   return (
     <header className="fixed inset-x-0 bottom-0 bg-neutral-800 sm:relative">
       <div className="mx-auto justify-between p-3 sm:flex sm:max-w-4xl sm:p-4">
@@ -16,7 +17,7 @@ const Header = () => {
             <h1 className="text-lg font-bold text-white">$ ./clintp.xyz</h1>
           </Link>
         <div className="flex gap-3">
-        {resume.basics.profiles.map(({ network, url }: { network: string, url: string }, index: Key) => (
+        {profiles.map(({ network, url }: { network: string, url: string }, index: Key) => (
           <a
             key={index}
             href={url}
@@ -37,7 +38,7 @@ const AboutSection = () => {
     <section className="mt-12">
       <h2 className="text-3xl font-bold dark:text-white mb-8">What have you done?</h2>
       <ul>
-        {resume.work.map(({ name }: { name: any }, index: Key) => (
+        {resume.work.map(({ name }: { name: string }, index: Key) => (
           <li key={index}>{name}</li>
         ))}
       </ul>
@@ -45,12 +46,13 @@ const AboutSection = () => {
   );
 }
 
-const ProjectsSection = () => {
+const ProjectsSection = ( {projects}: { projects: Array<{name:string, keywords:Array<string>, description: string}>}) => {
   return (
     <section className="mt-12">
       <h2 className="text-3xl font-bold dark:text-white mb-8">Some of my Projects</h2>
+      {/* <p className="mb-8">In my freetime I like to work on some open source projects, here's some of my top ones but also checkout my <a href="{ githubUrl }">github</a></a></p> */}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {resume.projects.map(({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
+        {projects.map(({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
           <ProjectCard key={index} name={name} keywords={keywords} description={description} />
         ))}
       </div>
@@ -83,7 +85,7 @@ export default function Home() {
         <meta content="my bio in two mouse clicks or less" name="description" />
       </Head>
       <main className={`min-h-screen dark:bg-neutral-900 ${font.className}`}>
-        <Header />
+        <Header profiles={resume.basics.profiles} />
         <article className="mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
           <h1 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
           <Image className="float-right rounded-full"
@@ -94,15 +96,44 @@ export default function Home() {
           />
           <p className="text-lg dark:text-neutral-200">{resume.basics.summary}</p>
           <h3 className="text-3xl font-bold mt-12 mb-8">Looking for a Resume?</h3>
-          <ul className="mb-4 flex gap-3">
-            <Link href="/Resume_ClintPlummer_ENMR.pdf" className="fill-blue-500"><Image src="images/icon-file-pdf.svg" width={30} height={30} className="" alt="pdf" /></Link>
-            <Link href="/resume.clintp.docx" className="hover:underline"><Image src="images/icon-file-docx.svg" width={30} height={30} className="" alt="docx" /></Link>
-            <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline"><Image src="images/icon-file-ipynb.svg" width={30} height={30} className="" alt="ipynb" /></Link>
-          </ul>
+          <Link href="/Resume_ClintPlummer_ENMR.pdf"
+          className="hover:saturate-200"
+          >
+            <Image src="images/icon-file-pdf.svg"
+              width={30}
+              height={30}
+              alt="pdf"
+            />
+          </Link>
+          <h4 className="text-2xl font-bold mt-12 mb-8">Something to geek out on</h4>
+            <ul className="mb-4 flex gap-3">
+              <li className="">
+                <Link href="/resume.clintp.docx" className="hover:underline">
+                  <Image src="images/icon-file-docx.svg"
+                   width={30}
+                   height={30}
+                   className="mx-auto mb-2"
+                   alt="docx"
+                  />
+                </Link>
+                <p className="text-xs">ATS Optimized</p>
+              </li>
+              <li className="">
+                <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline">
+                  <Image src="images/icon-file-ipynb.svg"
+                   width={30}
+                   height={30}
+                   className="mx-auto mb-2"
+                   alt="ipynb"
+                  />
+                </Link>
+                <p className="text-xs">Jupyter  Notebook</p>
+              </li>
+            </ul>
           {/* <AboutSection /> */}
-          <h3 className="text-3xl font-bold mt-12 mb-8">Want to get in Contact?</h3>
+          <h3 className="text-3xl font-bold mt-12 mb-8">Want to talk?</h3>
           <p>I can be reached at <a href={ `mailto:` + resume.basics.email } className="hover:underline" >{ resume.basics.email }</a></p>
-          <ProjectsSection />
+          <ProjectsSection projects={resume.projects}/>
         </article>
       </main>
     </div>

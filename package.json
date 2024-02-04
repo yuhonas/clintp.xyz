@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "npm run lint && npm run test:e2e",
+    "test": "npm run lint && ./resume/test.sh && npm run test:e2e",
     "test:e2e": "start-server-and-test 'PORT=8080 npm run dev' 8080 'cypress run --browser chrome --headless'",
     "test:cypress": "cypress open",
     "build:resume": "cd resume && node parser.js resume-template.docx resume.clintp.json ../public/resume.clintp.docx"

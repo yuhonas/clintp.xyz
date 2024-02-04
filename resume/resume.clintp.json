@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
   "basics": {
     "name": "Clint Plummer",
     "label": "Engineering Manager",
@@ -7,7 +7,7 @@
     "email": "hello@clintp.xyz",
     "phone": "",
     "url": "https://clintp.xyz",
-    "summary": "Software engineering manager with over 10 years experience developing for the web across multiple languages. Highly collaborative with an excellent understanding of development best practices throughout the entire SDLC, specialising in growing high-performing agile teams and crafting product/technical roadmaps. Demonstrated success in collaborating with both clients and technical stakeholders, leading to numerous successful deliveries",
+    "summary": "Software engineering manager with over 10 years experience developing for the web across multiple languages. Highly collaborative with an excellent understanding of development best practices throughout the entire SDLC, specialising in growing high-performing agile teams and crafting product/technical roadmaps. Demonstrated success in collaborating with both clients and technical stakeholders, leading to many successful deliveries",
     "location": {
       "address": "",
       "postalCode": "",

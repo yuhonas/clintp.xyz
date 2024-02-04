@@ -12,6 +12,7 @@ pillow = "*"
 texsoup = "*"
 sumy = "*"
 py-readability-metrics = "*"
+check-jsonschema = "*"
 
 [requires]
 python_version = "3.9"
