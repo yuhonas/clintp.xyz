@@ -109,7 +109,7 @@ export default function Home() {
           <p className="text-xs">Regular PDF</p>
           <h4 className="text-2xl font-bold mt-12 mb-8">Something to geek out on</h4>
             <ul className="mb-4 flex gap-3">
-              <li className="">
+              <li>
                 <Link href="/resume.clintp.docx" className="hover:underline">
                   <Image src="images/icon-file-docx.svg"
                    width={30}
@@ -120,7 +120,7 @@ export default function Home() {
                 </Link>
                 <p className="text-xs">ATS Optimized</p>
               </li>
-              <li className="">
+              <li>
                 <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline">
                   <Image src="images/icon-file-ipynb.svg"
                    width={30}
@@ -130,6 +130,17 @@ export default function Home() {
                   />
                 </Link>
                 <p className="text-xs">Jupyter  Notebook</p>
+              </li>
+              <li>
+                <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.json" className="hover:underline">
+                  <Image src="images/icon-file-json.svg"
+                   width={30}
+                   height={30}
+                   className="mx-auto mb-2"
+                   alt="ipynb"
+                  />
+                </Link>
+                <p className="text-xs">JSON Resume</p>
               </li>
             </ul>
           {/* <AboutSection /> */}
