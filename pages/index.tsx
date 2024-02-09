@@ -87,7 +87,7 @@ export default function Home() {
       <main className={`min-h-screen dark:bg-neutral-900 ${font.className}`}>
         <Header profiles={resume.basics.profiles} />
         <article className="mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
-          <h1 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h1>
+          <h2 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h2>
           <Image className="float-right rounded-full"
             src={resume.basics.image + '?s=200'}
             width={175} height={175}
