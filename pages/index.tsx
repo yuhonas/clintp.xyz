@@ -13,7 +13,7 @@ const Header = ({ profiles }: { profiles: Array<{ network: string, url: string }
     <header className="fixed inset-x-0 bottom-0 bg-neutral-800 sm:relative">
       <div className="mx-auto justify-between p-3 sm:flex sm:max-w-4xl sm:p-4">
           <Link href="/" className="hidden items-center gap-1 sm:flex">
-            <Image className="inline-block w-8 object-cover rounded mr-2" src={resume.basics.image} width={32} height={32} alt="Picture of me" />
+            <Image className="inline-block w-8 object-cover rounded mr-2" src={'favicon.svg'} width={32} height={32} alt="Picture of me" />
             <h1 className="text-lg font-bold text-white">$ ./clintp.xyz</h1>
           </Link>
         <div className="flex gap-3">
@@ -89,7 +89,7 @@ export default function Home() {
         <article className="mx-auto max-w-3xl p-4 selection:bg-black selection:text-white">
           <h2 className="mb-8 text-4xl font-bold dark:text-white sm:mt-16">Who?</h2>
           <Image className="float-right rounded-full"
-            src={resume.basics.image + '?s=200'}
+            src={resume.basics.image}
             width={175} height={175}
             quality="100"
             alt="Picture of me"
