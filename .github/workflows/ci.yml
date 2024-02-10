@@ -1,42 +1,45 @@
-# name: test, build and deploy site
-# on: [push]
-# jobs:
-#   cypress-run:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: checkout
-#         uses: actions/checkout@v3
-#       - name: run e2e tests
-#         uses: cypress-io/github-action@v5
-#         with:
-#           start: npm run ci:e2e
-#         env:
-#           CYPRESS_baseUrl: http://localhost:8080/
-#       - uses: actions/upload-artifact@v3
-#         if: failure()
-#         with:
-#           name: cypress-screenshots
-#           path: ./cypress/videos/
-#   build:
-#     needs: cypress-run
-#     runs-on: ubuntu-latest
-#     if: github.ref == 'refs/heads/main'
-#     steps:
-#     - uses: actions/checkout@v3
-#     - name: setup node
-#       uses: actions/setup-node@v3
-#       with:
-#         node-version: '18.x'
-#         cache: 'npm'
-#     - name: build for static hosting
-#       run: |
-#         npm install
-#         npm run docs:build
-#         touch docs/.vitepress/dist/.nojekyll # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-#     - name: deploy the site
-#       uses: crazy-max/ghaction-github-pages@v2
-#       with:
-#         build_dir: docs/.vitepress/dist/
-#         fqdn: ${{ secrets.SITE_FQDN }}
-#       env:
-#         GH_PAT: ${{ secrets.DEPLOYMENT_PAT }}
+name: test, build and deploy site
+on: [push]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: run e2e tests
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm run test:e2e
+        env:
+          CYPRESS_baseUrl: http://localhost:8080/
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: ./cypress/videos/
+  build-and-deploy:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+  update-resume-gist:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Update Resume Gist
+      uses: exuanbo/actions-deploy-gist@v1
+      with:
+        token: ${{ secrets.TOKEN }}
+        gist_id: 1ab255457bdc9c22a4453ad383bc3108
+        file_path: resume/resume.clintp.json

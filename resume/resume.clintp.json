@@ -3,7 +3,7 @@
   "basics": {
     "name": "Clint Plummer",
     "label": "Engineering Manager",
-    "image": "https://gravatar.com/avatar/47dcd08e87e97b88d915d83ec373da74",
+    "image": "https://gravatar.com/avatar/47dcd08e87e97b88d915d83ec373da74?s=200",
     "email": "hello@clintp.xyz",
     "phone": "",
     "url": "https://clintp.xyz",
@@ -69,7 +69,7 @@
       "startDate": "2021-03-01",
       "summary": "",
       "highlights": [
-        "Random multiple campaigns to evaluate problem/solution fit",
+        "Ran multiple campaigns to evaluate problem/solution fit",
         "Built a landing page & MVP",
         "Pitched to Antler & was accepted into the program"
       ]

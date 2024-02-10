@@ -13,6 +13,7 @@ texsoup = "*"
 sumy = "*"
 py-readability-metrics = "*"
 check-jsonschema = "*"
+prefect = "*"
 
 [requires]
 python_version = "3.9"

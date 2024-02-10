@@ -9,7 +9,8 @@ To further explore the resume data you can use [lite.datasette.io](https://lite.
 
 ### Prerequisites
 
-* Node.js 20.x
+* Node.js 18.x
+* npm 10.x
 
 ### Installing
 
@@ -63,8 +64,16 @@ curl -L \
 ```
 
 ## TODO
-Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
+- [ ] Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
+- [ ] Add vCard/QRCode or https://en.wikipedia.org/wiki/MeCard_(QR_code)
+- [ ] Add HTML Template
+- [ ] Add workflow orchestration
+- [ ] Add PDF
+- [ ] Implement JSON Source View - https://mac-s-g.github.io/react-json-view/demo/dist/
 
 ## Links
 * https://github.com/gauravghongde/social-icons
 * https://www.svgrepo.com/svg/342086/open-source-initiative
+* https://www.qr-code-generator.com/solutions/vcard-qr-code/
+* https://github.com/anna-geller/prefect-getting-started
+
