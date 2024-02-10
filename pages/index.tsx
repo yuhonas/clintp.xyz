@@ -107,18 +107,19 @@ export default function Home() {
             />
           </Link>
           <p className="text-xs">Regular PDF</p>
-          <h4 className="text-2xl font-bold mt-12 mb-8">Something to geek out on</h4>
+          <h4 className="text-2xl font-bold mt-12 mb-4">Something to geek out on</h4>
+          <p className="mb-4 ">This site and the below artifacts are for the most part generated from a single <a href="https://jsonresume.org/" target="_blank" className="underline">JSON Resume</a></p>
             <ul className="mb-4 flex gap-3">
               <li>
-                <Link href="/resume.clintp.docx" className="hover:underline">
-                  <Image src="images/icon-file-docx.svg"
+                <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.json" className="hover:underline">
+                  <Image src="images/icon-file-json.svg"
                    width={30}
                    height={30}
                    className="mx-auto mb-2"
-                   alt="docx"
+                   alt="ipynb"
                   />
                 </Link>
-                <p className="text-xs">ATS Optimized</p>
+                <p className="text-xs">My JSON Resume</p>
               </li>
               <li>
                 <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline">
@@ -131,18 +132,18 @@ export default function Home() {
                 </Link>
                 <p className="text-xs">Jupyter  Notebook</p>
               </li>
-              <li>
-                <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.json" className="hover:underline">
-                  <Image src="images/icon-file-json.svg"
+               <li>
+                <Link href="/resume.clintp.docx" className="hover:underline">
+                  <Image src="images/icon-file-docx.svg"
                    width={30}
                    height={30}
                    className="mx-auto mb-2"
-                   alt="ipynb"
+                   alt="docx"
                   />
                 </Link>
-                <p className="text-xs">JSON Resume</p>
+                <p className="text-xs">ATS Optimized Resume</p>
               </li>
-            </ul>
+           </ul>
           {/* <AboutSection /> */}
           <h3 className="text-3xl font-bold mt-12 mb-8">Want to talk?</h3>
           <p>I can be reached at <a href={ `mailto:` + resume.basics.email } className="hover:underline" >{ resume.basics.email }</a></p>
