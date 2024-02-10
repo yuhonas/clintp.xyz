@@ -17,6 +17,17 @@ jobs:
         with:
           name: cypress-screenshots
           path: ./cypress/videos/
+  update-resume-gist:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Update Resume Gist
+      uses: exuanbo/actions-deploy-gist@v1
+      with:
+        token: ${{ secrets.TOKEN }}
+        gist_id: 1ab255457bdc9c22a4453ad383bc3108
+        file_path: resume/resume.clintp.json
   build:
     needs: cypress-run
     runs-on: ubuntu-latest
