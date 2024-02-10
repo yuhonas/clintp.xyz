@@ -108,10 +108,11 @@ export default function Home() {
           </Link>
           <p className="text-xs">Regular PDF</p>
           <h4 className="text-2xl font-bold mt-12 mb-4">Something to geek out on</h4>
-          <p className="mb-4 ">This site and the below artifacts are for the most part generated from a single <a href="https://jsonresume.org/" target="_blank" className="underline">JSON Resume</a></p>
+          <p className="mb-4 ">
+              This site and the following files are generated from <a href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">resume.clintp.json</a> which conforms to <a href="https://jsonresume.org/" target="_blank" className="underline">JSON Resume</a></p>
             <ul className="mb-4 flex gap-3">
-              <li>
-                <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.json" className="hover:underline">
+              {/* <li>
+                <Link href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="hover:underline">
                   <Image src="images/icon-file-json.svg"
                    width={30}
                    height={30}
@@ -120,7 +121,7 @@ export default function Home() {
                   />
                 </Link>
                 <p className="text-xs">My JSON Resume</p>
-              </li>
+              </li>*/}
               <li>
                 <Link href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" className="hover:underline">
                   <Image src="images/icon-file-ipynb.svg"
