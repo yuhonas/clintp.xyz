@@ -9,7 +9,8 @@ To further explore the resume data you can use [lite.datasette.io](https://lite.
 
 ### Prerequisites
 
-* Node.js 20.x
+* Node.js 18.x
+* npm 10.x
 
 ### Installing
 
