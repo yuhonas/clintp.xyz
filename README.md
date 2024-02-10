@@ -5,7 +5,7 @@
 This is a simple one page bio site that uses [Next.js](https://nextjs.org/) with some basic CI/CD using [github actions](./.github/workflows/ci.yml). The site & resume are built from a single [resume.clintp.json](./resume/resume.clintp.json) that conforms to [JSON Resume](https://jsonresume.org/)
 
 
-To further explore the resume data you can use [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
+To further explore the resume data you can use [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
 
 ### Prerequisites
 
