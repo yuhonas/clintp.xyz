@@ -4,6 +4,7 @@ import segno
 from segno import helpers
 from urllib.request import urlopen, urlparse
 from PIL import Image
+import subprocess
 
 
 class ExtractResume(luigi.Task):
@@ -34,6 +35,22 @@ class FetchAndConvertProfileImage(luigi.Task):
 
     def output(self):
         return luigi.LocalTarget("build/clintp.gif")
+
+
+class GenerateWordDocument(luigi.Task):
+    def requires(self):
+        return {
+            'resume': ExtractResume()
+        }
+
+    def run(self):
+        # run the nodejs script parser.js
+        # this script will take the resume.json file and generate a word document
+        subprocess.run(["node", "docxtemplater.js", "./resume-template.docx", self.input()[
+                       'resume'].path, self.output().path])
+
+    def output(self):
+        return luigi.LocalTarget("build/resume.clintp.docx")
 
 
 class GenerateQrCode(luigi.Task):
@@ -132,5 +149,5 @@ class GenerateTimeline(luigi.Task):
 
 
 if __name__ == "__main__":
-    luigi.build([GenerateTimeline(), GenerateQrCode()],
+    luigi.build([GenerateTimeline(), GenerateQrCode(), GenerateWordDocument()],
                 workers=1, local_scheduler=True)
