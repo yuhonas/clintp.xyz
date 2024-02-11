@@ -64,5 +64,4 @@ class GenerateQrCode(luigi.Task):
 
 
 if __name__ == "__main__":
-    # luigi.build([TaskD()], workers=1, local_scheduler=True)
     luigi.build([GenerateQrCode()], workers=1, local_scheduler=True)
