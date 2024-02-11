@@ -11,14 +11,6 @@ class ExtractResume(luigi.Task):
 
     def run(self):
         pass
-        # Simulating JSON extraction, replace this with actual code to read JSON
-        # data = [
-        #     {"id": 1, "name": "Alice"},
-        #     {"id": 2, "name": "Bob"},
-        #     {"id": 3, "name": "Charlie"}
-        # ]
-        # with open(self.output_file, 'w') as f:
-        #     json.dump(data, f)
 
     def output(self):
         return luigi.LocalTarget(self.output_file)
@@ -26,10 +18,12 @@ class ExtractResume(luigi.Task):
 
 class ConvertProfileImage(luigi.Task):
     def requires(self):
-        return ExtractResume()
+        return {
+            'resume': ExtractResume()
+        }
 
     def run(self):
-        resume = json.load(open(self.input().path))
+        resume = json.load(open(self.input()['resume'].path))
         profile_image = urlopen(resume['basics']['image'])
 
         with open('clintp.jpg', 'wb') as f:
@@ -50,29 +44,17 @@ class ConvertProfileImage(luigi.Task):
 
 class TaskA(luigi.Task):
     def requires(self):
-        return ExtractResume()
+        return {
+            'resume': ExtractResume(),
+            'profile_image': ConvertProfileImage()
+        }
 
     def run(self):
-        resume = json.load(open(self.input().path))
-        profile_image = urlopen(resume['basics']['image'])
+        # access the resume that was generated in a previous task
 
-        # download profile image to temporary file so we can work on it
-        with open('clintp.jpg', 'wb') as f:
-            f.write(profile_image.read())
-
-        image = Image.open('clintp.jpg').quantize(
-            colors=256, method=2).convert('RGB')
-        # print(image)
-
-        # using python convert my profile_image to gif
-        # profile_image = Image.open(profile_image)
-        image_tiny = image.resize((40, 40))
-        # resizing the smaller image to the original size
-        pixelated = image_tiny.resize(image.size, Image.NEAREST)
-
-        pixelated.save('clintp.gif')
-
+        resume = json.load(open(self.input()['resume'].path))
         # parse the site_url and remove the protocol as it's included for some reason in the qrcode
+
         parsed_url = urlparse(resume['basics']['url'])
         url_without_protocol = parsed_url.netloc + parsed_url.path
 
@@ -80,32 +62,11 @@ class TaskA(luigi.Task):
                                      email=(resume['basics']['email']),
                                      url=url_without_protocol)
 
-        qrcode.to_artistic(background='clintp.gif',
+        qrcode.to_artistic(background=self.input()['profile_image'].path,
                            target=self.output().path, scale=5)
 
-        # qrcode.save(self.output().path, scale=4, background=)
-        # TaskA logic here
-        # result = json.load(open(self.input().path))
-        # print(result['basics']['name'])
-        # first_name, last_name = result["basics"]["name"].split(" ", 1)
-        # email = result['basics']['email']
-
-        # card = [
-        #     'BEGIN:VCARD',
-        #     'VERSION:2.1',
-        #     f'N:{last_name};{first_name}',
-        #     f'FN:{first_name} {last_name}',
-        #     f'EMAIL;PREF;INTERNET:{email}',
-        #     f'REV:1',
-        #     'END:VCARD'
-        # ]
-
-        # # write card to output
-        # with open(self.output().path, 'w') as f:
-        #     f.write('\n'.join(card))
-
     def output(self):
-        return luigi.LocalTarget("qrcode-clintp.gif")
+        return luigi.LocalTarget("clintp-qrcode.gif")
 
 
 class TaskB(luigi.Task):
