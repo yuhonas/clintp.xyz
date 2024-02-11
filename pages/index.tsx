@@ -111,7 +111,7 @@ export default function Home() {
               <ul className="mb-4 list-disc">
                 <li>My resume is stored in <a href="https://jsonresume.org/" className="underline">JSON Schema</a> format, it can be viewed at <a href="https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">resume.clintp.json</a></li>
                 <li>The resume is automagically linted/spell checked and built into various formats</li>
-                <li>You can explore the data using tools like <a href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">JSON Crack</a> or&nbsp;
+                <li>You can explore the data using tools like <a href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">jsoncrack.com</a> or&nbsp;
                   <a href="https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location" className="underline">lite.datasette.io</a>
                 </li>
                 <li>As part of the <a href="https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml" className="underline">resume build</a>, a gist is updated which enables the resume to be published on <a href="https://registry.jsonresume.org/yuhonas" className="underline">registry.jsonresume.com</a>, see also <a href="https://registry.jsonresume.org/yuhonas?theme=stackoverflow" className="underline">here</a> for an example of the resume rethemed </li>
