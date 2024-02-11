@@ -52,7 +52,7 @@ const ProjectsSection = ( {projects}: { projects: Array<{name:string, url: strin
       <h2 className="text-3xl font-bold dark:text-white mb-8">Some of my Projects</h2>
       {/* <p className="mb-8">In my freetime I like to work on some open source projects, here's some of my top ones but also checkout my <a href="{ githubUrl }">github</a></a></p> */}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {projects.map(({ name, url, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
+        {projects.map(({ name, url, keywords, description }: { name: string, url: string, keywords: Array<string>, description: string }, index: Key) => (
           <ProjectCard key={index} name={name} url={url} keywords={keywords} description={description} />
         ))}
       </div>
