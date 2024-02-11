@@ -142,7 +142,7 @@ export default function Home() {
                 <p className="text-xs">Jupyter  Notebook</p>
               </li>
                <li>
-                <Link href="/resume.clintp.docx" className="hover:underline">
+                <Link href="https://github.com/yuhonas/clintp.xyz/raw/main/resume/build/resume.clintp.docx" className="hover:underline">
                   <Image src="images/icon-file-docx.svg"
                    width={30}
                    height={30}
