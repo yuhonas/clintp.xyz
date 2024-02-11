@@ -110,6 +110,7 @@ export default function Home() {
           <h4 className="text-2xl font-bold mt-12 mb-4">Something to geek out on</h4>
           <p className="mb-4 ">
               This site and the following files are generated from <a href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">resume.clintp.json</a> which conforms to <a href="https://jsonresume.org/" target="_blank" className="underline">JSON Resume</a></p>
+
             <ul className="mb-4 flex gap-3">
               {/* <li>
                 <Link href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="hover:underline">
