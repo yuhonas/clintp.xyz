@@ -340,7 +340,7 @@
       "highlights": [
       ],
       "keywords": [
-        "art", "bbs", "zsh-plugin"
+        "art", "bbs", "zsh-plugin", "shell"
       ],
       "startDate": "2023-03-01",
       "endDate": "2024-01-01",
@@ -350,8 +350,25 @@
       ],
       "entity": "owner",
       "type": "open-source"
+    },
+    {
+      "name": "osx-colors",
+      "description": "Sane color handling of osx's accent and highlight color from the commandline",
+      "highlights": [
+      ],
+      "keywords": [
+        "cli", "osx", "ricing", "python"
+      ],
+      "startDate": "2021-03-01",
+      "endDate": "2024-01-01",
+      "url": "https://github.com/yuhonas/osx-colors",
+      "roles": [
+        "Creator"
+      ],
+      "entity": "owner",
+      "type": "open-source"
     }
-  ],
+   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/sample.resume.json",
     "version": "v1.0.0",
