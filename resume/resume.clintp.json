@@ -353,7 +353,7 @@
     },
     {
       "name": "osx-colors",
-      "description": "Sane color handling of osx's accent and highlight color from the commandline",
+      "description": "Sane colour handling of osx's accent and highlight colour from the commandline",
       "highlights": [
       ],
       "keywords": [

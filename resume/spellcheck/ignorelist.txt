@@ -19,9 +19,12 @@ Brightcove
 browsable
 CFA
 cht
+cli
 clint
 clintp
 CMS
+colors
+commandline
 CRM
 crypto
 CTO
@@ -54,6 +57,7 @@ linkedin
 LinkedIn
 locomote
 Locomote
+osx
 PaaS
 PCI
 plummer
