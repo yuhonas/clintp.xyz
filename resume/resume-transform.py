@@ -63,5 +63,76 @@ class GenerateQrCode(luigi.Task):
         return luigi.LocalTarget("build/clintp-qrcode.gif")
 
 
+class GenerateTimeline(luigi.Task):
+    """
+    A Luigi task that generates a timeline JSON file based on the resume data.
+
+    See https://timeline.knightlab.com/docs/json-format.html
+
+    The timeline JSON file contains information about the work experience, including the start date, job position,
+    description, and associated media such as logos and images.
+
+    This task requires the 'ExtractResume' task to be completed before it can run.
+
+    The generated timeline JSON file is saved to the 'build/timeline.json' file.
+    """
+
+    def requires(self):
+        return {
+            'resume': ExtractResume()
+        }
+
+    def run(self):
+        # access the resume that was generated in a previous task
+
+        resume = json.load(open(self.input()['resume'].path))
+
+        timeline = {
+            'title': {
+                'media': {
+                    'url': resume['basics']['image'],
+                    'caption': resume['basics']['name']
+                },
+                'text': {
+                    'headline': resume['basics']['name'],
+                    'text': resume['basics']['summary']
+                }
+            },
+            'events': []
+        }
+
+        # enumerate through the work experience and add to the timeline
+        for index, job in enumerate(resume['work']):
+            # parse the date into year/month/day
+            year, month, day = job['startDate'].split('-')
+
+            # break the url into just the domain name
+            job_domain = urlparse(job['url']).netloc
+
+            timeline['events'].append({
+                'start_date': {
+                    'year': year,
+                    'month': month,
+                    'day': day
+                },
+                'text': {
+                    'headline': job['position'],
+                    'text': job['description']
+                },
+                "media": {
+                    "url": 'https://logo.clearbit.com/' + job_domain,
+                    "caption": job['name']
+                }
+            })
+
+            # convert the timeline to json and write to a file
+            with open(self.output().path, 'w') as f:
+                f.write(json.dumps(timeline, indent=2))
+
+    def output(self):
+        return luigi.LocalTarget("build/timeline.json")
+
+
 if __name__ == "__main__":
-    luigi.build([GenerateQrCode()], workers=1, local_scheduler=True)
+    luigi.build([GenerateTimeline(), GenerateQrCode()],
+                workers=1, local_scheduler=True)

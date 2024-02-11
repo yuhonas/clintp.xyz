@@ -76,4 +76,5 @@ curl -L \
 * https://www.svgrepo.com/svg/342086/open-source-initiative
 * https://www.qr-code-generator.com/solutions/vcard-qr-code/
 * https://github.com/anna-geller/prefect-getting-started
+* https://logo.clearbit.com/goat.com
 
