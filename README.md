@@ -34,6 +34,16 @@ npm run dev
 npm run test
 ```
 
+## Transforming the resume
+
+From the `resume` directory run
+
+```
+pipenv run python resume-transform.py
+```
+
+This will produce a number of build artifacts in the `build` directory
+
 ## Deployment
 
 
