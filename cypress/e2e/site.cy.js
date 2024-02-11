@@ -14,7 +14,7 @@ context("site", () => {
     });
 
     it("should have a working link to my resume", () => {
-      cy.get("a[href='/resume.clintp.docx']")
+      cy.get("a[href$='/resume.clintp.docx']")
         .should("exist")
         .then(($anchor) => {
           cy.request($anchor.attr("href")).its("status").should("eq", 200);
