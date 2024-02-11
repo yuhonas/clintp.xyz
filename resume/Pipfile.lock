@@ -42,11 +42,11 @@
         },
         "anyio": {
             "hashes": [
-                "sha256:44a3c9aba0f5defa43261a8b3efb97891f2bd7d804e0e1f56419befa1adfc780",
-                "sha256:91dee416e570e92c64041bd18b900d1d6fa78dff7048769ce5ac5ddad004fbb5"
+                "sha256:745843b39e829e108e518c489b31dc757de7d2131d53fac32bd8df268227bfee",
+                "sha256:e1875bb4b4e2de1669f4bc7869b6d3f54231cdced71605e6e64c9be77e3be50f"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.7.1"
+            "markers": "python_version >= '3.8'",
+            "version": "==4.2.0"
         },
         "appnope": {
             "hashes": [
@@ -2813,11 +2813,12 @@
         },
         "starlette": {
             "hashes": [
-                "sha256:cd0cb10ddb49313f609cedfac62c8c12e56c7314b66d89bb077ba228bada1b09",
-                "sha256:e54e2b7e2fb06dff9eac40133583f10dfa05913f5a85bf26f427c7a40a9a3d02"
+                "sha256:4134757b950f027c8f16028ec81787751bb44145df17c8b0fa84087b9851b42d",
+                "sha256:e53e086e620ba715f0c187daca92927b722484d148e70921f0de075936119536"
             ],
+            "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==0.32.0.post1"
+            "version": "==0.36.2"
         },
         "sumy": {
             "hashes": [
@@ -2935,7 +2936,7 @@
                 "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783",
                 "sha256:af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_version < '3.10'",
             "version": "==4.9.0"
         },
         "tzdata": {
