@@ -12,14 +12,10 @@
   "events": [
     {
       "start_date": {
-        "year": "2023",
-        "month": "04",
-        "day": "01"
+        "year": "2023"
       },
       "end_date": {
-        "year": "2024",
-        "month": "01",
-        "day": "15"
+        "year": "2024"
       },
       "text": {
         "headline": "Owner (Startup Adviser & Lead Engineer Freelance)",
@@ -32,14 +28,10 @@
     },
     {
       "start_date": {
-        "year": "2022",
-        "month": "05",
-        "day": "01"
+        "year": "2022"
       },
       "end_date": {
-        "year": "2023",
-        "month": "04",
-        "day": "01"
+        "year": "2023"
       },
       "text": {
         "headline": "Entrepreneur in Residence (Antler)",
@@ -52,14 +44,10 @@
     },
     {
       "start_date": {
-        "year": "2021",
-        "month": "03",
-        "day": "01"
+        "year": "2021"
       },
       "end_date": {
-        "year": "2022",
-        "month": "01",
-        "day": "01"
+        "year": "2022"
       },
       "text": {
         "headline": "Founder (Will I Wake)",
@@ -72,14 +60,10 @@
     },
     {
       "start_date": {
-        "year": "2019",
-        "month": "04",
-        "day": "01"
+        "year": "2019"
       },
       "end_date": {
-        "year": "2020",
-        "month": "04",
-        "day": "01"
+        "year": "2020"
       },
       "text": {
         "headline": "Engineering Manager (GOAT)",
@@ -92,14 +76,10 @@
     },
     {
       "start_date": {
-        "year": "2017",
-        "month": "06",
-        "day": "01"
+        "year": "2017"
       },
       "end_date": {
-        "year": "2018",
-        "month": "07",
-        "day": "01"
+        "year": "2018"
       },
       "text": {
         "headline": "Solutions Architect (Travelport Locomote)",
@@ -112,14 +92,10 @@
     },
     {
       "start_date": {
-        "year": "2014",
-        "month": "06",
-        "day": "01"
+        "year": "2014"
       },
       "end_date": {
-        "year": "2017",
-        "month": "06",
-        "day": "01"
+        "year": "2017"
       },
       "text": {
         "headline": "Engineering Manager and Technical Product Owner (Travelport Locomote)",
@@ -132,14 +108,10 @@
     },
     {
       "start_date": {
-        "year": "2012",
-        "month": "07",
-        "day": "01"
+        "year": "2012"
       },
       "end_date": {
-        "year": "2014",
-        "month": "06",
-        "day": "01"
+        "year": "2014"
       },
       "text": {
         "headline": "Engineering Team Lead (Travelport Locomote)",
@@ -152,14 +124,10 @@
     },
     {
       "start_date": {
-        "year": "2017",
-        "month": "03",
-        "day": "01"
+        "year": "2017"
       },
       "end_date": {
-        "year": "2018",
-        "month": "07",
-        "day": "01"
+        "year": "2018"
       },
       "text": {
         "headline": "Adviser (Revelthat)",
@@ -172,14 +140,10 @@
     },
     {
       "start_date": {
-        "year": "2006",
-        "month": "03",
-        "day": "01"
+        "year": "2006"
       },
       "end_date": {
-        "year": "2012",
-        "month": "05",
-        "day": "01"
+        "year": "2012"
       },
       "text": {
         "headline": "Lead Senior Engineer (Alliance Software)",
@@ -192,14 +156,10 @@
     },
     {
       "start_date": {
-        "year": "2006",
-        "month": "03",
-        "day": "01"
+        "year": "2006"
       },
       "end_date": {
-        "year": "2012",
-        "month": "05",
-        "day": "01"
+        "year": "2012"
       },
       "text": {
         "headline": "Co-Owner (Boche Collection)",
@@ -212,14 +172,10 @@
     },
     {
       "start_date": {
-        "year": "2008",
-        "month": "03",
-        "day": "01"
+        "year": "2008"
       },
       "end_date": {
-        "year": "2008",
-        "month": "12",
-        "day": "01"
+        "year": "2008"
       },
       "text": {
         "headline": "Web Developer (Revium)",
@@ -232,14 +188,10 @@
     },
     {
       "start_date": {
-        "year": "2005",
-        "month": "02",
-        "day": "01"
+        "year": "2005"
       },
       "end_date": {
-        "year": "2006",
-        "month": "03",
-        "day": "01"
+        "year": "2006"
       },
       "text": {
         "headline": "Junior Web Developer (Bigdog Software)",
@@ -252,14 +204,10 @@
     },
     {
       "start_date": {
-        "year": "2002",
-        "month": "02",
-        "day": "01"
+        "year": "2002"
       },
       "end_date": {
-        "year": "2005",
-        "month": "08",
-        "day": "01"
+        "year": "2005"
       },
       "text": {
         "headline": "Junior Web Developer (Swinburne University)",

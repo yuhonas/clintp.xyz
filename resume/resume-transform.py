@@ -108,14 +108,10 @@ class GenerateTimeline(luigi.Task):
 
             timeline['events'].append({
                 'start_date': {
-                    'year': job['startDate'].split('-')[0],
-                    'month': job['startDate'].split('-')[1],
-                    'day': job['startDate'].split('-')[2]
+                    'year': job['startDate'].split('-')[0]
                 },
                 'end_date': {
-                    'year': job['endDate'].split('-')[0],
-                    'month': job['endDate'].split('-')[1],
-                    'day': job['endDate'].split('-')[2]
+                    'year': job['endDate'].split('-')[0]
                 },
                 'text': {
                     'headline': job['position'] + ' (' + job['name'] + ')',
