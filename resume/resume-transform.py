@@ -116,7 +116,7 @@ class GenerateTimeline(luigi.Task):
                     'day': day
                 },
                 'text': {
-                    'headline': job['position'],
+                    'headline': job['position'] + ' (' + job['name'] + ')',
                     'text': job['description']
                 },
                 "media": {
