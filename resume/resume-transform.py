@@ -103,17 +103,19 @@ class GenerateTimeline(luigi.Task):
 
         # enumerate through the work experience and add to the timeline
         for index, job in enumerate(resume['work']):
-            # parse the date into year/month/day
-            year, month, day = job['startDate'].split('-')
-
             # break the url into just the domain name
             job_domain = urlparse(job['url']).netloc
 
             timeline['events'].append({
                 'start_date': {
-                    'year': year,
-                    'month': month,
-                    'day': day
+                    'year': job['startDate'].split('-')[0],
+                    'month': job['startDate'].split('-')[1],
+                    'day': job['startDate'].split('-')[2]
+                },
+                'end_date': {
+                    'year': job['endDate'].split('-')[0],
+                    'month': job['endDate'].split('-')[1],
+                    'day': job['endDate'].split('-')[2]
                 },
                 'text': {
                     'headline': job['position'] + ' (' + job['name'] + ')',
