@@ -46,25 +46,25 @@ const AboutSection = () => {
   );
 }
 
-const ProjectsSection = ( {projects}: { projects: Array<{name:string, keywords:Array<string>, description: string}>}) => {
+const ProjectsSection = ( {projects}: { projects: Array<{name:string, url: string, keywords:Array<string>, description: string}>}) => {
   return (
     <section className="mt-12">
       <h2 className="text-3xl font-bold dark:text-white mb-8">Some of my Projects</h2>
       {/* <p className="mb-8">In my freetime I like to work on some open source projects, here's some of my top ones but also checkout my <a href="{ githubUrl }">github</a></a></p> */}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {projects.map(({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
-          <ProjectCard key={index} name={name} keywords={keywords} description={description} />
+        {projects.map(({ name, url, keywords, description }: { name: string, keywords: Array<string>, description: string }, index: Key) => (
+          <ProjectCard key={index} name={name} url={url} keywords={keywords} description={description} />
         ))}
       </div>
     </section>
   );
 }
 
-const ProjectCard = ({ name, keywords, description }: { name: string, keywords: Array<string>, description: string }) => {
+const ProjectCard = ({ name, url, keywords, description }: { name: string, url: string, keywords: Array<string>, description: string }) => {
   return (
     <section className="card cursor-pointer rounded p-5 shadow-sm shadow-black/60 transition hover:-translate-y-2 hover:shadow-md hover:shadow-black/50 dark:bg-neutral-800">
       <header className="flex items-center justify-between dark:text-gray-50">
-        <h3 className="text-lg font-bold">{name}</h3>
+        <h3 className="text-lg font-bold"><a href={url}>{name}</a></h3>
         <Image src="/images/logo-open-source-initiative.svg" width={20} height={20} className="dark:invert" alt="Open Source Initiative Logo" />
       </header>
       <div className="mt-2 dark:text-gray-300">{description}</div>
@@ -114,7 +114,7 @@ export default function Home() {
                 <li>You can explore the data using tools like <a href="https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json" className="underline">jsoncrack.com</a> or&nbsp;
                   <a href="https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location" className="underline">lite.datasette.io</a>
                 </li>
-                <li>As part of the <a href="https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml" className="underline">resume build</a>, a gist is updated which enables the resume to be published on <a href="https://registry.jsonresume.org/yuhonas" className="underline">registry.jsonresume.com</a>, see also <a href="https://registry.jsonresume.org/yuhonas?theme=stackoverflow" className="underline">here</a> for an example of the resume rethemed </li>
+                <li>As part of the <a href="https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml" className="underline">resume build</a>, a <a href="https://gist.github.com/yuhonas/1ab255457bdc9c22a4453ad383bc3108">gist</a> is updated which enables the resume to be published on <a href="https://registry.jsonresume.org/yuhonas" className="underline">registry.jsonresume.com</a>, see also <a href="https://registry.jsonresume.org/yuhonas?theme=stackoverflow" className="underline">here</a> for an example of the resume rethemed </li>
                 <li>For a bit of fun, i&apos;ve also been playing around with <a href="https://github.com/spotify/luigi" className="underline">Spotifys Luigi</a> creating a <a href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume-transform.py" className="underline">data pipeline</a> for producing artifact&apos;s like contact <a href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/build/clintp-qrcode.gif" className="underline">QR Codes</a> and a career timeline through <a href="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/build/timeline.json&font=Default&lang=en&hash_bookmark=true&initial_zoom=2&height=650#event-co-owner" className="underline">Timeline JS</a></li>
               </ul>
               <p className="mb-4">This following files are also available</p>
