@@ -74,10 +74,9 @@ curl -L \
 ```
 
 ## TODO
-- [ ] Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
-- [ ] Add vCard/QRCode or https://en.wikipedia.org/wiki/MeCard_(QR_code)
-- [ ] Add HTML Template
-- [ ] Add workflow orchestration
+- [x] Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
+- [x] Add vCard/QRCode or https://en.wikipedia.org/wiki/MeCard_(QR_code)
+- [x] Add ETL Pipeline/Workflow Orchestaration
 - [ ] Add PDF
 - [ ] Implement JSON Source View - https://mac-s-g.github.io/react-json-view/demo/dist/
 
