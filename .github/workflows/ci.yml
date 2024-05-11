@@ -6,10 +6,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: run e2e tests
+      - name: run linting & tests
         uses: cypress-io/github-action@v5
         with:
-          start: npm run test:e2e
+          start: npm run test
         env:
           CYPRESS_baseUrl: http://localhost:8080/
       - uses: actions/upload-artifact@v3
