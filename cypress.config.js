@@ -1,7 +1,12 @@
-const { defineConfig } = require('cypress')
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:8080',
+export default defineConfig({
+  reporter: "mochawesome",
+  reporterOptions: {
+    toConsole: true,
   },
-})
+  e2e: {
+    baseUrl: "http://localhost:8080",
+    supportFile: false,
+  },
+});
