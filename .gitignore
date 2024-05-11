@@ -56,3 +56,6 @@ cypress/screenshots
 
 # jupyter notebook
 resume/.ipynb_checkpoints/
+
+# testing
+mochawesome-report/

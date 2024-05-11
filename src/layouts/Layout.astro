@@ -1,0 +1,91 @@
+---
+// interface Props {
+// 	title: string;
+// }
+
+const { title, description } = Astro.props['content'];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <main class="min-h-screen bg-neutral-900 text-white">
+      <header class="inset-x-0 bottom-0 bg-neutral-800">
+        <div class="mx-auto justify-between p-4 flex max-w-4xl">
+          <a href="/" class="items-center gap-1 flex">
+            <img src="/favicon.svg" class="inline-block w-8 object-cover rounded mr-2"/>
+            <h1 class="text-lg font-bold">$ ./clintp.xyz</h1>
+          </a>
+        </div>
+      </header>
+      <article class="mx-auto max-w-3xl p-4 text-white selection:bg-black selection:text-white leading-7 text-lg">
+      <slot />
+    </article>
+    </main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+  h2 {
+     @apply text-4xl font-bold mb-8 mt-4 sm:mt-16
+  }
+
+  h3 {
+     @apply text-3xl font-bold mb-8
+  }
+
+  h4 {
+     @apply text-2xl font-bold mb-4
+  }
+
+  p {
+    @apply mb-8
+  }
+
+  ul {
+    @apply ml-8 mb-4 list-disc
+  }
+
+  a {
+    @apply text-violet-400
+  }
+
+  a:hover {
+    @apply underline
+  }
+
+  a h1 {
+    @apply text-white;
+  }
+</style>

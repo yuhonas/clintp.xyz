@@ -1,0 +1,50 @@
+---
+layout: ../layouts/Layout.astro
+title: clintp.xyz | my bio in two mouse clicks or less
+description: my bio in two mouse clicks or less
+
+---
+import { Image } from 'astro:assets';
+import resume from '../../resume/resume.clintp.json';
+
+## Who?
+
+<Image
+  src={ resume.basics.image } alt={`Picture of ${resume.basics.name}`}
+  width="175"
+  height="175"
+  class="float-right rounded-full"
+/>
+
+<p>{resume.basics.summary}</p>
+
+### Looking for a Resume?
+* [Resume_ClintPlummer_ENMR.pdf](/Resume_ClintPlummer_ENMR.pdf)
+
+#### Something to geek out on
+
+* My resume is written in [JSON Schema format](https://jsonresume.org/), it can be viewed at [resume.clintp.json](https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json)
+* You can explore my resume data using tools like [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
+* There is a [data transformation pipeline](https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume-transform.py) written in [Spotifys Luigi](https://github.com/spotify/luigi) that produces a number of [artifact's](https://github.com/yuhonas/clintp.xyz/tree/main/resume/build) from my resume data like a career timeline for [Timeline JS](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/build/timeline.json&font=Default&lang=en&hash_bookmark=true&initial_zoom=2&height=650#event-co-owner) and a contact [QR Code](https://github.com/yuhonas/clintp.xyz/blob/main/resume/build/clintp-qrcode.gif)
+* As part of the [resume build](https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml), a gist is updated which enables the resume to be published on [registry.jsonresume.com](https://registry.jsonresume.org/yuhonas) and with that comes a bunch of out of the box themes like [stackoverflow theme](https://registry.jsonresume.org/yuhonas?theme=stackoverflow) or the [relaxed theme](https://registry.jsonresume.org/yuhonas?theme=relaxed) amongst [others](https://jsonresume.org/themes/)
+* This site get's [E2E tested](https://github.com/yuhonas/clintp.xyz/blob/main/cypress/e2e/site.cy.js) to ensure all the good stuff happens and the bad stuff doesn't
+* The resume is automagically linted, spell checked and built into various formats
+
+If you haven't hit max geek yet the following are also available
+
+* [Jupyter Notebook](https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb)
+* [ATS Optimized Resume](https://github.com/yuhonas/clintp.xyz/raw/main/resume/build/resume.clintp.docx)
+
+## Want to talk?
+I can be reached at [hello@clintp.xyz](mailto:hello@clintp.xyz)
+
+## Some of my Projects
+In my freetime I like to work on open source projects amongst other things, here are some notable ones I created
+
+{ resume.projects.map((project) => (
+  <div>
+    <a href={project.url}><strong>{project.name}</strong></a>
+    <p>{project.description}</p>
+  </div>
+)) }
+
