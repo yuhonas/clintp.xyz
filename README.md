@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This is a simple one page bio site that uses [Next.js](https://nextjs.org/) with some basic CI/CD using [github actions](./.github/workflows/ci.yml). The site & resume are built from a single [resume.clintp.json](./resume/resume.clintp.json) that conforms to [JSON Resume](https://jsonresume.org/)
+This is a simple one page bio site that uses [astro](https://astro.build/) with some basic CI/CD using [github actions](./.github/workflows/ci.yml). The site & resume are built from a single [resume.clintp.json](./resume/resume.clintp.json) that conforms to [JSON Resume](https://jsonresume.org/)
 
 
 To further explore the resume data you can use [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
@@ -42,13 +42,21 @@ From the `resume` directory run
 pipenv run python resume-transform.py
 ```
 
-This will produce a number of build artifacts in the `build` directory
+This will produce a number of build artifacts in the `resume/build` directory
 
 ## Deployment
 
 
 This site is automatically built and deployed by [github actions](https://github.com/actions) to [Github Pages](https://pages.github.com/)
 
+
+## Building for deployment
+
+To build a static version of the site run
+
+```
+npm run build
+```
 
 ## Building the resume
 
@@ -59,11 +67,6 @@ npm run build:resume:
 ```
 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Top repos
 ```bash
@@ -74,10 +77,7 @@ curl -L \
 ```
 
 ## TODO
-- [x] Add timeline - https://matplotlib.org/stable/gallery/lines_bars_and_markers/timeline.html
-- [x] Add vCard/QRCode or https://en.wikipedia.org/wiki/MeCard_(QR_code)
-- [x] Add ETL Pipeline/Workflow Orchestaration
-- [ ] Add PDF
+- [ ] Dynamically generate PDF
 - [ ] Implement JSON Source View - https://mac-s-g.github.io/react-json-view/demo/dist/
 
 ## Links
