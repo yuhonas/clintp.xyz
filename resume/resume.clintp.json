@@ -33,13 +33,14 @@
       "name": "Self Employed",
       "location": "Melbourne, Australia",
       "description": "Startup Adviser and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
-      "position": "Startup Adviser & Lead Engineer",
+      "position": "Fractional CTO / Lead Engineer",
       "url": "https://clintp.xyz",
       "endDate": "",
       "startDate": "2023-04-01",
       "summary": "Startup Adviser, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead & build MVP Development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
       "highlights": [
-        "Worked with some of Australia's most exciting emerging startups"
+        "Worked with some of Australia's most exciting emerging startups",
+        "Ruby/ROR/Python/Node/ChatGPT API/Redis/AWS"
       ]
     },
     {
@@ -65,7 +66,7 @@
       "description": "So much of what makes you, you, is now online. What happens to it when you leave this earth? From social media & photos to crypto currency, Will I Wake is your digital caretaker in the afterlife, a digital will for an increasingly digital generation",
       "position": "Founder / CTO",
       "url": "https://yuhonas.github.io/williwake.com/",
-      "endDate": "2022-01-01",
+      "endDate": "2022-02-01",
       "startDate": "2021-03-01",
       "summary": "",
       "highlights": [
@@ -91,7 +92,7 @@
     {
       "name": "GOAT",
       "location": "Los Angeles, USA",
-      "description": "GOAT is an American online platform offering sneakers, luxury apparel and accessories through primary and resale markets, employing around 1,500 people globally it is a unicorn multiple times over values at around 4.5B",
+      "description": "GOAT is an American online platform offering sneakers, luxury apparel and accessories through primary and resale markets, employing around 1,500 people globally it is a unicorn multiple times over valued at around 4.5B",
       "position": "Engineering Manager",
       "url": "https://www.goat.com/",
       "endDate": "2020-04-01",
