@@ -17,15 +17,9 @@ import resume from "../../resume/resume.clintp.json";
       body {
         font-family: "Raleway", sans-serif;
       }
-
-      @media print {
-        body {
-         padding: 0;
-        }
-      }
     </style>
   </head>
-  <body class="p-12">
+  <body class="p-12 print:p-0">
     <div class="flex space justify-between mb-8">
       <section>
         <p class="font-semibold bg-black text-white text-4xl px-1 mb-0.5">
@@ -72,9 +66,16 @@ import resume from "../../resume/resume.clintp.json";
         resume.work.map((work) => (
           <div class="mb-8">
             <div class="flex mb-1">
-                <p class="text-sm w-60 flex-none">
-                {new Date(work.startDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })} - {new Date(work.endDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })}
-                </p>
+              <p class="text-sm w-60 flex-none">
+                {new Date(work.startDate).toLocaleString("en-AU", {
+                  month: "short",
+                  year: "numeric",
+                })}{" "}
+                -{" "}
+                {new Date(work.endDate).toLocaleString("en-AU", {
+                  month: "short",
+                  year: "numeric",
+                })}
               </p>
               <p class="font-semibold flex-grow">{work.position}</p>
               <p class="font-semibold text-right flex-grow">{work.name}</p>
