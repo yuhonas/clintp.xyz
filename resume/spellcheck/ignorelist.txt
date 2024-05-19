@@ -84,3 +84,10 @@ xyz
 yuhonas
 Zend
 zsh
+GTM
+ROR
+ChatGPT
+Serverless
+Terraform
+ROR
+Devops

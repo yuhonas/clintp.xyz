@@ -30,17 +30,19 @@
   },
   "work": [
     {
-      "name": "Self Employed",
+      "name": "Contracting",
       "location": "Melbourne, Australia",
       "description": "Startup Adviser and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",
-      "position": "Fractional CTO / Lead Engineer",
+      "position": "Fractional CTO / Product Owner / Lead Engineer",
       "url": "https://clintp.xyz",
       "endDate": "",
       "startDate": "2023-04-01",
       "summary": "Startup Adviser, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead & build MVP Development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
       "highlights": [
         "Worked with some of Australia's most exciting emerging startups",
-        "Ruby/ROR/Python/Node/ChatGPT API/Redis/AWS"
+        "Took products from ideation to market through story mapping, MVP development, GTM Strategy and market validation",
+        "Lead, Managed & Mentored teams of 3-6",
+        "Ruby/ROR/Python/Node/ChatGPT API/Serverless/AWS"
       ]
     },
     {
@@ -99,7 +101,7 @@
       "startDate": "2019-03-01",
       "summary": "",
       "highlights": [
-        "Lead & managed a team of 12 consisting of Product/iOS/Android/Backend & Mobile Engineers (Ruby/ROR/Go/Swift/Kotlin) both co-located and remote, building and successfully delivering on alias (https://apps.apple.com/us/app/id1467090341) a brand new seller focussed app & brand for GOAT",
+        "Lead & managed a team of 12 consisting of Product/iOS/Android/Backend & Mobile Engineers (Ruby/ROR/Go/Swift/Kotlin) both co-located and remote, building and successfully delivering on alias (https://apps.apple.com/us/app/id1467090341) a brand new seller focused app & brand for GOAT",
         "Levelled up multiple employee's through goal setting/coaching and the introduction of a career matrix to add more structure/conversation points around the journey"
       ]
     },
