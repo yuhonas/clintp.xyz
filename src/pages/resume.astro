@@ -1,0 +1,99 @@
+---
+// import Layout from '../layouts/Layout.astro'
+import resume from "../../resume/resume.clintp.json";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+
+      @media print {
+        body {
+         padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-12">
+    <div class="flex space justify-between mb-8">
+      <section>
+        <p class="font-semibold bg-black text-white text-4xl px-1 mb-0.5">
+          {resume.basics.name.toUpperCase()}
+        </p>
+        <p class="text-xl">{resume.basics.label}</p>
+      </section>
+      <p class="font-bold bg-black text-white text-3xl"></p>
+      <p class="font-bold bg-black text-white text-3xl"></p>
+    </div>
+    <div class="flex space justify-between mb-8">
+      <section class="w-1/2">
+        <p class="mb-2">
+          <span class="p-1 bg-black text-white text-lg font-semibold uppercase"
+            >Who Am I</span
+          >
+        </p>
+        <p>{resume.basics.summary}</p>
+      </section>
+      <section class="w-1/2">
+        <ul class="text-right">
+          {
+            resume.skills.map((skill) => (
+              <li class="mb-1.5">
+                <>
+                  <span class="font-semibold p-1 bg-black text-white text-sm">
+                    {skill.name}
+                  </span>
+                  <span class="ms-1 font-light opacity-40">|</span>
+                </>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+    <section>
+      <p class="mb-2">
+        <span class="p-1 bg-black text-white text-lg font-semibold uppercase"
+          >Experience</span
+        >
+      </p>
+      {
+        resume.work.map((work) => (
+          <div class="mb-8">
+            <div class="flex mb-1">
+                <p class="text-sm w-60 flex-none">
+                {new Date(work.startDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })} - {new Date(work.endDate).toLocaleString('en-AU', { month: 'short', year: 'numeric' })}
+                </p>
+              </p>
+              <p class="font-semibold flex-grow">{work.position}</p>
+              <p class="font-semibold text-right flex-grow">{work.name}</p>
+            </div>
+            <div class="flex">
+              <p class="text-xs w-60 flex-none">{work.location}</p>
+              <div class="flex-grow">
+                {work.summary && <p class="mb-4">{work.summary}</p>}
+
+                <ul>
+                  {work.highlights.map((highlight) => (
+                    <li class="ms-4 list-disc">{highlight}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </body>
+</html>
