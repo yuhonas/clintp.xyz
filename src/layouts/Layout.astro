@@ -1,108 +1,122 @@
 ---
+const { title, description } = Astro.props["content"];
 
-const { title, description } = Astro.props['content'];
+import resume from "../../resume/resume.clintp.json";
 
-import resume from '../../resume/resume.clintp.json';
+import { Image } from "astro:assets";
 
-import { Image } from 'astro:assets';
-
-import logoGithub from '../images/logo-social-github.svg'
-import logoLinkedIn from '../images/logo-social-linkedin.svg'
+import logoGithub from "../images/logo-social-github.svg";
+import logoLinkedIn from "../images/logo-social-linkedin.svg";
 
 const logos = {
   github: logoGithub,
-  linkedin: logoLinkedIn
-}
+  linkedin: logoLinkedIn,
+};
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="title" property="og:title" content={title} />
+    <meta name="image" property="og:image" content={resume.basics.image} />
+    <title>{title}</title>
+  </head>
+  <body>
     <main class="min-h-screen bg-neutral-900 text-white">
       <header class="inset-x-0 bottom-0 bg-neutral-800">
         <div class="mx-auto justify-between p-4 flex max-w-4xl">
           <a href="/" class="items-center gap-1 flex">
-            <img src="/favicon.svg" class="inline-block w-8 object-cover rounded mr-2" alt="Terminal Icon" />
+            <img
+              src="/favicon.svg"
+              class="inline-block w-8 object-cover rounded mr-2"
+              alt="Terminal Icon"
+            />
             <h1 class="text-lg font-bold">$ ./clintp.xyz</h1>
           </a>
           <nav class="flex gap-2">
-          { resume.basics.profiles.map(profile => (
-            <a href={ profile.url } class="hover:animate-spin" rel="noopener" target="_blank">
-              <Image src={ logos[profile.network.toLowerCase()] }
-                alt={ profile.network }
-                class="w-7 h-7 invert"
-              />
-            </a>
-            ))
-          }
+            {
+              resume.basics.profiles.map((profile) => (
+                <a
+                  href={profile.url}
+                  class="hover:animate-spin"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <Image
+                    src={logos[profile.network.toLowerCase()]}
+                    alt={profile.network}
+                    class="w-7 h-7 invert"
+                  />
+                </a>
+              ))
+            }
           </nav>
         </div>
       </header>
-      <article class="mx-auto max-w-3xl p-4 text-white selection:bg-black selection:text-white leading-7 text-lg">
-      <slot />
-    </article>
+      <article
+        class="mx-auto max-w-3xl p-4 text-white selection:bg-black selection:text-white leading-7 text-lg"
+      >
+        <slot />
+      </article>
     </main>
-	</body>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
 
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 
   h2 {
-     @apply text-4xl font-bold mb-8 mt-4 sm:mt-16
+    @apply text-4xl font-bold mb-8 mt-4 sm:mt-16;
   }
 
   h3 {
-     @apply text-3xl font-bold mb-8
+    @apply text-3xl font-bold mb-8;
   }
 
   h4 {
-     @apply text-2xl font-bold mb-4
+    @apply text-2xl font-bold mb-4;
   }
 
   p {
-    @apply mb-8
+    @apply mb-8;
   }
 
   ul {
-    @apply ml-8 mb-4 list-disc
+    @apply ml-8 mb-4 list-disc;
   }
 
   a {
-    @apply text-violet-400 font-medium
+    @apply text-violet-400 font-medium;
   }
 
   a:hover {
-    @apply underline
+    @apply underline;
   }
 
   a h1 {
