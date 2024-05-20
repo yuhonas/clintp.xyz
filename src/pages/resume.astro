@@ -63,7 +63,10 @@ const logos = {
                 class="w-3 h-3 invert rounded"
               />
             </dt>
-            <dd>{resume.basics.email}</dd>
+            <dd>
+              <a href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a
+              >
+            </dd>
           </dl>
         </section>
         <section>
