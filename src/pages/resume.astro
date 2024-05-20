@@ -120,7 +120,7 @@ const logos = {
         </p>
         {
           resume.work.map((work) => (
-            <div class="mb-8">
+            <article class="mb-8 print:break-inside-avoid">
               <div class="flex mb-1">
                 <p class="text-sm w-1/3 flex-none">
                   {new Date(work.startDate).toLocaleString("en-AU", {
@@ -148,7 +148,7 @@ const logos = {
                   </ul>
                 </div>
               </div>
-            </div>
+            </article>
           ))
         }
       </section>
