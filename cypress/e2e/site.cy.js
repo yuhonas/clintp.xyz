@@ -33,7 +33,7 @@ context("site", () => {
         });
     });
 
-    it.skip("should have a working link to my linkedin", () => {
+    it("should have a working link to my linkedin", () => {
       cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']")
         .should("exist")
         .then(($anchor) => {
