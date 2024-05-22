@@ -37,6 +37,28 @@ class FetchAndConvertProfileImage(luigi.Task):
         return luigi.LocalTarget("build/clintp.gif")
 
 
+class GeneratePDFDocument(luigi.Task):
+    def requires(self):
+        return {
+            'resume': ExtractResume()
+        }
+
+    def run(self):
+        import json
+        resume = json.load(open(self.input()['resume'].path))
+
+        # TODO: not a big fan of the hard coded path concatenation here
+        # this should be refactored to be more dynamic
+        subprocess.run(["node", "url2pdf.cjs", resume['basics']
+                       ['url'] + '/resume', self.output().path])
+
+    version = resume['meta']['version']
+
+
+def output(self):
+    return luigi.LocalTarget(f"build/resume.clintp{version}.pdf")
+
+
 class GenerateWordDocument(luigi.Task):
     def requires(self):
         return {
@@ -149,5 +171,5 @@ class GenerateTimeline(luigi.Task):
 
 
 if __name__ == "__main__":
-    luigi.build([GenerateTimeline(), GenerateQrCode(), GenerateWordDocument()],
+    luigi.build([GenerateTimeline(), GenerateQrCode(), GeneratePDFDocument(), GenerateWordDocument()],
                 workers=1, local_scheduler=True)
