@@ -37,9 +37,9 @@
       "url": "https://clintp.xyz",
       "endDate": "2024-02-01",
       "startDate": "2023-04-01",
-      "summary": "Startup Adviser, fractional CTO and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead & build MVP Development, and offer general, technical, strategic and management expertise to help startups succeed from day one",
+      "summary": "",
       "highlights": [
-        "Took products from ideation to market through story mapping, MVP development, GTM Strategy and market validation",
+        "Led products from ideation to market launch by spearheading discovery, story mapping, impact mapping, MDP (Most Delightful Product) development, GTM (Go-To-Market) strategy, and market validation",
         "Lead, Managed & Mentored teams of 3-6",
         "Ruby/ROR/Python/Node/ChatGPT API/Serverless/AWS"
       ]
@@ -67,7 +67,7 @@
       "summary": "",
       "highlights": [
         "Created a robust MVP and high-converting landing page using Ruby on Rails, React, Terraform, and AWS; validated product-market fit, resulting in a 40% increase in early user adoption",
-        "Pitched to Antler & was accepted into the program"
+        "Pitched to Antler & was selected to join their accelerator program"
       ]
     },
     {
@@ -265,6 +265,17 @@
       "score": "",
       "courses": [
       ]
+    },
+    {
+      "institution": "elabor8",
+      "url": "https://www.scrum.org/psm",
+      "area": "Professional Scrum Master Level 1",
+      "location": "Melbourne, Australia",
+      "studyType": "Certificate",
+      "startDate": "2016",
+      "endDate": "2016",
+      "score": "",
+      "courses": []
     },
     {
       "institution": "Complete Hospitality Training",
