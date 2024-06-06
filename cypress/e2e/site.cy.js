@@ -37,9 +37,6 @@ context("site", () => {
       cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']").should(
         "exist"
       );
-      // .then(($anchor) => {
-      //   cy.request($anchor.attr("href")).its("status").should("eq", 200);
-      // });
     });
   });
 

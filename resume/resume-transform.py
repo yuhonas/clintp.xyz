@@ -47,7 +47,7 @@ class GeneratePDFDocument(luigi.Task):
         import json
         resume = json.load(open(self.input()['resume'].path))
 
-        # TODO: not a big fan of the hard coded path concatenation here
+        # FIXME: not a big fan of the hard coded path concatenation here
         # this should be refactored to be more dynamic
         subprocess.run(["node", "url2pdf.cjs", resume['basics']
                        ['url'] + '/resume', self.output().path])
