@@ -30,6 +30,18 @@
   },
   "work": [
     {
+      "name": "Bugcrowd",
+      "location": "Melbourne, Australia (Remote)",
+      "description": "Bugcrowd provides crowdsourced cybersecurity solutions, including bug bounty programs, penetration testing, and vulnerability disclosure programs.",
+      "position": "Senior Software Engineer",
+      "url": "https://www.bugcrowd.com",
+      "endDate": "2025",
+      "startDate": "2024-07-31",
+      "summary": "",
+      "highlights": [
+      ]
+    },
+    {
       "name": "Contract",
       "location": "Latin America (Remote)",
       "description": "Startup Adviser and Lead Engineer, specialising in 0-day startups. I provide strategic guidance, lead MVP development, and offer general & technical management expertise to help startups succeed from day one",

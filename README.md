@@ -61,29 +61,9 @@ npm run build
 ## Building the resume
 
 My resume is built using [docxtemplater](https://docxtemplater.com/) it's optimized for [Applicant Tracking Systems (ATS)](https://en.wikipedia.org/wiki/Applicant_tracking_system)
-
 ```
 npm run build:resume:
 ```
+## Attributuion
 
-
-
-## Top repos
-```bash
-curl -L \
-  -H "Accept: application/vnd.github+json" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/users/yuhonas/repos | jq '[sort_by(.stargazers_count) | reverse | limit(4; .[])]'
-```
-
-## TODO
-- [ ] Dynamically generate PDF
-- [ ] Implement JSON Source View - https://mac-s-g.github.io/react-json-view/demo/dist/
-
-## Links
-* https://github.com/gauravghongde/social-icons
-* https://www.svgrepo.com/svg/342086/open-source-initiative
-* https://www.qr-code-generator.com/solutions/vcard-qr-code/
-* https://github.com/anna-geller/prefect-getting-started
-* https://logo.clearbit.com/goat.com
-
+* [Logos provided by Logo.dev](https://logo.dev)

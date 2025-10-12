@@ -52,7 +52,7 @@ class GeneratePDFDocument(luigi.Task):
         subprocess.run(["node", "url2pdf.cjs", resume['basics']
                        ['url'] + '/resume', self.output().path])
 
-    version = resume['meta']['version']
+    # version = resume['meta']['version']
 
 
 def output(self):
@@ -68,7 +68,7 @@ class GenerateWordDocument(luigi.Task):
     def run(self):
         # run the nodejs script parser.js
         # this script will take the resume.json file and generate a word document
-        subprocess.run(["node", "docxtemplater.js", "./resume-template.docx", self.input()[
+        subprocess.run(["node", "docxtemplater.cjs", "./resume-template.docx", self.input()[
                        'resume'].path, self.output().path])
 
     def output(self):
@@ -157,7 +157,7 @@ class GenerateTimeline(luigi.Task):
                     'text': job['description']
                 },
                 "media": {
-                    "url": 'https://logo.clearbit.com/' + job_domain,
+                    "url": 'https://img.logo.dev/' + job_domain + '?token=pk_YPDy4MO8STOd8oFEexkzZA',
                     "caption": job['name']
                 }
             })
@@ -171,5 +171,5 @@ class GenerateTimeline(luigi.Task):
 
 
 if __name__ == "__main__":
-    luigi.build([GenerateTimeline(), GenerateQrCode(), GeneratePDFDocument(), GenerateWordDocument()],
+    luigi.build([GenerateTimeline(), GenerateQrCode(), GenerateWordDocument()],
                 workers=1, local_scheduler=True)
