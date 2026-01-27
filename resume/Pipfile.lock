@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bbf1ce650b5d019460eeb80f55b5d9a2c463bbac081c3f060fbaa3fd21c41c61"
+            "sha256": "b4c5d8f06cbc5d0076d0fe6dacee294389c386e02d29fb5358a3f959df3efe42"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -2136,11 +2136,12 @@
         },
         "python-multipart": {
             "hashes": [
-                "sha256:03f54688c663f1b7977105f021043b0793151e4cb1c1a9d4a11fc13d622c4026",
-                "sha256:97ca7b8ea7b05f977dc3849c3ba99d51689822fab725c3703af7c866a0c2b215"
+                "sha256:2b2cd894c83d21bf49d702499531c7bafd057d730c201782048f7945d82de155",
+                "sha256:7340bef99a7e0032613f56dc36027b959fd3b30a787ed62d310e951f7c3a3a58"
             ],
-            "markers": "python_version >= '3.8'",
-            "version": "==0.0.9"
+            "index": "pypi",
+            "markers": "python_version >= '3.10'",
+            "version": "==0.0.22"
         },
         "python-slugify": {
             "hashes": [
