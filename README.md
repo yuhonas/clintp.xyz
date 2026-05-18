@@ -9,15 +9,15 @@ To further explore the resume data you can use [jsoncrack.com](https://jsoncrack
 
 ### Prerequisites
 
-* Node.js 18.x
-* npm 10.x
+* Node.js 26.x
+* pnpm 10.x
 
 ### Installing
 
 Install dependencies
 
 ```
-npm install
+pnpm install
 ```
 
 ## Development
@@ -25,13 +25,13 @@ npm install
 To run a local web server for development
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 ## Running linting & the tests
 
 ```
-npm run test
+pnpm run test
 ```
 
 ## Transforming the resume
@@ -55,14 +55,14 @@ This site is automatically built and deployed by [github actions](https://github
 To build a static version of the site run
 
 ```
-npm run build
+pnpm run build
 ```
 
 ## Building the resume
 
 My resume is built using [docxtemplater](https://docxtemplater.com/) it's optimized for [Applicant Tracking Systems (ATS)](https://en.wikipedia.org/wiki/Applicant_tracking_system)
 ```
-npm run build:resume:
+pnpm run build:resume:
 ```
 ## Attributuion
 

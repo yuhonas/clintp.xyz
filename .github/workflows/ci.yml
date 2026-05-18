@@ -6,10 +6,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - name: run linting & tests
         uses: cypress-io/github-action@v5
         with:
-          start: npm run test
+          start: pnpm run test
         env:
           CYPRESS_baseUrl: http://localhost:8080/
       - uses: actions/upload-artifact@v4
@@ -25,10 +29,14 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
       - name: Build the site
-        run: npm run build
+        run: pnpm run build
       - name: Deploy the site
         uses: peaceiris/actions-gh-pages@v4
         with:

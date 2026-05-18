@@ -10,7 +10,7 @@
     "astro": "astro",
     "test": "npm run test:lint && ./resume/test.sh && npm run test:e2e",
     "test:lint": "eslint .",
-    "test:e2e": "start-server-and-test 'PORT=8080 astro dev --host --port 8080' 8080 'cypress run --reporter mochawesome --browser chrome --headless'",
+    "test:e2e": "start-server-and-test 'PORT=8080 astro dev --host --port 8080' 8080 'cypress run --reporter mochawesome --browser electron --headless'",
     "test:cypress": "cypress open"
   },
   "dependencies": {
@@ -22,14 +22,14 @@
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "angular-expressions": "^1.2.1",
-    "cypress": "^13.9.0",
-    "docxtemplater": "^3.47.2",
-    "eslint": "^9.2.0",
-    "eslint-plugin-astro": "^1.1.2",
-    "mochawesome": "^7.1.3",
-    "pizzip": "^3.1.7",
-    "puppeteer": "^22.11.2",
-    "start-server-and-test": "^2.0.3"
+    "angular-expressions": "^1.5.5",
+    "cypress": "^13.17.0",
+    "docxtemplater": "^3.68.7",
+    "eslint": "^9.39.4",
+    "eslint-plugin-astro": "^1.7.0",
+    "mochawesome": "^7.1.4",
+    "pizzip": "^3.2.0",
+    "puppeteer": "^22.15.0",
+    "start-server-and-test": "^2.1.5"
   }
 }

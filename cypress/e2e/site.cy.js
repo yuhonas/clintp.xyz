@@ -25,7 +25,7 @@ context("site", () => {
 
     it("should have a working link to my python notebook", () => {
       cy.get(
-        "a[href='https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb']"
+        "a[href='https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb']",
       )
         .should("exist")
         .then(($anchor) => {
@@ -35,7 +35,7 @@ context("site", () => {
 
     it("should have a link to my linkedin", () => {
       cy.get("a[href='https://www.linkedin.com/in/clint-plummer/']").should(
-        "exist"
+        "exist",
       );
     });
   });
