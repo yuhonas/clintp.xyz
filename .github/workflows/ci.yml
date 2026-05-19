@@ -10,8 +10,12 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 10
+      - name: disable pnpm side effects cache to prevent caching issues
+        run: pnpm config set side-effects-cache false --location project
+      - name: allow cypress package to be installed
+        run: pnpm --allow-build=cypress add --save-dev cypress
       - name: run linting & tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v7
         with:
           start: pnpm run test
         env:
