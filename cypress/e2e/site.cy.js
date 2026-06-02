@@ -33,7 +33,18 @@ context("site", () => {
       )
         .should("exist")
         .then(($anchor) => {
-          cy.request($anchor.attr("href")).its("status").should("eq", 200);
+          cy.request({
+            url: $anchor.attr("href"),
+            failOnStatusCode: false,
+          }).then((response) => {
+            if (response.status === 429) {
+              cy.log(
+                "Warning: GitHub returned 429 (rate limited); skipping status check",
+              );
+              return;
+            }
+            expect(response.status).to.eq(200);
+          });
         });
     });
 
