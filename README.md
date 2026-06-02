@@ -62,7 +62,7 @@ pnpm run build
 
 My resume is built using [docxtemplater](https://docxtemplater.com/) it's optimized for [Applicant Tracking Systems (ATS)](https://en.wikipedia.org/wiki/Applicant_tracking_system)
 ```
-pnpm run build:resume:
+pnpm run build:resume
 ```
 ## Attributuion
 
