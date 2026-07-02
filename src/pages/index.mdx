@@ -9,42 +9,82 @@ import resume from '../../resume/resume.clintp.json';
 
 ## Who?
 
-<Image
-  src={ resume.basics.image } alt={`Picture of ${resume.basics.name}`}
-  width="175"
-  height="175"
-  class="float-right rounded-full"
-/>
 
-<p>{resume.basics.summary}</p>
+<div class="flow-root mb-8">
+  <div class="float-right ml-6 mb-4 relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] shrink-0 p-1 bg-surface-container-high rounded-full ring-2 ring-primary/20 shadow-diffused-glow overflow-hidden group">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-container/10 z-0"></div>
+    <Image
+      src={ resume.basics.image } alt={`Picture of ${resume.basics.name}`}
+      width="150"
+      height="150"
+      class="rounded-full grayscale contrast-115 hover:grayscale-0 transition-all duration-500 relative z-10 w-full h-full object-cover"
+    />
+  </div>
+  <p class="text-lg leading-relaxed text-gray-300 mb-0">{resume.basics.summary}</p>
+</div>
+
+<div class="bg-surface-container-low p-6 rounded-lg my-10 border border-white/[0.03] shadow-diffused-glow">
 
 ### Looking for a Resume?
-* [Resume_ClintPlummer_ENLR.pdf](/Resume_ClintPlummer_ENLR.pdf)
 
-#### Something to geek out on
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <a href="/Resume_ClintPlummer_ENLR.pdf" class="flex flex-col items-center justify-center p-4 bg-gradient-to-br from-primary to-primary-container text-surface font-display font-bold rounded-md hover:shadow-[0_0_20px_rgba(167,139,250,0.35)] transition-all duration-300 text-center no-underline hover:text-surface">
+      <span class="text-[10px] uppercase tracking-wider opacity-85 mb-1">Human Optimized</span>
+      <span class="text-sm">Download</span>
+    </a>
+    <a href="https://github.com/yuhonas/clintp.xyz/raw/main/resume/build/resume.clintp.docx" class="flex flex-col items-center justify-center p-4 bg-surface-container-high hover:bg-surface-container-highest text-primary font-display font-bold rounded-md border border-primary/15 hover:border-primary/40 transition-all duration-300 text-center no-underline">
+      <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-1">ATS Optimized</span>
+      <span class="text-sm">Download</span>
+    </a>
+    <a href="https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb" class="flex flex-col items-center justify-center p-4 bg-surface-container-high hover:bg-surface-container-highest text-primary font-display font-bold rounded-md border border-primary/15 hover:border-primary/40 transition-all duration-300 text-center no-underline">
+      <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-1">Interactive</span>
+      <span class="text-sm">Jupyter Notebook</span>
+    </a>
+  </div>
+</div>
 
-* My resume is written in [JSON Schema format](https://jsonresume.org/), it can be viewed at [resume.clintp.json](https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json)
-* You can explore my resume data using tools like [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
-* There is a [data transformation pipeline](https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume-transform.py) written in [Spotifys Luigi](https://github.com/spotify/luigi) that produces a number of [artifact's](https://github.com/yuhonas/clintp.xyz/tree/main/resume/build) from my resume data like a career timeline for [Timeline JS](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/build/timeline.json&font=Default&lang=en&hash_bookmark=true&initial_zoom=2&height=650#event-co-owner) and a contact [QR Code](https://github.com/yuhonas/clintp.xyz/blob/main/resume/build/clintp-qrcode.gif)
-* As part of the [resume build](https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml), a gist is updated which enables the resume to be published on [registry.jsonresume.com](https://registry.jsonresume.org/yuhonas) and with that comes a bunch of out of the box themes like [stackoverflow theme](https://registry.jsonresume.org/yuhonas?theme=stackoverflow) or the [lucide theme](https://registry.jsonresume.org/yuhonas?theme=lucide) amongst [others](https://jsonresume.org/themes/)
-* This site get's [E2E tested](https://github.com/yuhonas/clintp.xyz/blob/main/cypress/e2e/site.cy.js) to ensure all the good stuff happens and the bad stuff doesn't
-* The resume is automagically linted, spell checked and built into various formats
+#### Something to Geek Out On
 
-If you haven't hit max geek yet the following are also available
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-white/[0.02] font-mono text-sm leading-relaxed mb-10">
 
-* [Jupyter Notebook](https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume.clintp.ipynb)
-* [ATS Optimized Resume](https://github.com/yuhonas/clintp.xyz/raw/main/resume/build/resume.clintp.docx)
+* My resume is written in [JSON Schema format](https://jsonresume.org/). View raw data at [resume.clintp.json](https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json)
+* Explore the resume data using visualization tools: [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
+* There is a [data transformation pipeline](https://github.com/yuhonas/clintp.xyz/blob/main/resume/resume-transform.py) written in [Spotify's Luigi](https://github.com/spotify/luigi) that produces a number of [artifacts](https://github.com/yuhonas/clintp.xyz/tree/main/resume/build) from my resume data, like a career timeline for [Timeline JS](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/build/timeline.json&font=Default&lang=en&hash_bookmark=true&initial_zoom=2&height=650#event-co-owner) and a contact [QR Code](https://github.com/yuhonas/clintp.xyz/blob/main/resume/build/clintp-qrcode.gif)
+* As part of the [resume build](https://github.com/yuhonas/clintp.xyz/blob/main/.github/workflows/ci.yml), a gist is updated which enables the resume to be published on [registry.jsonresume.com](https://registry.jsonresume.org/yuhonas) (e.g. [stackoverflow theme](https://registry.jsonresume.org/yuhonas?theme=stackoverflow) or [lucide theme](https://registry.jsonresume.org/yuhonas?theme=lucide)).
+* This site is [E2E tested](https://github.com/yuhonas/clintp.xyz/blob/main/cypress/e2e/site.cy.js) using Cypress to ensure everything builds and works properly.
+* The resume is automagically linted, spell checked and built into various formats.
 
-## Want to talk?
-I can be reached at [hello@clintp.xyz](mailto:hello@clintp.xyz)
+</div>
+
+## Want to Talk?
+<p class="mb-8">I can be reached at <a href="mailto:hello@clintp.xyz">hello@clintp.xyz</a>.</p>
 
 ## Some of my Projects
-In my freetime I like to work on open source projects amongst other things, here are some notable ones I created
+<p class="text-gray-400 mb-8 font-light">In my freetime I like to work on open source projects, here are some notable ones I created:</p>
 
-{ resume.projects.map((project) => (
-  <div>
-    <a href={project.url}><strong>{project.name}</strong></a>
-    <p>{project.description}</p>
-  </div>
-)) }
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+  {
+    resume.projects.map((project) => (
+      <div class="bg-surface-container-low p-6 rounded-lg border border-white/[0.02] shadow-diffused-glow hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <h4 class="text-lg font-display font-bold text-primary-fixed mt-0 mb-2 group-hover:text-primary transition-colors">
+            <a href={project.url}>{project.name}</a>
+          </h4>
+          <p class="text-sm text-gray-400 mb-4">{project.description}</p>
+        </div>
+        <div class="mt-auto">
+          {project.keywords && (
+            <div class="flex flex-wrap gap-1.5">
+              {project.keywords.map((kw) => (
+                <span class="px-2 py-0.5 bg-surface-container-highest text-gray-400 rounded-sm text-[10px] font-mono">
+                  {kw}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    ))
+  }
+</div>
 

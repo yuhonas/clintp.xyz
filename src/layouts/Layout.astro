@@ -24,33 +24,57 @@ const logos = {
     <meta name="generator" content={Astro.generator} />
     <meta name="title" property="og:title" content={title} />
     <meta name="image" property="og:image" content={resume.basics.image} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body>
-    <main class="min-h-screen bg-neutral-900 text-white">
-      <header class="inset-x-0 bottom-0 bg-neutral-800">
-        <div class="mx-auto justify-between p-4 flex max-w-4xl">
-          <a href="/" class="items-center gap-3 flex">
+    <main
+      class="min-h-screen bg-surface text-gray-300 font-sans scanlines relative pb-12"
+    >
+      <header
+        class="inset-x-0 bottom-0 bg-surface-container-low border-b border-white/[0.03]"
+      >
+        <div class="mx-auto justify-between p-4 flex max-w-4xl items-center">
+          <a
+            href="/"
+            class="items-center gap-3 flex font-mono text-primary-fixed hover:text-primary transition-colors duration-200"
+          >
+            <div class="relative flex h-2.5 w-2.5 mr-0.5">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"
+              ></span>
+            </div>
             <img
               src="/favicon.svg"
-              class="inline-block w-8 object-cover rounded"
+              class="inline-block w-6 h-6 object-cover rounded-sm opacity-80"
               alt="Terminal Icon"
             />
-            <h1 class="text-lg font-bold">$ ./clintp.xyz</h1>
+            <h1 class="text-sm md:text-base font-bold tracking-tight">
+              $ ./clintp.xyz
+            </h1>
           </a>
-          <nav class="flex gap-3">
+          <nav class="flex gap-4">
             {
               resume.basics.profiles.map((profile) => (
                 <a
                   href={profile.url}
-                  class="hover:animate-spin"
+                  class="transition-transform duration-300 hover:scale-110 flex items-center justify-center p-1.5 rounded-md bg-surface-container-high hover:bg-surface-container-highest"
                   rel="noopener"
                   target="_blank"
+                  title={profile.network}
                 >
                   <Image
                     src={logos[profile.network.toLowerCase()]}
                     alt={profile.network}
-                    class="w-7 h-7 invert"
+                    class="w-5 h-5 invert opacity-80 hover:opacity-100 transition-opacity"
                   />
                 </a>
               ))
@@ -59,7 +83,7 @@ const logos = {
         </div>
       </header>
       <article
-        class="mx-auto max-w-3xl p-4 text-white selection:bg-black selection:text-white leading-7 text-lg"
+        class="mx-auto max-w-3xl px-6 py-12 text-gray-300 selection:bg-primary-container selection:text-surface-container-lowest leading-relaxed text-base md:text-lg"
       >
         <slot />
       </article>
@@ -67,63 +91,106 @@ const logos = {
   </body>
 </html>
 <style is:global>
-  @import url("https://googleapis.com");
   body {
     font-family: "Inter", sans-serif;
+    background-color: #131313;
   }
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
+    --primary: #cebdff;
+    --primary-container: #a78bfa;
+    --accent-gradient: linear-gradient(135deg, #cebdff, #a78bfa);
+  }
+
+  .scanlines {
+    position: relative;
+  }
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      rgba(167, 139, 250, 0.012) 0px,
+      rgba(167, 139, 250, 0.012) 1px,
+      transparent 1px,
+      transparent 3px
     );
+    pointer-events: none;
+    z-index: 50;
   }
 
   code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+    font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   h2 {
-    @apply text-4xl font-bold mb-8 mt-4 sm:mt-16;
+    @apply text-3xl md:text-4xl text-primary mt-12 mb-6;
+  }
+
+  h2:first-of-type {
+    @apply mt-0;
   }
 
   h3 {
-    @apply text-3xl font-bold mb-8;
+    @apply text-2xl md:text-3xl text-primary-fixed mt-8 mb-4;
+  }
+
+  .bg-surface-container-low h3 {
+    @apply text-xl mt-0 mb-4;
+  }
+
+  .bg-surface-container-lowest ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    @apply space-y-4 mb-0;
+  }
+
+  .bg-surface-container-lowest li {
+    position: relative;
+    padding-left: 1.5rem;
+    @apply text-sm leading-relaxed text-gray-300;
+  }
+
+  .bg-surface-container-lowest li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #cebdff;
+    font-weight: bold;
   }
 
   h4 {
-    @apply text-2xl font-bold mb-4;
+    @apply text-xl md:text-2xl text-primary-fixed mt-6 mb-3;
   }
 
   p {
-    @apply mb-8;
+    @apply mb-6 text-gray-300;
   }
 
   ul {
-    @apply ml-8 mb-4 list-disc;
+    @apply ml-6 mb-6 list-disc text-gray-300 space-y-2;
   }
 
   a {
-    @apply text-violet-400 font-medium;
+    @apply text-primary-container font-medium hover:text-primary transition-colors duration-200;
   }
 
   a:hover {
-    @apply underline;
+    @apply underline decoration-primary/40 underline-offset-4;
   }
 
   a h1 {
-    @apply text-white;
+    @apply text-primary-fixed;
   }
 </style>
