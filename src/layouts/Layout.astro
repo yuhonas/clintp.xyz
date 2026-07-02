@@ -33,20 +33,33 @@ const logos = {
     <title>{title}</title>
   </head>
   <body>
-    <main class="min-h-screen bg-surface text-gray-300 font-sans scanlines relative pb-12">
-      <header class="inset-x-0 bottom-0 bg-surface-container-low border-b border-white/[0.03]">
+    <main
+      class="min-h-screen bg-surface text-gray-300 font-sans scanlines relative pb-12"
+    >
+      <header
+        class="inset-x-0 bottom-0 bg-surface-container-low border-b border-white/[0.03]"
+      >
         <div class="mx-auto justify-between p-4 flex max-w-4xl items-center">
-          <a href="/" class="items-center gap-3 flex font-mono text-primary-fixed hover:text-primary transition-colors duration-200">
+          <a
+            href="/"
+            class="items-center gap-3 flex font-mono text-primary-fixed hover:text-primary transition-colors duration-200"
+          >
             <div class="relative flex h-2.5 w-2.5 mr-0.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"
+              ></span>
             </div>
             <img
               src="/favicon.svg"
               class="inline-block w-6 h-6 object-cover rounded-sm opacity-80"
               alt="Terminal Icon"
             />
-            <h1 class="text-sm md:text-base font-bold tracking-tight">$ ./clintp.xyz</h1>
+            <h1 class="text-sm md:text-base font-bold tracking-tight">
+              $ ./clintp.xyz
+            </h1>
           </a>
           <nav class="flex gap-4">
             {
@@ -83,13 +96,9 @@ const logos = {
     background-color: #131313;
   }
   :root {
-    --primary: #CEBDFF;
-    --primary-container: #A78BFA;
-    --accent-gradient: linear-gradient(
-      135deg,
-      #CEBDFF,
-      #A78BFA
-    );
+    --primary: #cebdff;
+    --primary-container: #a78bfa;
+    --accent-gradient: linear-gradient(135deg, #cebdff, #a78bfa);
   }
 
   .scanlines {
@@ -116,7 +125,9 @@ const logos = {
     font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
   }
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     font-family: "Space Grotesk", sans-serif;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -136,6 +147,27 @@ const logos = {
 
   .bg-surface-container-low h3 {
     @apply text-xl mt-0 mb-4;
+  }
+
+  .bg-surface-container-lowest ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    @apply space-y-4 mb-0;
+  }
+
+  .bg-surface-container-lowest li {
+    position: relative;
+    padding-left: 1.5rem;
+    @apply text-sm leading-relaxed text-gray-300;
+  }
+
+  .bg-surface-container-lowest li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #cebdff;
+    font-weight: bold;
   }
 
   h4 {
