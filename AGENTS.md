@@ -6,6 +6,12 @@ This project is a portfolio website for an engineering leader, it is a light sho
 
 The target audience is technical recruiters or geeks/nerds interested in reading a little bit about me
 
+## Code Style
+
+### File Type Rules
+
+* **`.mdx`**: Prefer markdown over inline HTML, use it only if you need to write something complex.
+
 ## Design system
 
 You MUST read the following file related to any visual changes for the project
