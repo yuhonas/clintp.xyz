@@ -38,8 +38,7 @@
       "endDate": "2026-03-10",
       "startDate": "2024-07-31",
       "summary": "Ruby/Rails, Python, React, Typescript, Kotlin, Kubernetes, Amazon Bedrock",
-      "highlights": [
-      ]
+      "highlights": []
     },
     {
       "name": "Contract",
@@ -65,8 +64,7 @@
       "endDate": "2023-04-01",
       "startDate": "2022-05-01",
       "summary": "Joined the program to explore nurturing my own startup aka 'The Practical MBA', learnt many valuable skills along the way from ideation, taking concepts to market (0 to 1), market validation, business models, product/market fit to capital raising and pitching to committees",
-      "highlights": [
-      ]
+      "highlights": []
     },
     {
       "name": "Will I Wake",
@@ -263,8 +261,7 @@
       ]
     }
   ],
-  "volunteer": [
-  ],
+  "volunteer": [],
   "education": [
     {
       "institution": "The Improv Conspiracy Theatre",
@@ -275,8 +272,7 @@
       "startDate": "2022",
       "endDate": "2022",
       "score": "",
-      "courses": [
-      ]
+      "courses": []
     },
     {
       "institution": "elabor8",
@@ -312,10 +308,8 @@
       "courses": []
     }
   ],
-  "awards": [
-  ],
-  "publications": [
-  ],
+  "awards": [],
+  "publications": [],
   "skills": [
     {
       "name": "Leadership, team building & management",
@@ -367,16 +361,16 @@
       ]
     }
   ],
-  "references": [
-  ],
+  "references": [],
   "projects": [
     {
       "name": "Free exercise DB",
       "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable front-end",
-      "highlights": [
-      ],
+      "highlights": [],
       "keywords": [
-        "exercise", "fitness", "open-data"
+        "exercise",
+        "fitness",
+        "open-data"
       ],
       "startDate": "2023-03-01",
       "endDate": "2024-01-01",
@@ -390,10 +384,12 @@
     {
       "name": "zsh ansimotd",
       "description": "a zsh-plugin to display old skool ansi & ascii bbs art on logon",
-      "highlights": [
-      ],
+      "highlights": [],
       "keywords": [
-        "art", "bbs", "zsh-plugin", "shell"
+        "art",
+        "bbs",
+        "zsh-plugin",
+        "shell"
       ],
       "startDate": "2023-03-01",
       "endDate": "2024-01-01",
@@ -407,10 +403,12 @@
     {
       "name": "osx-colors",
       "description": "Sane colour handling of osx's accent and highlight colour from the commandline",
-      "highlights": [
-      ],
+      "highlights": [],
       "keywords": [
-        "cli", "osx", "ricing", "python"
+        "cli",
+        "osx",
+        "ricing",
+        "python"
       ],
       "startDate": "2021-03-01",
       "endDate": "2024-01-01",
@@ -420,11 +418,29 @@
       ],
       "entity": "owner",
       "type": "open-source"
+    },
+    {
+      "name": "clintp.xyz",
+      "description": "My bio in two mouse clicks or less",
+      "highlights": [],
+      "keywords": [
+        "personal-website",
+        "bio",
+        "astro"
+      ],
+      "startDate": "2020-12-07",
+      "endDate": "2026-07-03",
+      "url": "https://github.com/yuhonas/clintp.xyz",
+      "roles": [
+        "Creator"
+      ],
+      "entity": "owner",
+      "type": "open-source"
     }
-   ],
+  ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json",
-    "version": "v1.0.3",
-    "lastModified": "2024-05-21T13:58:00"
+    "version": "v1.1",
+    "lastModified": "2026-06-03T10:00:00"
   }
 }

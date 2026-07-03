@@ -2,19 +2,17 @@
 layout: ../layouts/Layout.astro
 title: clintp.xyz | my bio in two mouse clicks or less
 description: my bio in two mouse clicks or less
-
 ---
 import { Image } from 'astro:assets';
 import resume from '../../resume/resume.clintp.json';
 
 ## Who?
 
-
 <div class="flow-root mb-8">
   <div class="float-right ml-6 mb-4 relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] shrink-0 p-1 bg-surface-container-high rounded-full ring-2 ring-primary/20 shadow-diffused-glow overflow-hidden group">
     <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-container/10 z-0"></div>
     <Image
-      src={ resume.basics.image } alt={`Picture of ${resume.basics.name}`}
+      src={resume.basics.image} alt={`Picture of ${resume.basics.name}`}
       width="150"
       height="150"
       class="rounded-full grayscale contrast-115 hover:grayscale-0 transition-all duration-500 relative z-10 w-full h-full object-cover"
@@ -23,11 +21,11 @@ import resume from '../../resume/resume.clintp.json';
   <p class="text-lg leading-relaxed text-gray-300 mb-0">{resume.basics.summary}</p>
 </div>
 
-<div class="bg-surface-container-low p-6 rounded-lg my-10 border border-white/[0.03] shadow-diffused-glow">
+<section class="bg-surface-container-low p-6 rounded-lg my-10 border border-white/[0.03] shadow-diffused-glow">
 
 ### Looking for a Resume?
 
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <nav class="grid grid-cols-1 sm:grid-cols-3 gap-4" aria-label="Resume formats">
     <a href="/Resume_ClintPlummer_ENLR.pdf" class="flex flex-col items-center justify-center p-4 bg-gradient-to-br from-primary to-primary-container text-surface font-display font-bold rounded-md hover:shadow-[0_0_20px_rgba(167,139,250,0.35)] transition-all duration-300 text-center no-underline hover:text-surface">
       <span class="text-[10px] uppercase tracking-wider opacity-85 mb-1">Human Optimized</span>
       <span class="text-sm">Download</span>
@@ -40,12 +38,12 @@ import resume from '../../resume/resume.clintp.json';
       <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-1">Interactive</span>
       <span class="text-sm">Jupyter Notebook</span>
     </a>
-  </div>
-</div>
+  </nav>
+</section>
 
 #### Something to Geek Out On
 
-<div class="bg-surface-container-lowest p-6 rounded-lg border border-white/[0.02] font-mono text-sm leading-relaxed mb-10">
+<aside class="bg-surface-container-lowest p-6 rounded-lg border border-white/[0.02] font-mono text-sm leading-relaxed mb-10">
 
 * My resume is written in [JSON Schema format](https://jsonresume.org/). See [resume.clintp.json](https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json)
 * Explore the resume data using visualization tools: [jsoncrack.com](https://jsoncrack.com/editor?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json) or [lite.datasette.io](https://lite.datasette.io/?json=https://raw.githubusercontent.com/yuhonas/clintp.xyz/main/resume/resume.clintp.json#/data/resume?_sort=rowid&_facet=name&_facet=location)
@@ -54,10 +52,11 @@ import resume from '../../resume/resume.clintp.json';
 * This site is [E2E tested](https://github.com/yuhonas/clintp.xyz/blob/main/cypress/e2e/site.cy.js) to ensure all the good stuff happens and the bad stuff doesn't.
 * There is some sprinkling of AI primarily to supplement ideation and [design implementation](https://github.com/yuhonas/clintp.xyz/pull/117/changes) see [AGENT.md](https://github.com/yuhonas/clintp.xyz/blob/main/AGENTS.md) and [DESIGN-SYSTEM.md](https://github.com/yuhonas/clintp.xyz/blob/main/.ai/design-system.md)
 
-</div>
+</aside>
 
 ## Want to Talk?
-<p class="mb-8">I can be reached at <a href="mailto:hello@clintp.xyz">hello@clintp.xyz</a>.</p>
+
+I can be reached at [hello@clintp.xyz](mailto:hello@clintp.xyz).
 
 ## Some of my Projects
 <p class="text-gray-400 mb-8 font-light">In my freetime I like to work on open source projects, here are some notable ones I created:</p>
@@ -65,7 +64,7 @@ import resume from '../../resume/resume.clintp.json';
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
   {
     resume.projects.map((project) => (
-      <div class="bg-surface-container-low p-6 rounded-lg border border-white/[0.02] shadow-diffused-glow hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between group">
+      <article class="bg-surface-container-low p-6 rounded-lg border border-white/[0.02] shadow-diffused-glow hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between group">
         <div>
           <h4 class="text-lg font-display font-bold text-primary-fixed mt-0 mb-2 group-hover:text-primary transition-colors">
             <a href={project.url}>{project.name}</a>
@@ -83,7 +82,7 @@ import resume from '../../resume/resume.clintp.json';
             </div>
           )}
         </div>
-      </div>
+      </article>
     ))
   }
 </div>
