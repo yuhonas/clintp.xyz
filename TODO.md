@@ -1,6 +1,8 @@
 ## TODO
 - [ ] Dynamically generate PDF
 - [ ] Implement JSON Source View - https://mac-s-g.github.io/react-json-view/demo/dist/
+- [ ] Fix ./resume/test.sh it needs a pipefail
+- [ ] Add additional dependencies for resume checking (ENV variable skippable)
 
 
 ### Top repos

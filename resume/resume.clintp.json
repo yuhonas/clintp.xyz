@@ -199,9 +199,12 @@
         "Lead, hired and mentored other software engineers",
         "Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management",
         "Delivered E2E & supported over 20 projects with Ruby on Rails/Zend Framework",
-        "Built a custom Zend Framework based Video Delivery platform that was pitched as a corporate Video Delivery Platform & CMS, this integrated with third party video platforms such as Brightcove and BitsOnTheRun. Features such as channel creation, pre/post roll advertisement injection, video scheduling and search by time based video meta data, it was later sold to a USA based company",
-        "Phased out a legacy custom built PHP CMS and coordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites",
-        "Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings* Lead, hired and mentored other software engineers * Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management * Delivered E2E & supported over 20 projects with Rails/Zend Framework * Built a custom Zend Framework based Video Delivery platform that was pitched as a corporate Video Delivery Platform & CMS, this integrated with third party video platforms such as Brightcove and BitsOnTheRun. Features such as channel creation, pre/post roll advertisement injection, video scheduling and search by time based video meta data, it was later sold to a USA based company. * Phased out a legacy custom built PHP CMS and coordinated / co-developed a complete rewrite of the CMS using Zend Framework which is now in use in a multitude of sites. * Supported and maintained a high traffic legacy CMS based site for a popular travel company. Routinely dealt directly with the client and collaborated with their hosting company, their IT department and key stake holders to achieve great project outcomes. Implemented solutions for integration with an internal File Maker Database, Online Trip Payments & Online Trip Bookings"
+        "Built a custom Zend Framework based Video Delivery platform that was later sold to a USA based company",
+        "Phased out a legacy custom built PHP CMS and coordinated / co-developed a complete rewrite of the CMS",
+        "Supported/Scaled a high traffic inhouse CMS. Collaborated with the clients/devops/key stakeholders to acheive many successfull project outcomes",
+        "Lead, hired and mentored other software engineers",
+        "Collaborated & mentored Senior Developers, Juniors & Contractors and provided technical advice and direction to management",
+        "Delivered E2E & supported over 20 projects with Rails/Zend Framework"
       ]
     },
     {
@@ -227,7 +230,7 @@
       "startDate": "2008-03-01",
       "summary": "",
       "highlights": [
-        "Worked in a team developing a complex advertisement builder for Australia Post using a custom in-house CMS"
+        "Successfully launched a complex advertisement builder for Australia Post using a custom in-house CMS"
       ]
     },
     {
