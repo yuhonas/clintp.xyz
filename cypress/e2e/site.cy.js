@@ -56,7 +56,7 @@ context("site", () => {
   });
 
   it("should have the correct meta title", () => {
-    cy.title().should("eq", "Clint Plummer | Software Engineering Leader & Fractional CTO");
+    cy.title().should("eq", "Clint Plummer | Software Engineering Leader");
   });
 
   it("should have the correct meta description", () => {
