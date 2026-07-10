@@ -40,7 +40,7 @@ context("schema markup", () => {
       cy.get('head meta[property="og:image"]').should(
         "have.attr",
         "content",
-        "/og_image.jpg",
+        "https://clintp.xyz/og_image.jpg",
       );
     });
 

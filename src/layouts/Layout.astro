@@ -35,9 +35,15 @@ const logos = {
     <meta property="og:locale" content="en_AU" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og_image.jpg" />
+    <meta property="og:image" content={resume.basics.url + "/og_image.jpg"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content={resume.basics.url + "/og_image.jpg"} />
+    <meta name="twitter:site" content={resume.meta.username} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://clintp.xyz/og_image.jpg" />
     <meta
       property="og:image:alt"
       content={`${resume.basics.name} — ${resume.basics.label}`}
