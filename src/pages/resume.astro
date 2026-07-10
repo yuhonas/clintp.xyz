@@ -4,6 +4,7 @@ import logoGithub from "@fortawesome/fontawesome-free/svgs/brands/github.svg";
 import logoLinkedIn from "@fortawesome/fontawesome-free/svgs/brands/linkedin.svg";
 import logoEmail from "@fortawesome/fontawesome-free/svgs/solid/at.svg";
 import logoLocation from "@fortawesome/fontawesome-free/svgs/solid/location-dot.svg";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
 
 import { Image } from "astro:assets";
 
@@ -16,6 +17,9 @@ const logos = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Clint Plummer | Software Engineering Leader Resume</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || "https://clintp.xyz").href} />
+    <SchemaMarkup pageType="ProfilePage" />
     <meta name="viewport" content="width=device-width" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

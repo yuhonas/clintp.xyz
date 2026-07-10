@@ -56,7 +56,7 @@ context("site", () => {
   });
 
   it("should have the correct meta title", () => {
-    cy.title().should("eq", "clintp.xyz | my bio in two mouse clicks or less");
+    cy.title().should("eq", "Clint Plummer | Software Engineering Leader & Fractional CTO");
   });
 
   it("should have the correct meta description", () => {
@@ -66,7 +66,7 @@ context("site", () => {
   });
 
   it("should have the correct opening page title", () => {
-    cy.get("h1").contains("clintp.xyz");
+    cy.get("h1").contains("Clint Plummer");
   });
 
   it("should have my email address somewhere so I can be contacted", () => {
