@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 
 import logoGithub from "../images/logo-social-github.svg";
 import logoLinkedIn from "../images/logo-social-linkedin.svg";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
 
 const logos = {
   github: logoGithub,
@@ -36,6 +37,7 @@ const logos = {
       src="https://cloud.umami.is/script.js"
       data-website-id="bf0941e6-f365-47a9-9a70-78c2c91bc8e1"
     ></script>
+    <SchemaMarkup pageType="ProfilePage" />
     <title>{title}</title>
   </head>
   <body>
