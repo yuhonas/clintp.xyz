@@ -7,17 +7,19 @@ const { pageType = "ProfilePage" } = Astro.props;
 const sameAs = [...resume.basics.profiles.map((p) => p.url)];
 
 // Construct educational institutions list
-const alumniOf = resume.education.map((edu) => ({
-  "@type": "EducationalOrganization",
-  name: edu.institution,
-  url: edu.url || undefined,
-  address: edu.location
-    ? {
-        "@type": "PostalAddress",
-        addressLocality: edu.location,
-      }
-    : undefined,
-}));
+const alumniOf = resume.education
+  .filter((edu) => edu.institution.toLowerCase().includes("university"))
+  .map((edu) => ({
+    "@type": "EducationalOrganization",
+    name: edu.institution,
+    url: edu.url || undefined,
+    address: edu.location
+      ? {
+          "@type": "PostalAddress",
+          addressLocality: edu.location,
+        }
+      : undefined,
+  }));
 
 // Retrieve skill names
 const knowsAbout = resume.skills.map((s) => s.name);
