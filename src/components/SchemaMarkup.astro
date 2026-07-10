@@ -71,7 +71,7 @@ const softwareProjectsSchema = resume.projects.map((project) => ({
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": pageType,
-  url: Astro.url.href,
+  url: `${resume.basics.url}`,
   name: `${resume.basics.name} - ${resume.basics.label}`,
   description: resume.basics.summary,
   mainEntity: personSchema,
