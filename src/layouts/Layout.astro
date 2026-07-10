@@ -24,8 +24,26 @@ const logos = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={resume.basics.url} />
-    <meta name="title" property="og:title" content={title} />
-    <meta name="image" property="og:image" content={resume.basics.image} />
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={resume.basics.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={resume.basics.image} />
+    <meta
+      property="og:image:alt"
+      content={`${resume.basics.name} — ${resume.basics.label}`}
+    />
+    <meta
+      property="profile:first_name"
+      content={resume.basics.name.split(" ")[0]}
+    />
+    <meta
+      property="profile:last_name"
+      content={resume.basics.name.split(" ")[1]}
+    />
+    <meta property="profile:username" content={resume.meta.username} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

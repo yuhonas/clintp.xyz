@@ -5,6 +5,67 @@ context("schema markup", () => {
     cy.visit("/");
   });
 
+  context("opengraph", () => {
+    it("should have the correct og:type", () => {
+      cy.get('head meta[property="og:type"]').should(
+        "have.attr",
+        "content",
+        "profile",
+      );
+    });
+
+    it("should have the correct og:url", () => {
+      cy.get('head meta[property="og:url"]').should(
+        "have.attr",
+        "content",
+        "https://clintp.xyz",
+      );
+    });
+
+    it("should have the correct og:title", () => {
+      cy.get('head meta[property="og:title"]')
+        .should("exist")
+        .and("have.attr", "content")
+        .and("not.be.empty");
+    });
+
+    it("should have the correct og:description", () => {
+      cy.get('head meta[property="og:description"]')
+        .should("exist")
+        .and("have.attr", "content")
+        .and("not.be.empty");
+    });
+
+    it("should have the correct og:image", () => {
+      cy.get('head meta[property="og:image"]').should(
+        "have.attr",
+        "content",
+        "https://clintp.xyz/profile.png",
+      );
+    });
+
+    it("should have the correct og:image:alt", () => {
+      cy.get('head meta[property="og:image:alt"]').should(
+        "have.attr",
+        "content",
+        "Clint Plummer — Engineering Leader",
+      );
+    });
+
+    it("should have the correct profile:first_name and profile:last_name", () => {
+      cy.get('head meta[property="profile:first_name"]').should(
+        "have.attr",
+        "content",
+        "Clint",
+      );
+      cy.get('head meta[property="profile:last_name"]').should(
+        "have.attr",
+        "content",
+        "Plummer",
+      );
+    });
+  });
+
   it("should have valid schema.org structured data for the entire site", () => {
     cy.get('script[type="application/ld+json"]')
       .should("exist")
