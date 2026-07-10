@@ -23,7 +23,7 @@ const logos = {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || "https://clintp.xyz").href} />
+    <link rel="canonical" href={resume.basics.url} />
     <meta name="title" property="og:title" content={title} />
     <meta name="image" property="og:image" content={resume.basics.image} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,8 +35,7 @@ const logos = {
     <script
       defer
       src="https://cloud.umami.is/script.js"
-      data-website-id="bf0941e6-f365-47a9-9a70-78c2c91bc8e1"
-    ></script>
+      data-website-id="bf0941e6-f365-47a9-9a70-78c2c91bc8e1"></script>
     <SchemaMarkup pageType="ProfilePage" />
     <title>{title}</title>
   </head>
@@ -88,8 +87,7 @@ const logos = {
         <slot />
       </article>
     </main>
-  </body>
-  <style is:global>
+  </body><style is:global>
     body {
       font-family: "Inter", sans-serif;
       background-color: #131313;
@@ -198,5 +196,4 @@ const logos = {
       @apply text-primary-fixed;
     }
   </style>
-
 </html>
