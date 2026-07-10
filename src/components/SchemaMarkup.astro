@@ -1,58 +1,59 @@
 ---
 import resume from "../../resume/resume.clintp.json";
 
-const { pageType = 'ProfilePage' } = Astro.props;
+const { pageType = "ProfilePage" } = Astro.props;
 
 // Construct unique profile and website URLs
-const sameAs = [
-  ...resume.basics.profiles.map(p => p.url),
-  resume.basics.url
-].filter((url, index, self) => url && self.indexOf(url) === index);
+const sameAs = [...resume.basics.profiles.map((p) => p.url)];
 
 // Construct educational institutions list
-const alumniOf = resume.education.map(edu => ({
+const alumniOf = resume.education.map((edu) => ({
   "@type": "EducationalOrganization",
-  "name": edu.institution,
-  "url": edu.url || undefined,
-  "address": edu.location ? {
-    "@type": "PostalAddress",
-    "addressLocality": edu.location
-  } : undefined
+  name: edu.institution,
+  url: edu.url || undefined,
+  address: edu.location
+    ? {
+        "@type": "PostalAddress",
+        addressLocality: edu.location,
+      }
+    : undefined,
 }));
 
 // Retrieve skill names
-const knowsAbout = resume.skills.map(s => s.name);
+const knowsAbout = resume.skills.map((s) => s.name);
 
 // Construct standard Person schema entity
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": resume.basics.name,
-  "alternateName": resume.basics.profiles.find(p => p.network.toLowerCase() === 'github')?.username || undefined,
-  "image": resume.basics.image,
-  "email": resume.basics.email,
-  "url": resume.basics.url,
-  "jobTitle": resume.basics.label,
-  "description": resume.basics.summary,
-  "address": {
+  name: resume.basics.name,
+  alternateName:
+    resume.basics.profiles.find((p) => p.network.toLowerCase() === "github")
+      ?.username || undefined,
+  image: resume.basics.image,
+  email: resume.basics.email,
+  url: resume.basics.url,
+  jobTitle: resume.basics.label,
+  description: resume.basics.summary,
+  address: {
     "@type": "PostalAddress",
-    "addressLocality": resume.basics.location.city,
-    "addressRegion": resume.basics.location.region,
-    "addressCountry": resume.basics.location.countryCode
+    addressLocality: resume.basics.location.city,
+    addressRegion: resume.basics.location.region,
+    addressCountry: resume.basics.location.countryCode,
   },
-  "sameAs": sameAs,
-  "alumniOf": alumniOf,
-  "knowsAbout": knowsAbout
+  sameAs: sameAs,
+  alumniOf: alumniOf,
+  knowsAbout: knowsAbout,
 };
 
 // Construct top-level Page schema
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": pageType,
-  "url": Astro.url.href,
-  "name": `${resume.basics.name} - ${resume.basics.label}`,
-  "description": resume.basics.summary,
-  "mainEntity": personSchema
+  url: Astro.url.href,
+  name: `${resume.basics.name} - ${resume.basics.label}`,
+  description: resume.basics.summary,
+  mainEntity: personSchema,
 };
 
 const jsonLd = JSON.stringify(pageSchema);
