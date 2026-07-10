@@ -22,6 +22,7 @@ const logos = {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || "https://clintp.xyz").href} />
     <meta name="title" property="og:title" content={title} />
     <meta name="image" property="og:image" content={resume.basics.image} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,9 +55,9 @@ const logos = {
               class="inline-block w-6 h-6 object-cover rounded-sm opacity-80"
               alt="Terminal Icon"
             />
-            <h1 class="text-sm md:text-base font-bold tracking-tight">
+            <span class="text-sm md:text-base font-bold tracking-tight">
               $ ./clintp.xyz
-            </h1>
+            </span>
           </a>
           <nav class="flex gap-4">
             {
@@ -121,12 +122,17 @@ const logos = {
       font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
     }
 
+    h1,
     h2,
     h3,
     h4 {
       font-family: "Space Grotesk", sans-serif;
       letter-spacing: -0.02em;
       font-weight: 700;
+    }
+
+    h1 {
+      @apply text-4xl md:text-5xl text-primary mb-8 mt-4;
     }
 
     h2 {
@@ -186,7 +192,7 @@ const logos = {
       @apply underline decoration-primary/40 underline-offset-4;
     }
 
-    a h1 {
+    a span {
       @apply text-primary-fixed;
     }
   </style>
