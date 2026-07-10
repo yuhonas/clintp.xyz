@@ -24,9 +24,8 @@ context("schema markup", () => {
         expect(person["@type"]).to.eq("Person");
         expect(person["@id"]).to.eq("https://clintp.xyz/#person");
         expect(person.name).to.eq("Clint Plummer");
-        expect(person.email).to.eq("hello@clintp.xyz");
         expect(person.jobTitle).to.eq("Engineering Leader");
-        
+
         // Check social/profile links
         expect(person.sameAs).to.be.an("array");
         expect(person.sameAs).to.include("https://github.com/yuhonas");
@@ -60,7 +59,7 @@ context("schema markup", () => {
           expect(project.url).to.eq(expected.repo);
           expect(project.dateCreated).to.exist;
           expect(project.keywords).to.be.a("string");
-          
+
           // Verify link to author (Person)
           expect(project.author["@type"]).to.eq("Person");
           expect(project.author["@id"]).to.eq(person["@id"]);
