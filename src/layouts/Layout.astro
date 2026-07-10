@@ -66,6 +66,8 @@ const logos = {
                 <a
                   href={profile.url}
                   class="transition-transform duration-300 hover:scale-110 flex items-center justify-center p-1.5 rounded-md bg-surface-container-high hover:bg-surface-container-highest"
+                  data-umami-event={`${profile.network.toLowerCase()}_click`}
+                  data-umami-event-url={profile.url}
                   rel="noopener"
                   target="_blank"
                   title={profile.network}
