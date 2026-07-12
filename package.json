@@ -27,6 +27,7 @@
     "docxtemplater": "^3.68.7",
     "eslint": "^9.39.4",
     "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-mdx": "^3.8.1",
     "mochawesome": "^7.1.4",
     "pizzip": "^3.2.0",
     "puppeteer": "^22.15.0",
